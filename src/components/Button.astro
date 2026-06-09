@@ -1,0 +1,10 @@
+---
+interface Props {
+	title?: string;
+}
+
+const { title } = Astro.props;
+---
+<a href="https://calendly.com/vikas-p-2706/30min" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-full gradient-accent text-primary-foreground px-5 py-2.5 text-sm font-semibold shadow-glow hover:scale-[1.03] active:scale-[0.98] transition-transform">
+	{title || "Book Free Demo"}
+</a>
