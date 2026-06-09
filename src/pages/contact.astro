@@ -1,0 +1,203 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+---
+
+<Layout>
+	<div id="top" class="min-h-screen bg-background text-foreground selection:bg-primary/30 overflow-x-hidden">
+		<!-- Header -->
+		<header class="fixed top-0 inset-x-0 z-50 transition-all duration-500 bg-white/80 backdrop-blur-lg border-b border-border shadow-md" id="main-header">
+			<nav class="container-custom h-16 flex items-center justify-between" id="nav-container">
+				<a href="/" class="font-bold tracking-tight text-xl flex items-center gap-2 group text-primary">
+					<span>CareReceptionist</span><span class="text-secondary"> AI</span>
+				</a>
+				
+				<div class="hidden md:flex items-center gap-10 text-sm font-bold text-muted-foreground">
+					<a href="/#how" class="hover:text-secondary transition-colors relative group py-2">
+						How It Works
+						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+					</a>
+					<a href="/#pricing" class="hover:text-secondary transition-colors relative group py-2">
+						Pricing
+						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+					</a>
+					<a href="/#demo" class="hover:text-secondary transition-colors relative group py-2">
+						Demo
+						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+					</a>
+					<a href="/#contact" class="hover:text-secondary transition-colors relative group py-2">
+						Contact
+						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+					</a>
+				</div>
+				
+				<div class="hidden md:flex items-center gap-4">
+					<Button />
+				</div>
+				
+				<button class="md:hidden p-3 -mr-3 flex items-center justify-center text-primary z-[60] relative" aria-label="Toggle menu" id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">
+					<div class="w-6 h-5 relative flex flex-col justify-between">
+						<span class="w-full h-0.5 bg-current transition-all duration-300 origin-left" id="menu-bar-1"></span>
+						<span class="w-full h-0.5 bg-current transition-all duration-300"></span>
+						<span class="w-full h-0.5 bg-current transition-all duration-300 origin-left" id="menu-bar-3"></span>
+					</div>
+				</button>
+			</nav>
+
+			<!-- Mobile Menu Overlay -->
+			<div id="mobile-menu" class="fixed inset-0 z-50 invisible opacity-0 transition-all duration-300 md:hidden">
+				<div class="absolute inset-0 bg-white/95 backdrop-blur-2xl"></div>
+				<div class="relative h-full flex flex-col items-center justify-center gap-8 p-8 text-center">
+					<a href="/#how" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">How It Works</a>
+					<a href="/#pricing" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Pricing</a>
+					<a href="/#demo" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Demo</a>
+					<a href="/#contact" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Contact</a>
+					<div class="mt-4 scale-125">
+						<Button />
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="pt-32 pb-20 sm:pt-40 sm:pb-28">
+			<div class="max-w-5xl mx-auto px-5 sm:px-8">
+				<div class="reveal active">
+					<div class="text-center mb-14">
+						<a href="/" class="text-sm text-muted-foreground hover:text-secondary transition-colors">← Back to home</a>
+						<h1 class="mt-6 text-4xl sm:text-6xl font-bold tracking-tight text-gradient">Let's Talk</h1>
+						<p class="mt-4 text-muted-foreground text-lg max-w-xl mx-auto">Have a question or want to see a demo? Reach out directly.</p>
+					</div>
+				</div>
+
+				<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+					<div class="reveal active" style="transition-delay: 0ms">
+						<a href="https://calendly.com/vikas-p-2706/30min" target="_blank" rel="noopener noreferrer" class="block glass rounded-2xl p-8 h-full group hover:border-secondary/40 transition-all hover:-translate-y-1">
+							<div class="w-12 h-12 rounded-xl gradient-accent flex items-center justify-center mb-6 shadow-glow">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-days w-6 h-6 text-white"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="M8 14h.01"></path><path d="M12 14h.01"></path><path d="M16 14h.01"></path><path d="M8 18h.01"></path><path d="M12 18h.01"></path><path d="M16 18h.01"></path></svg>
+							</div>
+							<h3 class="font-bold text-xl text-primary">Book a Demo</h3>
+							<p class="mt-2 text-muted-foreground leading-relaxed">Schedule a free 10-minute call to see the AI in action.</p>
+							<div class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-secondary group-hover:gap-3 transition-all">
+								Book Now <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+							</div>
+						</a>
+					</div>
+
+					<div class="reveal active" style="transition-delay: 100ms">
+						<a href="mailto:vikas.p.2706@gmail.com" class="block glass rounded-2xl p-8 h-full group hover:border-secondary/40 transition-all hover:-translate-y-1">
+							<div class="w-12 h-12 rounded-xl gradient-accent flex items-center justify-center mb-6 shadow-glow">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail w-6 h-6 text-white"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+							</div>
+							<h3 class="font-bold text-xl text-primary">Email Us</h3>
+							<p class="mt-2 text-muted-foreground leading-relaxed">Send us a message and we'll get back to you within 24 hours.</p>
+							<div class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-secondary group-hover:gap-3 transition-all">
+								Send Email <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+							</div>
+						</a>
+					</div>
+
+					<div class="reveal active" style="transition-delay: 200ms">
+						<a href="https://www.youtube.com/watch?v=oInWpV4qtNU&t=15s" target="_blank" rel="noopener noreferrer" class="block glass rounded-2xl p-8 h-full group hover:border-secondary/40 transition-all hover:-translate-y-1">
+							<div class="w-12 h-12 rounded-xl gradient-accent flex items-center justify-center mb-6 shadow-glow">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play w-6 h-6 text-white"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"></path></svg>
+							</div>
+							<h3 class="font-bold text-xl text-primary">Watch Demo Video</h3>
+							<p class="mt-2 text-muted-foreground leading-relaxed">See how CareReceptionist AI handles a real patient call.</p>
+							<div class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-secondary group-hover:gap-3 transition-all">
+								Watch Now <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right w-4 h-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- Footer -->
+		<footer class="bg-primary text-white py-20 mt-20">
+			<div class="container-custom flex flex-col md:flex-row md:items-center md:justify-between gap-12">
+				<div class="max-w-xs">
+					<div class="font-bold tracking-tight text-2xl">
+						<span>CareReceptionist</span><span class="text-secondary"> AI</span>
+					</div>
+					<p class="text-sm text-white/70 mt-4 leading-relaxed">
+						HIPAA-secure voice AI for US dental clinics. Never miss a patient call again.
+					</p>
+				</div>
+				
+				<div class="flex flex-wrap gap-x-12 gap-y-6 text-sm font-bold">
+					<div class="flex flex-col gap-4">
+						<span class="text-accent uppercase tracking-wider text-xs font-bold">Product</span>
+						<a href="/#how" class="text-white/70 hover:text-white transition-colors">How It Works</a>
+						<a href="/#pricing" class="text-white/70 hover:text-white transition-colors">Pricing</a>
+						<a href="/#demo" class="text-white/70 hover:text-white transition-colors">Demo</a>
+					</div>
+					<div class="flex flex-col gap-4">
+						<span class="text-accent uppercase tracking-wider text-xs font-bold">Company</span>
+						<a href="/privacy" class="text-white/70 hover:text-white transition-colors">Privacy Policy</a>
+						<a href="/contact" class="text-white hover:text-white transition-colors">Contact</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="container-custom mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/50">
+				<div>© 2026 CareReceptionist AI. All rights reserved.</div>
+				<div>Built by Vikas.</div>
+			</div>
+		</footer>
+	</div>
+</Layout>
+
+<script>
+	// Mobile Menu Toggle
+	const mobileMenuButton = document.getElementById('mobile-menu-button');
+	const mobileMenu = document.getElementById('mobile-menu');
+	const mobileLinks = document.querySelectorAll('.mobile-link');
+	const menuBars = [
+		document.getElementById('menu-bar-1'),
+		document.querySelector('.w-full.h-0.5.bg-current.transition-all.duration-300:not(#menu-bar-1):not(#menu-bar-3)'),
+		document.getElementById('menu-bar-3')
+	];
+
+	function toggleMenu() {
+		const isExpanded = mobileMenuButton?.getAttribute('aria-expanded') === 'true';
+		mobileMenuButton?.setAttribute('aria-expanded', (!isExpanded).toString());
+		
+		if (!isExpanded) {
+			mobileMenu?.classList.remove('invisible', 'opacity-0');
+			mobileMenu?.classList.add('visible', 'opacity-100');
+			document.body.style.overflow = 'hidden';
+			menuBars[0]?.classList.add('rotate-45', 'translate-y-[9px]');
+			menuBars[1]?.classList.add('opacity-0', 'translate-x-2');
+			menuBars[2]?.classList.add('-rotate-45', '-translate-y-[9px]');
+		} else {
+			mobileMenu?.classList.add('invisible', 'opacity-0');
+			mobileMenu?.classList.remove('visible', 'opacity-100');
+			document.body.style.overflow = '';
+			menuBars[0]?.classList.remove('rotate-45', 'translate-y-[9px]');
+			menuBars[1]?.classList.remove('opacity-0', 'translate-x-2');
+			menuBars[2]?.classList.remove('-rotate-45', '-translate-y-[9px]');
+		}
+	}
+
+	mobileMenuButton?.addEventListener('click', toggleMenu);
+	mobileLinks.forEach(link => {
+		link.addEventListener('click', () => {
+			if (mobileMenuButton?.getAttribute('aria-expanded') === 'true') {
+				toggleMenu();
+			}
+		});
+	});
+</script>
+
+<style>
+	.reveal {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+	}
+
+	.reveal.active {
+		opacity: 1;
+		transform: translateY(0);
+	}
+</style>

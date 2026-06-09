@@ -1,0 +1,201 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+---
+
+<Layout>
+	<div id="top" class="min-h-screen bg-background text-foreground selection:bg-primary/30 overflow-x-hidden">
+		<!-- Header -->
+		<header class="fixed top-0 inset-x-0 z-50 transition-all duration-500 bg-white/80 backdrop-blur-lg border-b border-border shadow-md" id="main-header">
+			<nav class="container-custom h-16 flex items-center justify-between" id="nav-container">
+				<a href="/" class="font-bold tracking-tight text-xl flex items-center gap-2 group text-primary">
+					<span>CareReceptionist</span><span class="text-secondary"> AI</span>
+				</a>
+				
+				<div class="hidden md:flex items-center gap-10 text-sm font-bold text-muted-foreground">
+					<a href="/#how" class="hover:text-secondary transition-colors relative group py-2">
+						How It Works
+						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+					</a>
+					<a href="/#pricing" class="hover:text-secondary transition-colors relative group py-2">
+						Pricing
+						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+					</a>
+					<a href="/#demo" class="hover:text-secondary transition-colors relative group py-2">
+						Demo
+						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+					</a>
+					<a href="/#contact" class="hover:text-secondary transition-colors relative group py-2">
+						Contact
+						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+					</a>
+				</div>
+				
+				<div class="hidden md:flex items-center gap-4">
+					<Button />
+				</div>
+				
+				<button class="md:hidden p-3 -mr-3 flex items-center justify-center text-primary z-[60] relative" aria-label="Toggle menu" id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">
+					<div class="w-6 h-5 relative flex flex-col justify-between">
+						<span class="w-full h-0.5 bg-current transition-all duration-300 origin-left" id="menu-bar-1"></span>
+						<span class="w-full h-0.5 bg-current transition-all duration-300"></span>
+						<span class="w-full h-0.5 bg-current transition-all duration-300 origin-left" id="menu-bar-3"></span>
+					</div>
+				</button>
+			</nav>
+
+			<!-- Mobile Menu Overlay -->
+			<div id="mobile-menu" class="fixed inset-0 z-50 invisible opacity-0 transition-all duration-300 md:hidden">
+				<div class="absolute inset-0 bg-white/95 backdrop-blur-2xl"></div>
+				<div class="relative h-full flex flex-col items-center justify-center gap-8 p-8 text-center">
+					<a href="/#how" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">How It Works</a>
+					<a href="/#pricing" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Pricing</a>
+					<a href="/#demo" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Demo</a>
+					<a href="/#contact" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Contact</a>
+					<div class="mt-4 scale-125">
+						<Button />
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="pt-32 pb-20 sm:pt-40 sm:pb-28">
+			<div class="max-w-3xl mx-auto px-5 sm:px-8">
+				<div class="reveal active">
+					<div class="mb-10">
+						<a href="/" class="text-sm text-muted-foreground hover:text-secondary transition-colors">← Back to home</a>
+						<h1 class="mt-6 text-4xl sm:text-5xl font-bold tracking-tight text-gradient">Privacy Policy</h1>
+						<p class="mt-2 text-sm text-muted-foreground">Last updated: May 2025</p>
+					</div>
+				</div>
+
+				<div class="space-y-8">
+					<div class="reveal active" style="transition-delay: 80ms">
+						<section class="glass rounded-2xl p-6 sm:p-8">
+							<h2 class="text-xl font-bold text-primary mb-3">What Information We Collect</h2>
+							<p class="text-muted-foreground leading-relaxed">
+								When you book a demo or contact us, we collect your name, email address, and phone number. This information is provided voluntarily through our booking form or direct communication.
+							</p>
+						</section>
+					</div>
+
+					<div class="reveal active" style="transition-delay: 120ms">
+						<section class="glass rounded-2xl p-6 sm:p-8">
+							<h2 class="text-xl font-bold text-primary mb-3">How We Use Your Information</h2>
+							<p class="text-muted-foreground leading-relaxed">
+								We use your contact information solely to reach out regarding your demo booking, answer your questions, and provide our AI receptionist service. We do not use your data for any other purpose without your explicit consent.
+							</p>
+						</section>
+					</div>
+
+					<div class="reveal active" style="transition-delay: 160ms">
+						<section class="glass rounded-2xl p-6 sm:p-8">
+							<h2 class="text-xl font-bold text-primary mb-3">Data Sharing</h2>
+							<p class="text-muted-foreground leading-relaxed">
+								We never sell, rent, or share your personal data with third parties for marketing or any other purpose. Your information is kept strictly confidential and is only accessible to authorized team members who need it to provide our services.
+							</p>
+						</section>
+					</div>
+
+					<div class="reveal active" style="transition-delay: 200ms">
+						<section class="glass rounded-2xl p-6 sm:p-8">
+							<h2 class="text-xl font-bold text-primary mb-3">Contact Us</h2>
+							<p class="text-muted-foreground leading-relaxed">
+								If you have any questions about this privacy policy or how we handle your data, please contact us at: 
+								<a href="mailto:vikas.p.2706@gmail.com" class="text-secondary hover:underline font-semibold ml-1">vikas.p.2706@gmail.com</a>
+							</p>
+						</section>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!-- Footer -->
+		<footer class="bg-primary text-white py-20 mt-20">
+			<div class="container-custom flex flex-col md:flex-row md:items-center md:justify-between gap-12">
+				<div class="max-w-xs">
+					<div class="font-bold tracking-tight text-2xl">
+						<span>CareReceptionist</span><span class="text-secondary"> AI</span>
+					</div>
+					<p class="text-sm text-white/70 mt-4 leading-relaxed">
+						HIPAA-secure voice AI for US dental clinics. Never miss a patient call again.
+					</p>
+				</div>
+				
+				<div class="flex flex-wrap gap-x-12 gap-y-6 text-sm font-bold">
+					<div class="flex flex-col gap-4">
+						<span class="text-accent uppercase tracking-wider text-xs font-bold">Product</span>
+						<a href="/#how" class="text-white/70 hover:text-white transition-colors">How It Works</a>
+						<a href="/#pricing" class="text-white/70 hover:text-white transition-colors">Pricing</a>
+						<a href="/#demo" class="text-white/70 hover:text-white transition-colors">Demo</a>
+					</div>
+					<div class="flex flex-col gap-4">
+						<span class="text-accent uppercase tracking-wider text-xs font-bold">Company</span>
+						<a href="/privacy" class="text-white hover:text-white transition-colors">Privacy Policy</a>
+						<a href="/contact" class="text-white/70 hover:text-white transition-colors">Contact</a>
+					</div>
+				</div>
+			</div>
+			
+			<div class="container-custom mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/50">
+				<div>© 2026 CareReceptionist AI. All rights reserved.</div>
+				<div>Built by Vikas.</div>
+			</div>
+		</footer>
+	</div>
+</Layout>
+
+<script>
+	// Mobile Menu Toggle
+	const mobileMenuButton = document.getElementById('mobile-menu-button');
+	const mobileMenu = document.getElementById('mobile-menu');
+	const mobileLinks = document.querySelectorAll('.mobile-link');
+	const menuBars = [
+		document.getElementById('menu-bar-1'),
+		document.querySelector('.w-full.h-0.5.bg-current.transition-all.duration-300:not(#menu-bar-1):not(#menu-bar-3)'),
+		document.getElementById('menu-bar-3')
+	];
+
+	function toggleMenu() {
+		const isExpanded = mobileMenuButton?.getAttribute('aria-expanded') === 'true';
+		mobileMenuButton?.setAttribute('aria-expanded', (!isExpanded).toString());
+		
+		if (!isExpanded) {
+			mobileMenu?.classList.remove('invisible', 'opacity-0');
+			mobileMenu?.classList.add('visible', 'opacity-100');
+			document.body.style.overflow = 'hidden';
+			menuBars[0]?.classList.add('rotate-45', 'translate-y-[9px]');
+			menuBars[1]?.classList.add('opacity-0', 'translate-x-2');
+			menuBars[2]?.classList.add('-rotate-45', '-translate-y-[9px]');
+		} else {
+			mobileMenu?.classList.add('invisible', 'opacity-0');
+			mobileMenu?.classList.remove('visible', 'opacity-100');
+			document.body.style.overflow = '';
+			menuBars[0]?.classList.remove('rotate-45', 'translate-y-[9px]');
+			menuBars[1]?.classList.remove('opacity-0', 'translate-x-2');
+			menuBars[2]?.classList.remove('-rotate-45', '-translate-y-[9px]');
+		}
+	}
+
+	mobileMenuButton?.addEventListener('click', toggleMenu);
+	mobileLinks.forEach(link => {
+		link.addEventListener('click', () => {
+			if (mobileMenuButton?.getAttribute('aria-expanded') === 'true') {
+				toggleMenu();
+			}
+		});
+	});
+</script>
+
+<style>
+	.reveal {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+	}
+
+	.reveal.active {
+		opacity: 1;
+		transform: translateY(0);
+	}
+</style>
