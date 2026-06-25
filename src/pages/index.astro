@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button.astro';
 import FeatureCard from '../components/FeatureCard.astro';
 import FAQItem from '../components/FAQItem.astro';
+import ResultsROI from '../components/ResultsROI.tsx';
+import RevenueCalculator from '../components/RevenueCalculator.tsx';
 ---
 
 <Layout>
@@ -162,6 +164,12 @@ import FAQItem from '../components/FAQItem.astro';
 					</div>
 				</div>
 			</section>
+
+			<!-- Results & ROI Section -->
+			<ResultsROI client:visible />
+
+			<!-- Missed Call Revenue Calculator & ROI Statement Section -->
+			<RevenueCalculator client:visible />
 
 			<!-- Safety Net Section -->
 			<section class="py-14 sm:py-28 bg-muted/30 border-y border-border">
