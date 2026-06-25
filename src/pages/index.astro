@@ -7,6 +7,7 @@ import ResultsROI from '../components/ResultsROI.tsx';
 import RevenueCalculator from '../components/RevenueCalculator.tsx';
 import Testimonials from '../components/Testimonials.tsx';
 import { PricingSection } from '../components/PricingSection.tsx';
+import { FinalCTA } from '../components/FinalCTA.tsx';
 ---
 
 <Layout>
@@ -334,21 +335,8 @@ import { PricingSection } from '../components/PricingSection.tsx';
 				</div>
 			</section>
 
-			<!-- CTA Section -->
-			<section id="cta" class="py-14 sm:py-28 scroll-mt-24">
-				<div class="container-custom max-w-4xl">
-					<div class="reveal relative bg-primary rounded-3xl p-10 sm:p-20 text-center overflow-hidden shadow-2xl">
-						<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_70%)] pointer-events-none"></div>
-						<div class="relative">
-							<h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight">Ready to Stop Missing Patients?</h2>
-							<p class="mt-6 text-white/80 max-w-xl mx-auto text-lg leading-relaxed font-medium">Book a free 10-minute demo. See exactly how our warm, empathetic AI handles your clinic's calls.</p>
-							<div class="mt-10">
-								<Button title="Book Your Free Demo" />
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+			<!-- Final CTA Section -->
+			<FinalCTA client:visible />
 		</main>
 
 		<!-- Footer -->
