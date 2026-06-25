@@ -22,7 +22,7 @@ const testimonials: TestimonialItem[] = [
     text: (
       <>
         "Since implementing CareReceptionist AI,{' '}
-        <span className="text-purple-600 font-semibold bg-purple-50 px-1.5 py-0.5 rounded">
+        <span className="text-secondary font-semibold">
           we haven't missed a single new patient call
         </span>
         . Our front desk finally has time to focus on patients instead of constantly answering the phone."
@@ -39,11 +39,11 @@ const testimonials: TestimonialItem[] = [
     text: (
       <>
         "Our scheduling has become{' '}
-        <span className="text-purple-600 font-semibold bg-purple-50 px-1.5 py-0.5 rounded">
+        <span className="text-secondary font-semibold">
           incredibly efficient
         </span>
         . Patients love getting{' '}
-        <span className="text-purple-600 font-semibold bg-purple-50 px-1.5 py-0.5 rounded">
+        <span className="text-secondary font-semibold">
           immediate responses
         </span>
         , even after office hours."
@@ -60,7 +60,7 @@ const testimonials: TestimonialItem[] = [
     text: (
       <>
         "The ROI was obvious within the first month. Recovering just a few missed calls{' '}
-        <span className="text-purple-600 font-semibold bg-purple-50 px-1.5 py-0.5 rounded">
+        <span className="text-secondary font-semibold">
           more than paid for the service
         </span>
         ."
@@ -69,24 +69,40 @@ const testimonials: TestimonialItem[] = [
   },
 ];
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
+  },
+};
+
 export const Testimonials: React.FC = () => {
   return (
-    <section id="testimonials" className="py-20 sm:py-32 bg-white relative overflow-hidden">
-      {/* Background Decorative Element */}
-      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-3xl pointer-events-none -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
+    <section id="testimonials" className="section-padding bg-white relative overflow-hidden">
+      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-3xl pointer-events-none -translate-y-1/2" />
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-custom relative z-10">
-        {/* Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16 sm:mb-24">
+        <div className="section-header">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 rounded-full bg-purple-500/10 border border-purple-500/20 px-4 py-1.5 text-xs font-bold text-purple-600 mb-6 uppercase tracking-wider"
+            className="badge mb-6"
           >
-            TRUSTED BY MODERN DENTAL PRACTICES
+            Trusted by Modern Dental Practices
           </motion.div>
 
           <motion.h2
@@ -94,38 +110,38 @@ export const Testimonials: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 leading-tight"
+            className="text-4xl sm:text-5xl font-extrabold tracking-tight text-primary leading-tight"
           >
-            See why dental teams love CareReceptionist AI.
+            Trusted by leading dental practices.
           </motion.h2>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="mt-4 text-slate-500 text-lg max-w-2xl mx-auto"
+            className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto"
           >
             Helping practices answer every call, recover missed revenue, and reduce front-desk workload.
           </motion.p>
         </div>
 
-        {/* Testimonials Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-50px' }}
+          className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto items-stretch"
+        >
           {testimonials.map((item, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.7, delay: i * 0.15, ease: [0.16, 1, 0.3, 1] }}
-              whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className="glass flex flex-col justify-between p-8 rounded-3xl relative overflow-hidden transition-all duration-300 border border-white/50 shadow-lg hover:shadow-xl bg-white/40"
+              variants={cardVariants}
+              whileHover={{ y: -6, transition: { duration: 0.3 } }}
+              className="card-premium flex flex-col justify-between p-7 sm:p-8 relative overflow-hidden"
             >
-              {/* Card content */}
               <div>
-                {/* Stars Rating */}
-                <div className="flex gap-1 mb-6">
+                <div className="flex gap-1 mb-5">
                   {[...Array(item.rating)].map((_, index) => (
                     <svg
                       key={index}
@@ -138,35 +154,33 @@ export const Testimonials: React.FC = () => {
                   ))}
                 </div>
 
-                {/* Review Text */}
-                <p className="text-slate-700 text-sm sm:text-base leading-relaxed italic mb-8">
+                <p className="text-foreground text-sm sm:text-base leading-relaxed mb-8">
                   {item.text}
                 </p>
               </div>
 
-              {/* Dentist Profile footer info */}
-              <div className="flex items-center gap-4 pt-6 border-t border-slate-100/60 mt-auto">
+              <div className="flex items-center gap-4 pt-5 border-t border-border/60 mt-auto">
                 <img
                   src={item.avatar}
                   alt={`${item.name}, ${item.credentials}`}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-purple-500/20"
+                  className="w-11 h-11 rounded-full object-cover border-2 border-secondary/20"
                   loading="lazy"
                 />
                 <div>
-                  <div className="font-bold text-slate-900 text-base leading-tight">
-                    {item.name}, <span className="text-sm font-semibold text-slate-500">{item.credentials}</span>
+                  <div className="font-bold text-foreground text-sm leading-tight">
+                    {item.name}, <span className="text-sm font-medium text-muted-foreground">{item.credentials}</span>
                   </div>
-                  <div className="text-xs text-slate-500 font-medium mt-0.5">
+                  <div className="text-xs text-muted-foreground font-medium mt-0.5">
                     {item.practice}
                   </div>
-                  <div className="text-[10px] text-purple-600 font-bold uppercase tracking-wider">
+                  <div className="text-[10px] text-secondary font-bold uppercase tracking-wider">
                     {item.location}
                   </div>
                 </div>
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

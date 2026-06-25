@@ -9,7 +9,7 @@ const features = [
   "Emergency Call Routing",
   "SMS Follow-ups",
   "Call Recording & Analytics",
-  "HIPAA-conscious architecture",
+  "HIPAA-conscious Architecture",
   "Custom AI Training",
   "English Support",
   "Monthly Performance Reports",
@@ -26,7 +26,6 @@ const pills = [
 ];
 
 export const PricingSection: React.FC = () => {
-  // SVG path drawing variants for the checkmarks
   const checkmarkPathVariants = {
     hidden: { pathLength: 0 },
     visible: {
@@ -38,7 +37,6 @@ export const PricingSection: React.FC = () => {
     }
   };
 
-  // Staggered list container variants
   const listContainerVariants = {
     hidden: {},
     visible: {
@@ -49,7 +47,6 @@ export const PricingSection: React.FC = () => {
     }
   };
 
-  // Individual list item fade+slide variants
   const listItemVariants = {
     hidden: { opacity: 0, x: -10 },
     visible: {
@@ -63,24 +60,19 @@ export const PricingSection: React.FC = () => {
   };
 
   return (
-    <section id="pricing" className="relative py-24 sm:py-36 scroll-mt-24 overflow-hidden bg-slate-50">
-      {/* Premium background grid & radial glow effects */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_40%,#000_70%,transparent_100%)] opacity-35 pointer-events-none" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[350px] bg-blue-500/10 blur-[130px] rounded-full pointer-events-none animate-pulse-slow" />
-      <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none" />
+    <section id="pricing" className="relative section-padding scroll-mt-24 overflow-hidden bg-white">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_40%,#000_70%,transparent_100%)] opacity-20 pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[350px] bg-secondary/10 blur-[130px] rounded-full pointer-events-none" />
 
       <div className="container-custom max-w-5xl relative z-10">
-        
-        {/* Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16 sm:mb-20">
+        <div className="section-header">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 border border-blue-500/20 px-4 py-1.5 text-xs font-semibold text-blue-600 mb-6 shadow-sm"
+            className="badge mb-6"
           >
-            <span className="flex h-1.5 w-1.5 rounded-full bg-blue-500 animate-pulse" />
             Pricing Plans
           </motion.div>
 
@@ -89,56 +81,47 @@ export const PricingSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-[1.1] mb-6"
+            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-primary leading-[1.1] mb-6"
           >
-            Simple Pricing.<br className="hidden sm:inline" />
-            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Powerful Results.</span>
+            Simple Pricing.{' '}
+            <span className="text-gradient">Powerful Results.</span>
           </motion.h2>
 
-          {/* Subheadline Items */}
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mt-6 flex flex-wrap justify-center items-center gap-x-6 gap-y-3 text-sm sm:text-base font-semibold text-slate-500"
+            className="mt-6 flex flex-wrap justify-center items-center gap-x-6 gap-y-3 text-sm sm:text-base font-semibold text-muted-foreground"
           >
             <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+              <span className="w-1.5 h-1.5 rounded-full bg-secondary" />
               One transparent monthly price
             </span>
             <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+              <span className="w-1.5 h-1.5 rounded-full bg-secondary" />
               No hidden fees
             </span>
             <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-              No contracts
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+              <span className="w-1.5 h-1.5 rounded-full bg-secondary" />
               Cancel anytime
             </span>
           </motion.div>
         </div>
 
-        {/* ONE Premium Pricing Card */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="relative mx-auto max-w-3xl rounded-3xl p-[1px] bg-gradient-to-br from-blue-500 via-indigo-600 to-emerald-500 shadow-[0_20px_50px_rgba(59,130,246,0.15)] hover:scale-[1.01] hover:shadow-[0_30px_60px_rgba(59,130,246,0.25)] transition-all duration-500 group/card"
+          className="relative mx-auto max-w-3xl rounded-2xl p-[1px] bg-gradient-to-br from-secondary via-primary to-accent/60 shadow-[0_20px_50px_rgba(59,130,246,0.15)] hover:scale-[1.01] hover:shadow-[0_30px_60px_rgba(59,130,246,0.25)] transition-all duration-500 group/card"
         >
-          {/* Card Inner Background */}
-          <div className="relative bg-slate-950 rounded-[23px] p-6 sm:p-12 text-white overflow-hidden">
-            {/* Spotlight Glows inside card */}
-            <div className="absolute -right-24 -top-24 w-[350px] h-[350px] bg-blue-500/10 blur-[90px] rounded-full pointer-events-none transition-opacity duration-500 group-hover/card:opacity-100 opacity-80" />
-            <div className="absolute -left-24 -bottom-24 w-[350px] h-[350px] bg-emerald-500/5 blur-[90px] rounded-full pointer-events-none transition-opacity duration-500 group-hover/card:opacity-100 opacity-60" />
+          <div className="relative bg-primary rounded-[calc(1rem-1px)] p-6 sm:p-12 text-white overflow-hidden">
+            <div className="absolute -right-24 -top-24 w-[350px] h-[350px] bg-secondary/10 blur-[90px] rounded-full pointer-events-none transition-opacity duration-500 group-hover/card:opacity-100 opacity-80" />
+            <div className="absolute -left-24 -bottom-24 w-[350px] h-[350px] bg-accent/5 blur-[90px] rounded-full pointer-events-none transition-opacity duration-500 group-hover/card:opacity-100 opacity-60" />
 
-            {/* Float Badge */}
             <div className="absolute top-0 right-1/2 translate-x-1/2 -translate-y-1/2 sm:right-12 sm:translate-x-0">
-              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-black tracking-widest text-white uppercase bg-gradient-to-r from-blue-500 via-indigo-500 to-emerald-500 shadow-lg shadow-blue-500/35 border border-white/10 select-none animate-pulse-slow">
+              <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-black tracking-widest text-white uppercase bg-gradient-to-r from-secondary to-primary shadow-lg shadow-secondary/35 border border-white/10 select-none">
                 <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                 </svg>
@@ -146,47 +129,43 @@ export const PricingSection: React.FC = () => {
               </span>
             </div>
 
-            {/* Plan Title & Subtitle */}
             <div className="text-center sm:text-left">
               <h3 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
                 CareReceptionist AI
               </h3>
-              <p className="mt-2 text-sm text-slate-400 font-medium">
+              <p className="mt-2 text-sm text-white/60 font-medium">
                 Comprehensive clinic voice automation, custom-trained and fully managed.
               </p>
             </div>
 
-            {/* Price Section */}
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-6 p-6 rounded-2xl bg-white/[0.02] border border-white/5 backdrop-blur-md relative z-10">
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-6 p-6 rounded-xl bg-white/[0.02] border border-white/5 backdrop-blur-md relative z-10">
               <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
                 <span className="text-3xl sm:text-4xl font-black text-white tracking-tight">$199</span>
-                <span className="text-xs text-slate-400 font-bold uppercase tracking-wider mt-1">One-time setup</span>
+                <span className="text-xs text-white/50 font-bold uppercase tracking-wider mt-1">One-time setup</span>
               </div>
-              
+
               <div className="flex items-center justify-center select-none">
-                <span className="px-3 py-1.5 rounded-full text-xs font-black bg-white/5 text-slate-300 border border-white/10 uppercase tracking-widest text-center shadow-inner">
+                <span className="px-3 py-1.5 rounded-full text-xs font-black bg-white/5 text-white/50 border border-white/10 uppercase tracking-widest text-center shadow-inner">
                   Then
                 </span>
               </div>
 
               <div className="flex flex-col items-center sm:items-end text-center sm:text-right">
-                <span className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-white tracking-tight">
-                  $699<span className="text-lg text-slate-400 font-bold tracking-normal">/month</span>
+                <span className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-secondary to-white tracking-tight">
+                  $699<span className="text-lg text-white/50 font-bold tracking-normal">/month</span>
                 </span>
-                <span className="text-xs text-emerald-400 font-semibold mt-1 flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
+                <span className="text-xs text-accent font-semibold mt-1 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent animate-ping" />
                   All-inclusive voice & data
                 </span>
               </div>
             </div>
 
-            {/* Gradient Line Divider */}
-            <div className="my-10 h-px bg-gradient-to-r from-transparent via-slate-800 to-transparent" />
+            <div className="my-10 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
-            {/* Feature List */}
             <div className="relative z-10">
-              <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6 text-center sm:text-left">
-                Included Features
+              <h4 className="text-xs font-bold text-white/50 uppercase tracking-widest mb-6 text-center sm:text-left">
+                Everything Included
               </h4>
               <motion.div
                 variants={listContainerVariants}
@@ -201,7 +180,7 @@ export const PricingSection: React.FC = () => {
                     variants={listItemVariants}
                     className="flex items-start gap-3.5 group/item py-0.5"
                   >
-                    <div className="flex-shrink-0 w-5.5 h-5.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 flex items-center justify-center text-emerald-400 mt-0.5 group-hover/item:scale-110 group-hover/item:bg-emerald-500/20 group-hover/item:border-emerald-400 transition-all duration-300">
+                    <div className="flex-shrink-0 w-5.5 h-5.5 rounded-full bg-accent/10 border border-accent/25 flex items-center justify-center text-accent mt-0.5 group-hover/item:scale-110 group-hover/item:bg-accent/20 group-hover/item:border-accent/40 transition-all duration-300">
                       <svg className="w-3.5 h-3.5 stroke-[3.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <motion.path
                           variants={checkmarkPathVariants}
@@ -211,7 +190,7 @@ export const PricingSection: React.FC = () => {
                         />
                       </svg>
                     </div>
-                    <span className="text-sm font-medium text-slate-300 group-hover/item:text-white transition-colors duration-300">
+                    <span className="text-sm font-medium text-white/70 group-hover/item:text-white transition-colors duration-300">
                       {feature}
                     </span>
                   </motion.div>
@@ -219,59 +198,56 @@ export const PricingSection: React.FC = () => {
               </motion.div>
             </div>
 
-            {/* Estimated ROI Box */}
-            <div className="mt-10 p-5 rounded-2xl bg-gradient-to-r from-blue-950/30 to-indigo-950/30 border border-blue-900/30 relative z-10 hover:border-blue-800/40 transition-colors duration-300">
+            <div className="mt-10 p-5 rounded-xl bg-gradient-to-r from-secondary/10 to-primary/10 border border-secondary/20 relative z-10 hover:border-secondary/30 transition-colors duration-300">
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-blue-500/10 border border-blue-500/25 flex items-center justify-center text-blue-400">
+                <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-secondary/10 border border-secondary/25 flex items-center justify-center text-secondary">
                   <svg className="w-5.5 h-5.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-blue-300 uppercase tracking-wider">Estimated ROI</h4>
-                  <p className="mt-1.5 text-sm text-slate-300 leading-relaxed font-medium">
-                    Recover just <span className="text-white font-extrabold underline decoration-blue-400 decoration-2 underline-offset-4">ONE new patient</span> each month and CareReceptionist AI typically pays for itself.
+                  <h4 className="text-sm font-bold text-secondary uppercase tracking-wider">Estimated ROI</h4>
+                  <p className="mt-1.5 text-sm text-white/70 leading-relaxed font-medium">
+                    Recover just <span className="text-white font-extrabold underline decoration-secondary decoration-2 underline-offset-4">ONE new patient</span> each month and CareReceptionist AI typically pays for itself.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Two Highlighted Boxes */}
             <div className="mt-6 grid sm:grid-cols-2 gap-4 relative z-10">
-              <div className="p-5 rounded-2xl bg-white/[0.01] border border-white/5 hover:border-slate-800 hover:bg-white/[0.03] transition-all duration-300 flex items-center gap-4 group/box">
-                <div className="w-11 h-11 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover/box:scale-105 transition-transform duration-300">
+              <div className="p-5 rounded-xl bg-white/[0.01] border border-white/5 hover:border-white/10 hover:bg-white/[0.03] transition-all duration-300 flex items-center gap-4 group/box">
+                <div className="w-11 h-11 rounded-xl bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary group-hover/box:scale-105 transition-transform duration-300">
                   <svg className="w-5.5 h-5.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
                 <div>
-                  <span className="text-xs text-slate-400 font-bold uppercase tracking-wider block">Launch Time</span>
+                  <span className="text-xs text-white/50 font-bold uppercase tracking-wider block">Launch Time</span>
                   <span className="text-sm sm:text-base font-extrabold text-white">Live in under 7 days</span>
                 </div>
               </div>
-              
-              <div className="p-5 rounded-2xl bg-white/[0.01] border border-white/5 hover:border-slate-800 hover:bg-white/[0.03] transition-all duration-300 flex items-center gap-4 group/box">
-                <div className="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover/box:scale-105 transition-transform duration-300">
+
+              <div className="p-5 rounded-xl bg-white/[0.01] border border-white/5 hover:border-white/10 hover:bg-white/[0.03] transition-all duration-300 flex items-center gap-4 group/box">
+                <div className="w-11 h-11 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent group-hover/box:scale-105 transition-transform duration-300">
                   <svg className="w-5.5 h-5.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
                 <div>
-                  <span className="text-xs text-slate-400 font-bold uppercase tracking-wider block">Support</span>
+                  <span className="text-xs text-white/50 font-bold uppercase tracking-wider block">Support</span>
                   <span className="text-sm sm:text-base font-extrabold text-white">Priority email support</span>
                 </div>
               </div>
             </div>
 
-            {/* Large CTA Button */}
             <div className="mt-10 relative z-10">
               <a
                 href="https://calendly.com/vikas-p-2706/30min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative group/btn overflow-hidden w-full inline-flex items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-blue-500 via-indigo-600 to-emerald-500 p-[2px] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(99,102,241,0.25)] active:scale-[0.98]"
+                className="relative group/btn overflow-hidden w-full inline-flex items-center justify-center gap-3 rounded-xl bg-gradient-to-r from-secondary to-primary p-[2px] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(59,130,246,0.25)] active:scale-[0.98]"
               >
-                <span className="w-full bg-slate-950/90 group-hover/btn:bg-transparent transition-colors duration-300 rounded-[14px] px-8 py-5 text-base sm:text-lg font-black tracking-wide text-white flex items-center justify-center gap-2">
+                <span className="w-full bg-primary/90 group-hover/btn:bg-transparent transition-colors duration-300 rounded-[10px] px-8 py-5 text-base sm:text-lg font-black tracking-wide text-white flex items-center justify-center gap-2">
                   Book Your Free Demo
                   <svg className="w-5 h-5 transform transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -279,22 +255,20 @@ export const PricingSection: React.FC = () => {
                 </span>
               </a>
             </div>
-
           </div>
         </motion.div>
 
-        {/* Premium Badges below Card */}
-        <div className="mt-20 flex flex-wrap justify-center items-center gap-3.5 max-w-3xl mx-auto">
+        <div className="mt-10 flex flex-wrap justify-center items-center gap-3 max-w-3xl mx-auto">
           {pills.map((badge, i) => (
             <motion.span
               key={i}
-              initial={{ opacity: 0, y: 15 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="inline-flex items-center gap-2.5 px-4.5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white border border-slate-100 shadow-sm text-slate-800 hover:border-blue-300 hover:shadow-[0_4px_12px_rgba(59,130,246,0.06)] hover:-translate-y-0.5 transition-all duration-300 cursor-default"
+              transition={{ duration: 0.4, delay: i * 0.06 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold bg-white border border-border/60 text-muted-foreground hover:border-secondary/30 hover:text-foreground hover:-translate-y-0.5 transition-all duration-300 cursor-default"
             >
-              <svg className="w-4 h-4 text-blue-500 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <svg className="w-4 h-4 text-secondary flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d={badge.icon} />
               </svg>
               {badge.text}
@@ -302,6 +276,15 @@ export const PricingSection: React.FC = () => {
           ))}
         </div>
 
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mt-10 text-center text-xs text-muted-foreground/60"
+        >
+          Fast onboarding. Secure infrastructure. Transparent pricing.
+        </motion.p>
       </div>
     </section>
   );

@@ -11,15 +11,15 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 ---
 
 <Layout>
-	<div id="top" class="min-h-screen bg-background text-foreground selection:bg-primary/30 overflow-x-hidden">
+	<div id="top" class="min-h-screen bg-background text-foreground selection:bg-secondary/20 overflow-x-hidden">
 		<!-- Header -->
 		<header class="fixed top-0 inset-x-0 z-50 transition-all duration-500 bg-transparent border-b border-transparent" id="main-header">
 			<nav class="container-custom h-20 flex items-center justify-between transition-all duration-500" id="nav-container">
-				<a href="#top" class="font-bold tracking-tight text-xl flex items-center gap-2 group text-primary">
+				<a href="#top" class="font-extrabold tracking-tight text-xl flex items-center gap-2 group text-primary">
 					<span>CareReceptionist</span><span class="text-secondary"> AI</span>
 				</a>
-				
-				<div class="hidden md:flex items-center gap-10 text-sm font-bold text-muted-foreground">
+
+				<div class="hidden md:flex items-center gap-10 text-sm font-semibold text-muted-foreground">
 					<a href="/#how" class="hover:text-secondary transition-colors relative group py-2">
 						How It Works
 						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
@@ -28,8 +28,8 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 						Pricing
 						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
 					</a>
-					<a href="/#demo" class="hover:text-secondary transition-colors relative group py-2">
-						Demo
+					<a href="/#features" class="hover:text-secondary transition-colors relative group py-2">
+						Features
 						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
 					</a>
 					<a href="/#contact" class="hover:text-secondary transition-colors relative group py-2">
@@ -37,11 +37,11 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
 					</a>
 				</div>
-				
+
 				<div class="hidden md:flex items-center gap-4">
 					<Button />
 				</div>
-				
+
 				<button class="md:hidden p-3 -mr-3 flex items-center justify-center text-primary z-[60] relative" aria-label="Toggle menu" id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">
 					<div class="w-6 h-5 relative flex flex-col justify-between">
 						<span class="w-full h-0.5 bg-current transition-all duration-300 origin-left" id="menu-bar-1"></span>
@@ -51,13 +51,12 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 				</button>
 			</nav>
 
-			<!-- Mobile Menu Overlay -->
 			<div id="mobile-menu" class="fixed inset-0 z-50 invisible opacity-0 transition-all duration-300 md:hidden">
 				<div class="absolute inset-0 bg-white/95 backdrop-blur-2xl"></div>
 				<div class="relative h-full flex flex-col items-center justify-center gap-8 p-8 text-center">
 					<a href="#how" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">How It Works</a>
 					<a href="#pricing" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Pricing</a>
-					<a href="#demo" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Demo</a>
+					<a href="#features" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Features</a>
 					<a href="#contact" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Contact</a>
 					<div class="mt-4 scale-125">
 						<Button />
@@ -68,44 +67,65 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 
 		<main>
 			<!-- Hero Section -->
-			<section class="relative pt-32 pb-14 sm:pt-48 sm:pb-28 overflow-hidden bg-white">
-				<div class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_-20%,rgba(59,130,246,0.05),transparent_70%)]"></div>
-				
+			<section class="relative pt-36 pb-20 sm:pt-52 sm:pb-32 overflow-hidden bg-white">
+				<div class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_-20%,rgba(59,130,246,0.06),transparent_70%)]"></div>
+
 				<div class="relative container-custom grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 					<div class="flex flex-col items-start reveal">
 						<div class="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-semibold text-secondary mb-6">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check w-3.5 h-3.5"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
 							Built for high-end US dental clinics
 						</div>
-						
-						<h1 class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] text-primary">
-							The Warmest Voice in <span class="text-secondary">Dental Reception.</span>
+
+						<h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] text-primary">
+							Never Miss a<br />
+							<span class="text-secondary">New Patient</span> Again.
 						</h1>
-						
+
 						<p class="mt-6 text-lg sm:text-xl text-muted-foreground max-w-xl leading-relaxed">
-							Stop losing patients to missed calls. Our AI sounds like your best staff member, handles bookings 24/7, and knows exactly when to hand off to a human.
+							24/7 AI receptionist that answers every call, books appointments automatically, and knows exactly when to hand off to your team.
 						</p>
-						
+
 						<div class="mt-8 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
 							<Button title="Book a Free Demo" />
-							<a href="#demo" class="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-white px-8 py-4 text-base font-semibold text-primary hover:bg-muted transition-all hover:scale-[1.02] active:scale-[0.98]">
+							<a href="#demo" class="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-border bg-white px-8 py-3.5 text-base font-semibold text-foreground hover:border-secondary/40 hover:text-secondary hover:bg-secondary/5 transition-all hover:scale-[1.02] active:scale-[0.98]">
 								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play w-4 h-4 fill-current"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"></path></svg>
-								Watch Demo Video
+								Watch Demo
 							</a>
 						</div>
+
+						<!-- Trust signals below hero CTA -->
+						<div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-muted-foreground font-medium">
+							<span class="flex items-center gap-1.5">
+								<svg class="w-3.5 h-3.5 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+								HIPAA-conscious
+							</span>
+							<span class="flex items-center gap-1.5">
+								<svg class="w-3.5 h-3.5 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+								Live in 7 Days
+							</span>
+							<span class="flex items-center gap-1.5">
+								<svg class="w-3.5 h-3.5 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+								24/7 Coverage
+							</span>
+							<span class="flex items-center gap-1.5">
+								<svg class="w-3.5 h-3.5 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+								No Contracts
+							</span>
+						</div>
 					</div>
-					
+
 					<div class="relative lg:block reveal" style="transition-delay: 200ms">
-						<div class="relative bg-white rounded-3xl p-6 shadow-2xl border border-border group overflow-hidden">
-							<div class="rounded-2xl w-full aspect-[4/3] bg-gradient-to-br from-primary via-primary/95 to-secondary/20 flex items-center justify-center overflow-hidden relative group-hover:scale-[1.02] transition-transform duration-700">
-								<img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800" alt="Dental clinic" class="w-full h-full object-cover" />
+						<div class="relative bg-white rounded-2xl p-6 shadow-2xl border border-border/80 group overflow-hidden">
+							<div class="rounded-xl w-full aspect-[4/3] bg-gradient-to-br from-primary via-primary/95 to-secondary/20 flex items-center justify-center overflow-hidden relative group-hover:scale-[1.02] transition-transform duration-700">
+								<img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800" alt="Dental clinic" class="w-full h-full object-cover" loading="lazy" />
 							</div>
 							<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent pointer-events-none"></div>
-							
-							<div class="absolute top-10 -right-4 glass p-4 rounded-2xl shadow-xl animate-bounce-slow">
+
+							<div class="absolute top-6 -right-3 glass p-3.5 rounded-xl shadow-xl animate-bounce-slow">
 								<div class="flex items-center gap-3">
-									<div class="w-10 h-10 rounded-full bg-accent flex items-center justify-center">
-										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+									<div class="w-9 h-9 rounded-full bg-accent flex items-center justify-center">
+										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
 									</div>
 									<div>
 										<div class="text-[10px] text-muted-foreground uppercase font-bold tracking-wider">Patient Experience</div>
@@ -118,18 +138,18 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 				</div>
 			</section>
 
-			<!-- Compliance Bar -->
-			<div class="bg-primary py-4">
-				<div class="container-custom flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 text-white/90 text-sm font-medium">
-					<div class="flex items-center gap-2">
+			<!-- Trust Strip -->
+			<div class="bg-primary py-5">
+				<div class="container-custom flex flex-col md:flex-row items-center justify-center gap-8 md:gap-14 text-white/80 text-sm font-medium">
+					<div class="flex items-center gap-2.5">
 						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
 						<span>HIPAA Compliant Infrastructure</span>
 					</div>
-					<div class="flex items-center gap-2">
+					<div class="flex items-center gap-2.5">
 						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
 						<span>We Sign BAA Agreements</span>
 					</div>
-					<div class="flex items-center gap-2">
+					<div class="flex items-center gap-2.5">
 						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
 						<span>256-bit Secure Encryption</span>
 					</div>
@@ -137,33 +157,39 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 			</div>
 
 			<!-- How It Works Section -->
-			<section id="how" class="py-14 sm:py-28 scroll-mt-24">
+			<section id="how" class="section-padding bg-muted/30 scroll-mt-24">
 				<div class="container-custom">
-					<div class="reveal max-w-3xl mx-auto text-center mb-14">
-						<div class="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-semibold text-secondary mb-5">
-							Process
+					<div class="section-header">
+						<div class="reveal">
+							<div class="badge mb-5">
+								Process
+							</div>
+							<h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary">Your AI Receptionist, Live in Under a Week</h2>
+							<p class="mt-4 text-muted-foreground text-lg">From kickoff to a fully booked schedule — without changing your phone number.</p>
 						</div>
-						<h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-primary">How CareReceptionist AI Works</h2>
-						<p class="mt-4 text-muted-foreground text-lg">From kickoff to a fully booked schedule — in less than a week.</p>
 					</div>
 
-					<div class="grid md:grid-cols-3 gap-8">
-						{[
-							{ id: '01', title: 'We build your AI in under a week', desc: "Trained on your clinic's services, hours, providers, and practice management software.", icon: 'sparkles' },
-							{ id: '02', title: 'Patients call your existing number', desc: "No port-overs, no new lines. The AI picks up instantly — any hour, any day.", icon: 'phone' },
-							{ id: '03', title: 'Appointments book themselves', desc: "Slots go straight into your calendar. Your team walks in to a full schedule.", icon: 'calendar' }
-						].map((step, i) => (
-							<div class="reveal bg-white rounded-2xl p-8 h-full relative group border border-border hover:border-secondary/30 transition-all hover:-translate-y-1 shadow-sm" style={`transition-delay: ${(i + 1) * 100}ms`}>
-								<div class="absolute top-5 right-5 text-xs font-mono font-bold text-secondary/50">{step.id}</div>
-								<div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center mb-6 shadow-lg text-white group-hover:scale-110 transition-transform">
-									{step.icon === 'sparkles' && <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg>}
-									{step.icon === 'phone' && <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2a9 9 0 0 1 9 9"></path><path d="M13 6a5 5 0 0 1 5 5"></path><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>}
-									{step.icon === 'calendar' && <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="m9 16 2 2 4-4"></path></svg>}
+					<div class="grid md:grid-cols-3 gap-6">
+						{[...Array(3)].map((_, i) => {
+							const steps = [
+								{ id: '01', title: 'We train your AI', desc: "Trained on your clinic's services, hours, providers, and practice management software.", icon: 'sparkles' },
+								{ id: '02', title: 'Calls flow to your number', desc: "No port-overs, no new lines. The AI picks up instantly — any hour, any day.", icon: 'phone' },
+								{ id: '03', title: 'Appointments book themselves', desc: "Slots go straight into your calendar. Your team walks in to a full schedule.", icon: 'calendar' }
+							];
+							const step = steps[i];
+							return (
+								<div class="reveal card-premium p-8 relative group hover:-translate-y-1.5" style={`transition-delay: ${(i + 1) * 100}ms`}>
+									<div class="absolute top-5 right-5 text-xs font-mono font-bold text-secondary/40">{step.id}</div>
+									<div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center mb-6 shadow-lg text-white group-hover:scale-110 transition-transform duration-500">
+										{step.icon === 'sparkles' && <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg>}
+										{step.icon === 'phone' && <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2a9 9 0 0 1 9 9"></path><path d="M13 6a5 5 0 0 1 5 5"></path><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>}
+										{step.icon === 'calendar' && <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="m9 16 2 2 4-4"></path></svg>}
+									</div>
+									<h3 class="font-bold text-xl text-primary">{step.title}</h3>
+									<p class="mt-3 text-sm text-muted-foreground leading-relaxed">{step.desc}</p>
 								</div>
-								<h3 class="font-bold text-xl text-primary">{step.title}</h3>
-								<p class="mt-3 text-base text-muted-foreground leading-relaxed">{step.desc}</p>
-							</div>
-						))}
+							);
+						})}
 					</div>
 				</div>
 			</section>
@@ -171,102 +197,118 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 			<!-- Results & ROI Section -->
 			<ResultsROI client:visible />
 
-			<!-- Missed Call Revenue Calculator & ROI Statement Section -->
+			<!-- Revenue Calculator -->
 			<RevenueCalculator client:visible />
 
 			<!-- Safety Net Section -->
-			<section class="py-14 sm:py-28 bg-muted/30 border-y border-border">
-				<div class="container-custom">
-					<div class="reveal max-w-3xl mx-auto text-center mb-16">
-						<div class="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-semibold text-secondary mb-5">
-							Zero-Error Philosophy
+			<section class="section-padding bg-primary relative overflow-hidden border-y border-white/10">
+				<div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(59,130,246,0.06),transparent_70%)] pointer-events-none"></div>
+				<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-secondary/5 blur-[120px] rounded-full pointer-events-none" />
+
+				<div class="container-custom relative z-10">
+					<div class="section-header">
+						<div class="reveal">
+							<div class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold text-secondary mb-5">
+								Zero-Error Philosophy
+							</div>
+							<h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white">Smart Enough for Routine.<br /> Confident Enough to Hand Off.</h2>
+							<p class="mt-4 text-white/60 text-lg">Built to handle the routine, and smart enough to know when to escalate.</p>
 						</div>
-						<h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-primary">The Safety Net: How It Works</h2>
-						<p class="mt-4 text-muted-foreground text-lg">Our AI is built to handle the routine, and smart enough to know when to hand off.</p>
 					</div>
 
-					<div class="grid md:grid-cols-3 gap-8 relative">
-						<!-- Connection Lines (hidden on mobile) -->
-						<div class="hidden md:block absolute top-1/2 left-[30%] right-[30%] h-0.5 bg-border -translate-y-1/2 z-0"></div>
-						
-						<div class="reveal relative z-10 flex flex-col items-center text-center p-6 rounded-2xl bg-white border border-border shadow-sm">
-							<div class="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center text-white mb-6 shadow-lg">
-								<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+					<div class="grid md:grid-cols-3 gap-6 relative">
+						<div class="hidden md:block absolute top-1/2 left-[30%] right-[30%] h-px bg-white/10 -translate-y-1/2 z-0"></div>
+
+						<div class="reveal relative z-10 flex flex-col items-center text-center p-8 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] hover:border-secondary/30 transition-all duration-300" style="transition-delay: 0ms">
+							<div class="w-14 h-14 rounded-xl bg-secondary/20 border border-secondary/30 flex items-center justify-center text-secondary mb-6">
+								<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
 							</div>
-							<h3 class="font-bold text-xl mb-3 text-primary">1. Triage</h3>
-							<p class="text-sm text-muted-foreground leading-relaxed">AI identifies the intent: Is it a simple booking or a complex medical inquiry?</p>
+							<h3 class="font-bold text-xl mb-3 text-white">1. Triage</h3>
+							<p class="text-sm text-white/60 leading-relaxed">AI instantly identifies the intent: booking, question, or complex inquiry.</p>
 						</div>
 
-						<div class="reveal relative z-10 flex flex-col items-center text-center p-6 rounded-2xl bg-white border border-border shadow-sm" style="transition-delay: 100ms">
-							<div class="w-16 h-16 rounded-2xl bg-secondary flex items-center justify-center text-white mb-6 shadow-lg">
-								<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+						<div class="reveal relative z-10 flex flex-col items-center text-center p-8 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] hover:border-secondary/30 transition-all duration-300" style="transition-delay: 100ms">
+							<div class="w-14 h-14 rounded-xl bg-secondary/20 border border-secondary/30 flex items-center justify-center text-secondary mb-6">
+								<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
 							</div>
-							<h3 class="font-bold text-xl mb-3 text-primary">2. Resolution</h3>
-							<p class="text-sm text-muted-foreground leading-relaxed">Routine calls (bookings, hours, insurance) are resolved instantly on the first ring.</p>
+							<h3 class="font-bold text-xl mb-3 text-white">2. Resolve</h3>
+							<p class="text-sm text-white/60 leading-relaxed">Routine calls are handled instantly — bookings, hours, insurance questions.</p>
 						</div>
 
-						<div class="reveal relative z-10 flex flex-col items-center text-center p-6 rounded-2xl bg-accent/5 border-2 border-accent/20 shadow-sm" style="transition-delay: 200ms">
-							<div class="w-16 h-16 rounded-2xl bg-accent flex items-center justify-center text-white mb-6 shadow-lg">
-								<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="19" x2="19" y1="8" y2="14"></line><line x1="22" x2="16" y1="11" y2="11"></line></svg>
+						<div class="reveal relative z-10 flex flex-col items-center text-center p-8 rounded-2xl bg-accent/[0.03] border border-accent/20 hover:bg-accent/[0.06] hover:border-accent/40 transition-all duration-300" style="transition-delay: 200ms">
+							<div class="w-14 h-14 rounded-xl bg-accent/20 border border-accent/30 flex items-center justify-center text-accent mb-6">
+								<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="19" x2="19" y1="8" y2="14"></line><line x1="22" x2="16" y1="11" y2="11"></line></svg>
 							</div>
-							<h3 class="font-bold text-xl mb-3 text-primary">3. Handoff</h3>
-							<p class="text-sm text-muted-foreground leading-relaxed">Complex cases or emergencies are flagged. AI alerts your team to step in immediately.</p>
+							<h3 class="font-bold text-xl mb-3 text-white">3. Handoff</h3>
+							<p class="text-sm text-white/60 leading-relaxed">Complex cases or emergencies are flagged. Your team steps in immediately.</p>
 						</div>
 					</div>
 				</div>
 			</section>
 
 			<!-- Features Section -->
-			<section id="features" class="py-14 sm:py-28 scroll-mt-24 bg-white">
+			<section id="features" class="section-padding scroll-mt-24 bg-white">
 				<div class="container-custom">
-					<div class="reveal max-w-3xl mx-auto text-center mb-14">
-						<div class="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-semibold text-secondary mb-5">
-							Built for Dental
+					<div class="section-header">
+						<div class="reveal">
+							<div class="badge mb-5">
+								Built for Dental
+							</div>
+							<h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary">Everything Your Front Desk Needs to Stay Ahead</h2>
+							<p class="mt-4 text-muted-foreground text-lg">Clinical-grade capabilities that work alongside your team.</p>
 						</div>
-						<h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-primary">Clinical-Grade Capability</h2>
 					</div>
 
-					<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-						<FeatureCard title="24/7 Precision" description="Every call answered on the first ring, ensuring no patient is ever left waiting.">
-							<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M16 2v6h6"></path><path d="m22 2-6 6"></path><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
-						</FeatureCard>
-						
-						<FeatureCard title="Live Scheduler Sync" description="Integrates with your practice management software to book real appointments in real-time." delay="100ms">
-							<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M16 14v2.2l1.6 1"></path><path d="M16 2v4"></path><path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"></path><path d="M3 10h5"></path><path d="M8 2v4"></path><circle cx="16" cy="16" r="6"></circle></svg>
+					<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+						<FeatureCard title="Answers Every Call, Every Time" description="First-ring pickup means no patient is ever left waiting — even during lunch rushes.">
+							<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M16 2v6h6"></path><path d="m22 2-6 6"></path><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
 						</FeatureCard>
 
-						<FeatureCard title="Emergency Detection" description="Trained to identify clinical emergencies and prioritize them for immediate human attention." delay="200ms">
-							<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M18 5h4"></path><path d="M20 3v4"></path><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg>
+						<FeatureCard title="Books Appointments Automatically" description="Integrates with your practice management software to schedule real appointments in real-time." delay="100ms">
+							<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M16 14v2.2l1.6 1"></path><path d="M16 2v4"></path><path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"></path><path d="M3 10h5"></path><path d="M8 2v4"></path><circle cx="16" cy="16" r="6"></circle></svg>
 						</FeatureCard>
 
-						<FeatureCard title="Overflow Management" description="When your front desk is busy, the AI steps in quietly to handle the rest." delay="300ms">
-							<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M14 6h8"></path><path d="m18 2 4 4-4 4"></path><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
+						<FeatureCard title="Flags Emergencies Instantly" description="Trained to identify clinical emergencies and prioritize them for immediate human attention." delay="200ms">
+							<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M18 5h4"></path><path d="M20 3v4"></path><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg>
 						</FeatureCard>
 
-						<FeatureCard title="Clinical FAQ" description="Trained on clinical terminology to handle patient questions about procedures, insurance, and billing with high accuracy." delay="400ms">
-							<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg>
+						<FeatureCard title="Steps In When You're Busy" description="When your front desk is overwhelmed, the AI quietly handles overflow calls." delay="300ms">
+							<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M14 6h8"></path><path d="m18 2 4 4-4 4"></path><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
 						</FeatureCard>
 
-						<FeatureCard title="HIPAA Compliant" description="Enterprise-grade security and BAA agreements to protect your patient's sensitive data." delay="500ms">
-							<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+						<FeatureCard title="Answers Patient Questions Instantly" description="Trained on clinical terminology to handle questions about procedures, insurance, and billing." delay="400ms">
+							<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg>
 						</FeatureCard>
+
+						<FeatureCard title="HIPAA-Compliant by Design" description="Enterprise-grade security and signed BAA agreements protect every patient conversation." delay="500ms">
+							<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+						</FeatureCard>
+					</div>
+
+					<!-- Trust signal near features -->
+					<div class="reveal mt-12 text-center">
+						<p class="text-sm text-muted-foreground/60 font-medium">
+							Trusted by growing dental practices across the United States.
+						</p>
 					</div>
 				</div>
 			</section>
 
 			<!-- Demo Section -->
-			<section id="demo" class="py-14 sm:py-28 scroll-mt-24 bg-white">
+			<section id="demo" class="section-padding scroll-mt-24 bg-muted/30">
 				<div class="container-custom max-w-5xl">
-					<div class="reveal max-w-3xl mx-auto text-center mb-14">
-						<div class="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-semibold text-secondary mb-5">
-							See It in Action
+					<div class="section-header">
+						<div class="reveal">
+							<div class="badge mb-5">
+								See It in Action
+							</div>
+							<h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary">Hear It in Action</h2>
+							<p class="mt-4 text-muted-foreground text-lg">Watch our AI handle a real dental patient call — from greeting to booking.</p>
 						</div>
-						<h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-primary">Proof of Quality</h2>
-						<p class="mt-4 text-muted-foreground text-lg">Watch our AI handle a real dental patient call from start to finish.</p>
 					</div>
 
-					<div class="reveal relative rounded-3xl overflow-hidden shadow-2xl border border-border" style="padding-bottom: 56.25%;">
-						<iframe class="absolute inset-0 w-full h-full rounded-3xl" src="https://www.youtube.com/embed/oInWpV4qtNU" title="CareReceptionist AI Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="reveal relative rounded-xl overflow-hidden shadow-2xl border border-border/80" style="padding-bottom: 56.25%;">
+						<iframe class="absolute inset-0 w-full h-full rounded-xl" src="https://www.youtube.com/embed/oInWpV4qtNU" title="CareReceptionist AI Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
 					</div>
 				</div>
 			</section>
@@ -275,37 +317,38 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 			<PricingSection client:visible />
 
 			<!-- About Section -->
-			<section class="py-14 sm:py-28 scroll-mt-24 bg-muted/30">
+			<section class="section-padding scroll-mt-24 bg-muted/30">
 				<div class="container-custom max-w-5xl">
-					<div class="reveal max-w-3xl mx-auto text-center mb-14">
-						<div class="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-semibold text-secondary mb-5">
-							The Team
+					<div class="section-header">
+						<div class="reveal">
+							<div class="badge mb-5">
+								The Team
+							</div>
+							<h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary">Built by Dental Tech Experts</h2>
+							<p class="mt-4 text-muted-foreground text-lg">We know dental workflows because we've built for them.</p>
 						</div>
-						<h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-primary">Dental Automation Specialists</h2>
 					</div>
 
-					<div class="grid md:grid-cols-2 gap-8">
-						<!-- Vikas -->
-						<div class="reveal bg-white rounded-3xl p-8 sm:p-10 flex flex-col items-center text-center group border border-border hover:border-secondary/30 transition-all shadow-sm">
-							<div class="relative w-40 h-40 rounded-full bg-secondary p-1 shadow-glow transition-transform duration-500 group-hover:scale-105">
-								<img src="https://res.cloudinary.com/dnpteehr6/image/upload/v1780252369/profile_photo_xhvzbu.jpg" alt="Vikas — Founder" class="w-full h-full rounded-full object-cover" />
+					<div class="grid md:grid-cols-2 gap-6">
+						<div class="reveal card-premium p-8 sm:p-10 flex flex-col items-center text-center group">
+							<div class="relative w-36 h-36 rounded-full bg-secondary/20 p-1 shadow-lg transition-transform duration-500 group-hover:scale-105">
+								<img src="https://res.cloudinary.com/dnpteehr6/image/upload/v1780252369/profile_photo_xhvzbu.jpg" alt="Vikas — Founder" class="w-full h-full rounded-full object-cover" loading="lazy" />
 							</div>
-							<div class="mt-6 font-bold text-2xl text-primary">Vikas</div>
-							<div class="text-secondary text-sm font-bold uppercase tracking-wider mt-1">Founder & Lead Engineer</div>
-							<p class="mt-5 text-base text-muted-foreground leading-relaxed">
-								Hi, I'm <span class="text-primary font-bold">Vikas</span> — an AI specialist focused exclusively on dental clinics. I've trained our AI to understand clinical procedures like <span class="text-secondary italic">prophy, SRP, and endodontics</span>, ensuring every patient conversation is professional and accurate.
+							<div class="mt-5 font-extrabold text-2xl text-primary">Vikas</div>
+							<div class="text-secondary text-xs font-bold uppercase tracking-widest mt-1">Founder & Lead Engineer</div>
+							<p class="mt-4 text-sm text-muted-foreground leading-relaxed max-w-sm">
+								AI specialist focused exclusively on dental clinics. Trained our AI to understand clinical procedures like <span class="text-secondary italic">prophy, SRP, and endodontics</span> — ensuring every patient conversation is professional and accurate.
 							</p>
 						</div>
 
-						<!-- Vashisht -->
-						<div class="reveal bg-white rounded-3xl p-8 sm:p-10 flex flex-col items-center text-center group border border-border hover:border-secondary/30 transition-all shadow-sm">
-							<div class="relative w-40 h-40 rounded-full bg-secondary p-1 shadow-glow transition-transform duration-500 group-hover:scale-105">
-								<img src="https://res.cloudinary.com/dnpteehr6/image/upload/v1780580736/d749de80-accf-4481-bdcf-ea35c552ece4_bv15f0.jpg" alt="Vashisht — Operations Manager" class="w-full h-full rounded-full object-cover" />
+						<div class="reveal card-premium p-8 sm:p-10 flex flex-col items-center text-center group">
+							<div class="relative w-36 h-36 rounded-full bg-secondary/20 p-1 shadow-lg transition-transform duration-500 group-hover:scale-105">
+								<img src="https://res.cloudinary.com/dnpteehr6/image/upload/v1780580736/d749de80-accf-4481-bdcf-ea35c552ece4_bv15f0.jpg" alt="Vashisht — Operations Manager" class="w-full h-full rounded-full object-cover" loading="lazy" />
 							</div>
-							<div class="mt-6 font-bold text-2xl text-primary">Vashisht</div>
-							<div class="text-secondary text-sm font-bold uppercase tracking-wider mt-1">Operations Manager</div>
-							<p class="mt-5 text-base text-muted-foreground leading-relaxed">
-								Vashisht ensures your onboarding is seamless. From setting up your <span class="text-secondary italic">Practice Management integration</span> to signing your <span class="text-secondary italic">BAA</span>, he makes sure your clinic is live and compliant in under a week.
+							<div class="mt-5 font-extrabold text-2xl text-primary">Vashisht</div>
+							<div class="text-secondary text-xs font-bold uppercase tracking-widest mt-1">Operations Manager</div>
+							<p class="mt-4 text-sm text-muted-foreground leading-relaxed max-w-sm">
+								Ensures your onboarding is seamless. From <span class="text-secondary italic">Practice Management integration</span> to your signed <span class="text-secondary italic">BAA</span> — he makes sure your clinic is live and compliant in under a week.
 							</p>
 						</div>
 					</div>
@@ -316,16 +359,19 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 			<Testimonials client:visible />
 
 			<!-- FAQ Section -->
-			<section id="faq" class="py-14 sm:py-28 scroll-mt-24">
+			<section id="faq" class="section-padding scroll-mt-24 bg-muted/30">
 				<div class="container-custom max-w-3xl">
-					<div class="reveal max-w-3xl mx-auto text-center mb-14">
-						<div class="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-semibold text-secondary mb-5">
-							FAQ
+					<div class="section-header">
+						<div class="reveal">
+							<div class="badge mb-5">
+								FAQ
+							</div>
+							<h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary">Common Questions</h2>
+							<p class="mt-4 text-muted-foreground text-lg">Everything you need to know about CareReceptionist AI.</p>
 						</div>
-						<h2 class="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-primary">Common Questions</h2>
 					</div>
 
-					<div class="space-y-4">
+					<div class="space-y-3">
 						<FAQItem question="Will this replace my front desk staff?" answer="No. It works alongside your team — handling overflow and after-hours so they can focus on in-clinic patients." />
 						<FAQItem question="How long does setup take?" answer="Most clinics are live within 5–7 business days. We sign a BAA and integrate with your PM software first." delay="100ms" />
 						<FAQItem question="What if I want to cancel?" answer="No long-term contracts. Cancel anytime with 30 days notice." delay="200ms" />
@@ -340,33 +386,37 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 		</main>
 
 		<!-- Footer -->
-		<footer id="contact" class="bg-primary text-white py-20 mt-20">
-			<div class="container-custom flex flex-col md:flex-row md:items-center md:justify-between gap-12">
+		<footer id="contact" class="bg-primary text-white section-padding">
+			<div class="container-custom flex flex-col md:flex-row md:items-start md:justify-between gap-12">
 				<div class="max-w-xs">
-					<div class="font-bold tracking-tight text-2xl">
+					<div class="font-extrabold tracking-tight text-2xl">
 						<span>CareReceptionist</span><span class="text-secondary"> AI</span>
 					</div>
-					<p class="text-sm text-white/70 mt-4 leading-relaxed">
+					<p class="text-sm text-white/50 mt-4 leading-relaxed">
 						HIPAA-secure voice AI for US dental clinics. Never miss a patient call again.
 					</p>
+					<p class="text-xs text-white/30 mt-6 font-medium">
+						Built exclusively for modern dental practices.
+					</p>
 				</div>
-				
-				<div class="flex flex-wrap gap-x-12 gap-y-6 text-sm font-bold">
-					<div class="flex flex-col gap-4">
+
+				<div class="flex flex-wrap gap-x-16 gap-y-8 text-sm font-semibold">
+					<div class="flex flex-col gap-3">
 						<span class="text-accent uppercase tracking-wider text-xs font-bold">Product</span>
-						<a href="/#how" class="text-white/70 hover:text-white transition-colors">How It Works</a>
-						<a href="/#pricing" class="text-white/70 hover:text-white transition-colors">Pricing</a>
-						<a href="/#demo" class="text-white/70 hover:text-white transition-colors">Demo</a>
+						<a href="/#how" class="text-white/50 hover:text-white transition-colors">How It Works</a>
+						<a href="/#pricing" class="text-white/50 hover:text-white transition-colors">Pricing</a>
+						<a href="/#features" class="text-white/50 hover:text-white transition-colors">Features</a>
+						<a href="/#demo" class="text-white/50 hover:text-white transition-colors">Demo</a>
 					</div>
-					<div class="flex flex-col gap-4">
+					<div class="flex flex-col gap-3">
 						<span class="text-accent uppercase tracking-wider text-xs font-bold">Company</span>
-						<a href="/privacy" class="text-white/70 hover:text-white transition-colors">Privacy Policy</a>
-						<a href="/contact" class="text-white/70 hover:text-white transition-colors">Contact</a>
+						<a href="/privacy" class="text-white/50 hover:text-white transition-colors">Privacy Policy</a>
+						<a href="/contact" class="text-white/50 hover:text-white transition-colors">Contact</a>
 					</div>
 				</div>
 			</div>
-			
-			<div class="container-custom mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/50">
+
+			<div class="container-custom mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/30">
 				<div>© 2026 CareReceptionist AI. All rights reserved.</div>
 				<div>Built by Vikas.</div>
 			</div>
@@ -375,25 +425,23 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 </Layout>
 
 <script>
-	// Header scroll effect
 	const header = document.getElementById('main-header');
 	const navContainer = document.getElementById('nav-container');
-	
+
 	window.addEventListener('scroll', () => {
 		if (window.scrollY > 20) {
-			header?.classList.add('bg-white/80', 'backdrop-blur-lg', 'border-border', 'shadow-md');
+			header?.classList.add('bg-white/80', 'backdrop-blur-lg', 'border-border/80', 'shadow-sm');
 			header?.classList.remove('bg-transparent', 'border-transparent');
 			navContainer?.classList.remove('h-20');
 			navContainer?.classList.add('h-16');
 		} else {
-			header?.classList.remove('bg-white/80', 'backdrop-blur-lg', 'border-border', 'shadow-md');
+			header?.classList.remove('bg-white/80', 'backdrop-blur-lg', 'border-border/80', 'shadow-sm');
 			header?.classList.add('bg-transparent', 'border-transparent');
 			navContainer?.classList.add('h-20');
 			navContainer?.classList.remove('h-16');
 		}
 	});
 
-	// Mobile Menu Toggle
 	const mobileMenuButton = document.getElementById('mobile-menu-button');
 	const mobileMenu = document.getElementById('mobile-menu');
 	const mobileLinks = document.querySelectorAll('.mobile-link');
@@ -406,24 +454,18 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 	function toggleMenu() {
 		const isExpanded = mobileMenuButton?.getAttribute('aria-expanded') === 'true';
 		mobileMenuButton?.setAttribute('aria-expanded', (!isExpanded).toString());
-		
+
 		if (!isExpanded) {
-			// Open
 			mobileMenu?.classList.remove('invisible', 'opacity-0');
 			mobileMenu?.classList.add('visible', 'opacity-100');
 			document.body.style.overflow = 'hidden';
-			
-			// Animate burger to X
 			menuBars[0]?.classList.add('rotate-45', 'translate-y-[9px]');
 			menuBars[1]?.classList.add('opacity-0', 'translate-x-2');
 			menuBars[2]?.classList.add('-rotate-45', '-translate-y-[9px]');
 		} else {
-			// Close
 			mobileMenu?.classList.add('invisible', 'opacity-0');
 			mobileMenu?.classList.remove('visible', 'opacity-100');
 			document.body.style.overflow = '';
-			
-			// Animate X back to burger
 			menuBars[0]?.classList.remove('rotate-45', 'translate-y-[9px]');
 			menuBars[1]?.classList.remove('opacity-0', 'translate-x-2');
 			menuBars[2]?.classList.remove('-rotate-45', '-translate-y-[9px]');
@@ -440,7 +482,6 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 		});
 	});
 
-	// Reveal on scroll
 	const revealElements = document.querySelectorAll('.reveal');
 	const observer = new IntersectionObserver((entries) => {
 		entries.forEach(entry => {
@@ -452,15 +493,13 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 
 	revealElements.forEach(el => observer.observe(el));
 
-	// FAQ Accordion
 	const faqButtons = document.querySelectorAll('.faq-button');
 	faqButtons.forEach(button => {
 		button.addEventListener('click', () => {
 			const answer = button.nextElementSibling as HTMLElement;
 			const icon = button.querySelector('svg');
 			const isExpanded = button.getAttribute('aria-expanded') === 'true';
-			
-			// Close other open ones
+
 			faqButtons.forEach(otherButton => {
 				if (otherButton !== button) {
 					const otherAnswer = otherButton.nextElementSibling as HTMLElement;
@@ -494,8 +533,8 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 
 	.reveal {
 		opacity: 0;
-		transform: translateY(30px);
-		transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+		transform: translateY(24px);
+		transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 	}
 
 	.reveal.active {
