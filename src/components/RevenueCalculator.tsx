@@ -232,35 +232,30 @@ export const RevenueCalculator: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-20 max-w-5xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+        {/* ROI Statement */}
+        <div className="mt-24 text-center">
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="relative overflow-hidden rounded-2xl bg-primary p-8 sm:p-12 text-center border border-white/10 shadow-[0_20px_40px_rgba(0,0,0,0.3)]"
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-primary leading-snug md:leading-relaxed max-w-3xl mx-auto px-4"
           >
-            <div className="absolute -top-12 -left-12 w-24 h-24 bg-secondary/10 rounded-full blur-xl pointer-events-none" />
-            <div className="absolute -bottom-12 -right-12 w-24 h-24 bg-accent/10 rounded-full blur-xl pointer-events-none" />
-
-            <div className="relative z-10 max-w-3xl mx-auto">
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight text-white leading-relaxed">
-                CareReceptionist pays for itself with just{' '}
-                <span className="text-secondary font-bold">
-                  one recovered patient
-                </span>{' '}
-                per month.
-              </h3>
-            </div>
-          </motion.div>
+            CareReceptionist pays for itself with just{' '}
+            <span className="text-gradient">
+              one recovered patient
+            </span>{' '}
+            per month.
+          </motion.h3>
         </div>
 
+        {/* Disclaimer */}
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-6 text-center text-xs text-muted-foreground/60"
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mt-16 text-center text-sm text-muted-foreground"
         >
           Based on typical practice estimates. Individual results vary.
         </motion.p>
