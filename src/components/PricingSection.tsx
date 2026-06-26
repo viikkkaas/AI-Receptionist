@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const features = [
   "24/7 AI Receptionist",
-  "Unlimited Calls",
+  "Up to 1,500 mins/month included",
   "Appointment Scheduling",
   "Google Calendar Integration",
   "Emergency Call Routing",
