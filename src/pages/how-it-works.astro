@@ -1,0 +1,462 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import FAQItem from '../components/FAQItem.astro';
+import { FinalCTA } from '../components/FinalCTA.tsx';
+---
+
+<Layout>
+	<div id="top" class="min-h-screen bg-background text-foreground selection:bg-secondary/20 overflow-x-hidden">
+		<!-- Header -->
+		<header class="fixed top-0 inset-x-0 z-50 transition-all duration-500 bg-transparent border-b border-transparent" id="main-header">
+			<nav class="container-custom h-20 flex items-center justify-between transition-all duration-500" id="nav-container">
+				<a href="/" class="font-extrabold tracking-tight text-xl flex items-center gap-2 group text-primary">
+					<span>CareReceptionist</span><span class="text-secondary"> AI</span>
+				</a>
+
+				<div class="hidden md:flex items-center gap-10 text-sm font-semibold text-muted-foreground">
+					<a href="/how-it-works" class="text-secondary transition-colors relative group py-2">
+						How It Works
+						<span class="absolute bottom-0 left-0 w-full h-0.5 bg-secondary"></span>
+					</a>
+					<a href="/#pricing" class="hover:text-secondary transition-colors relative group py-2">
+						Pricing
+						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+					</a>
+					<a href="/#features" class="hover:text-secondary transition-colors relative group py-2">
+						Features
+						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+					</a>
+					<a href="/#contact" class="hover:text-secondary transition-colors relative group py-2">
+						Contact
+						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+					</a>
+				</div>
+
+				<div class="hidden md:flex items-center gap-4">
+					<Button />
+				</div>
+
+				<button class="md:hidden p-3 -mr-3 flex items-center justify-center text-primary z-[60] relative" aria-label="Toggle menu" id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">
+					<div class="w-6 h-5 relative flex flex-col justify-between">
+						<span class="w-full h-0.5 bg-current transition-all duration-300 origin-left" id="menu-bar-1"></span>
+						<span class="w-full h-0.5 bg-current transition-all duration-300" id="menu-bar-2"></span>
+						<span class="w-full h-0.5 bg-current transition-all duration-300 origin-left" id="menu-bar-3"></span>
+					</div>
+				</button>
+			</nav>
+
+			<div id="mobile-menu" class="fixed inset-0 z-50 invisible opacity-0 transition-all duration-300 md:hidden">
+				<div class="absolute inset-0 bg-white/95 backdrop-blur-2xl"></div>
+				<div class="relative h-full flex flex-col items-center justify-center gap-8 p-8 text-center">
+					<a href="/how-it-works" class="text-3xl font-bold text-secondary transition-colors mobile-link">How It Works</a>
+					<a href="/#pricing" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Pricing</a>
+					<a href="/#features" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Features</a>
+					<a href="/#contact" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Contact</a>
+					<div class="mt-4 scale-125">
+						<Button />
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<!-- Hero Section -->
+			<section class="relative pt-36 pb-20 sm:pt-52 sm:pb-32 overflow-hidden bg-white">
+				<div class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_-20%,rgba(59,130,246,0.06),transparent_70%)]"></div>
+
+				<div class="relative container-custom text-center max-w-4xl">
+					<div class="reveal">
+						<div class="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-semibold text-secondary mb-6">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket w-3.5 h-3.5"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
+							Simple Setup
+						</div>
+
+						<h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.08] text-primary">
+							Your AI Receptionist,<br />
+							<span class="text-secondary">Live in Under a Week</span>
+						</h1>
+
+						<p class="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+							From kickoff to a fully operational AI receptionist—without changing your phone number, disrupting your workflow, or requiring complicated setup.
+						</p>
+
+						<div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+							<Button title="Book Your Free Demo →" />
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Process Timeline Section -->
+			<section class="section-padding bg-muted/30">
+				<div class="container-custom max-w-5xl">
+					<div class="section-header">
+						<div class="reveal">
+							<div class="badge mb-5">How It Works</div>
+							<h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary">Your AI Receptionist, Live in Under a Week</h2>
+							<p class="mt-4 text-muted-foreground text-lg">From kickoff to a fully booked schedule — without changing your phone number.</p>
+						</div>
+					</div>
+
+					<div class="relative">
+						<div class="hidden md:block absolute left-[41px] top-0 bottom-0 w-px bg-border/80"></div>
+
+						<div class="space-y-12 md:space-y-16">
+							<div class="reveal relative flex flex-col md:flex-row gap-6 md:gap-10">
+								<div class="hidden md:flex flex-shrink-0 w-20 flex-col items-center">
+									<div class="w-20 h-20 rounded-2xl gradient-accent flex items-center justify-center shadow-glow relative z-10">
+										<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg>
+									</div>
+								</div>
+								<div class="md:hidden flex items-center gap-4 mb-2">
+									<div class="w-12 h-12 rounded-xl gradient-accent flex items-center justify-center shadow-glow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path><path d="M20 2v4"></path><path d="M22 4h-4"></path><circle cx="4" cy="20" r="2"></circle></svg>
+									</div>
+									<div class="flex items-center gap-3">
+										<span class="text-xs font-mono font-bold text-secondary bg-secondary/10 px-2.5 py-1 rounded-full">Step 1</span>
+										<span class="text-xs text-muted-foreground font-medium">~2 days</span>
+									</div>
+								</div>
+								<div class="flex-1 card-premium p-8 md:p-10 group hover:-translate-y-1">
+									<div class="hidden md:flex items-center gap-3 mb-5">
+										<span class="text-xs font-mono font-bold text-secondary bg-secondary/10 px-3 py-1.5 rounded-full">Step 1</span>
+										<span class="text-xs text-muted-foreground font-medium">Estimated duration: ~2 days</span>
+									</div>
+									<h3 class="text-2xl font-extrabold text-primary">We Train Your AI</h3>
+									<p class="mt-4 text-muted-foreground leading-relaxed text-base max-w-2xl">
+										We customize your AI using your clinic's services, providers, office hours, scheduling preferences, and workflows.
+									</p>
+								</div>
+							</div>
+
+							<div class="reveal relative flex flex-col md:flex-row gap-6 md:gap-10">
+								<div class="hidden md:flex flex-shrink-0 w-20 flex-col items-center">
+									<div class="w-20 h-20 rounded-2xl gradient-accent flex items-center justify-center shadow-glow relative z-10">
+										<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+									</div>
+								</div>
+								<div class="md:hidden flex items-center gap-4 mb-2">
+									<div class="w-12 h-12 rounded-xl gradient-accent flex items-center justify-center shadow-glow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+									</div>
+									<div class="flex items-center gap-3">
+										<span class="text-xs font-mono font-bold text-secondary bg-secondary/10 px-2.5 py-1 rounded-full">Step 2</span>
+										<span class="text-xs text-muted-foreground font-medium">~1 day</span>
+									</div>
+								</div>
+								<div class="flex-1 card-premium p-8 md:p-10 group hover:-translate-y-1">
+									<div class="hidden md:flex items-center gap-3 mb-5">
+										<span class="text-xs font-mono font-bold text-secondary bg-secondary/10 px-3 py-1.5 rounded-full">Step 2</span>
+										<span class="text-xs text-muted-foreground font-medium">Estimated duration: ~1 day</span>
+									</div>
+									<h3 class="text-2xl font-extrabold text-primary">Calls Flow to Your Existing Number</h3>
+									<p class="mt-4 text-muted-foreground leading-relaxed text-base max-w-2xl">
+										No new phone numbers. No complicated migration. Patients continue calling your existing number while CareReceptionist AI answers every call.
+									</p>
+								</div>
+							</div>
+
+							<div class="reveal relative flex flex-col md:flex-row gap-6 md:gap-10">
+								<div class="hidden md:flex flex-shrink-0 w-20 flex-col items-center">
+									<div class="w-20 h-20 rounded-2xl gradient-accent flex items-center justify-center shadow-glow relative z-10">
+										<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="m9 16 2 2 4-4"></path></svg>
+									</div>
+								</div>
+								<div class="md:hidden flex items-center gap-4 mb-2">
+									<div class="w-12 h-12 rounded-xl gradient-accent flex items-center justify-center shadow-glow">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="m9 16 2 2 4-4"></path></svg>
+									</div>
+									<div class="flex items-center gap-3">
+										<span class="text-xs font-mono font-bold text-secondary bg-secondary/10 px-2.5 py-1 rounded-full">Step 3</span>
+										<span class="text-xs text-muted-foreground font-medium">Ongoing</span>
+									</div>
+								</div>
+								<div class="flex-1 card-premium p-8 md:p-10 group hover:-translate-y-1">
+									<div class="hidden md:flex items-center gap-3 mb-5">
+										<span class="text-xs font-mono font-bold text-secondary bg-secondary/10 px-3 py-1.5 rounded-full">Step 3</span>
+										<span class="text-xs text-muted-foreground font-medium">Ongoing</span>
+									</div>
+									<h3 class="text-2xl font-extrabold text-primary">Appointments Book Themselves</h3>
+									<p class="mt-4 text-muted-foreground leading-relaxed text-base max-w-2xl">
+										Appointments are booked directly into your calendar while your team focuses on delivering exceptional patient care.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Timeline Overview -->
+			<section class="section-padding bg-white">
+				<div class="container-custom max-w-4xl">
+					<div class="section-header">
+						<div class="reveal">
+							<div class="badge mb-5">Onboarding Timeline</div>
+							<h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary">From Sign-Up to Go-Live</h2>
+							<p class="mt-4 text-muted-foreground text-lg">Your dedicated onboarding manager guides you through every step.</p>
+						</div>
+					</div>
+
+					<div class="reveal">
+						<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-0 relative">
+							<div class="hidden md:block absolute top-9 left-0 right-0 h-px bg-border/80 -z-0"></div>
+
+							{[...Array(4)].map((_, i) => {
+								const stages = [
+									{ label: 'Kickoff', desc: 'Discovery call & scoping', icon: 'handshake' },
+									{ label: 'AI Training', desc: 'Customize on your workflow', icon: 'brain' },
+									{ label: 'Testing', desc: 'Validate & refine', icon: 'check' },
+									{ label: 'Go Live', desc: 'Launch & monitor', icon: 'rocket' }
+								];
+								const stage = stages[i];
+								return (
+									<div class="relative flex md:flex-col items-center gap-4 md:gap-5 md:text-center flex-1">
+										<div class="hidden md:flex w-[72px] h-[72px] rounded-2xl bg-secondary/10 border border-secondary/20 items-center justify-center flex-shrink-0 relative z-10 group-hover:bg-secondary/20 transition-colors">
+											{stage.icon === 'handshake' && <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"></path></svg>}
+											{stage.icon === 'brain' && <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path></svg>}
+											{stage.icon === 'check' && <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>}
+											{stage.icon === 'rocket' && <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>}
+										</div>
+										<div class="md:hidden flex items-center gap-4">
+											<div class="w-12 h-12 rounded-xl bg-secondary/10 border border-secondary/20 flex items-center justify-center flex-shrink-0">
+												{stage.icon === 'handshake' && <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z"></path></svg>}
+												{stage.icon === 'brain' && <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path></svg>}
+												{stage.icon === 'check' && <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>}
+												{stage.icon === 'rocket' && <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>}
+											</div>
+											<div>
+												<div class="font-bold text-primary text-lg">{stage.label}</div>
+												<div class="text-sm text-muted-foreground">{stage.desc}</div>
+											</div>
+										</div>
+										<div class="hidden md:block">
+											<div class="font-bold text-primary text-lg">{stage.label}</div>
+											<div class="text-sm text-muted-foreground mt-1">{stage.desc}</div>
+										</div>
+									</div>
+								);
+							})}
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- What We Handle Section -->
+			<section class="section-padding bg-muted/30">
+				<div class="container-custom max-w-5xl">
+					<div class="section-header">
+						<div class="reveal">
+							<div class="badge mb-5">Full-Service Setup</div>
+							<h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary">Everything We Take Care Of</h2>
+							<p class="mt-4 text-muted-foreground text-lg">We handle every detail so you can focus on patient care.</p>
+						</div>
+					</div>
+
+					<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+						{[...Array(7)].map((_, i) => {
+							const items = [
+								{ title: 'AI Training', desc: 'Custom-trained on your clinic protocols and services', icon: 'sparkles' },
+								{ title: 'Calendar Integration', desc: 'Seamless sync with your practice management system', icon: 'calendar' },
+								{ title: 'Call Routing', desc: 'Intelligent routing to your existing phone number', icon: 'phone' },
+								{ title: 'Workflow Customization', desc: 'Tailored to your scheduling preferences and rules', icon: 'settings' },
+								{ title: 'Testing & Validation', desc: 'Rigorous testing before going live', icon: 'check' },
+								{ title: 'Launch Support', desc: 'Dedicated manager guides your go-live day', icon: 'rocket' },
+								{ title: 'Ongoing Optimization', desc: 'Continuous improvements and performance monitoring', icon: 'refresh' }
+							];
+							const item = items[i];
+							return (
+								<div class="reveal card-premium p-6 group hover:-translate-y-1.5" style={`transition-delay: ${i * 60}ms`}>
+									<div class="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+										{item.icon === 'sparkles' && <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path></svg>}
+										{item.icon === 'calendar' && <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="m9 16 2 2 4-4"></path></svg>}
+										{item.icon === 'phone' && <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>}
+										{item.icon === 'settings' && <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>}
+										{item.icon === 'check' && <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>}
+										{item.icon === 'rocket' && <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>}
+										{item.icon === 'refresh' && <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"></path><path d="M16 16h5v5"></path></svg>}
+									</div>
+									<h3 class="font-bold text-base text-primary">{item.title}</h3>
+									<p class="mt-2 text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+								</div>
+							);
+						})}
+					</div>
+				</div>
+			</section>
+
+			<!-- FAQ Section -->
+			<section id="faq" class="section-padding scroll-mt-24 bg-white">
+				<div class="container-custom max-w-3xl">
+					<div class="section-header">
+						<div class="reveal">
+							<div class="badge mb-5">FAQ</div>
+							<h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary">Onboarding Questions</h2>
+							<p class="mt-4 text-muted-foreground text-lg">Everything you need to know about getting started.</p>
+						</div>
+					</div>
+
+					<div class="space-y-3">
+						<FAQItem question="How long does onboarding take?" answer="Most clinics are live within 5-7 business days. We start with a discovery call, train the AI on your practice, integrate with your existing systems, test thoroughly, and go live — all within a single week." />
+						<FAQItem question="Do I need a new phone number?" answer="No. We route calls through your existing phone number. Patients keep calling the same number they've always called — CareReceptionist AI answers when your team can't." delay="100ms" />
+						<FAQItem question="Will my staff need training?" answer="Minimal to none. Your team continues working as usual. The AI handles overflow calls and after-hours bookings. We provide a quick walkthrough so everyone understands how the handoff system works." delay="200ms" />
+						<FAQItem question="Can you integrate with my existing scheduling workflow?" answer="Yes. We integrate with leading practice management systems used by dental clinics. Our team handles the integration so appointments flow directly into your existing calendar." delay="300ms" />
+						<FAQItem question="What if the AI can't handle a call?" answer="The AI is trained to recognize when a call needs human attention. Complex cases, emergencies, or unusual requests are immediately flagged and handed off to your team in real-time." delay="400ms" />
+					</div>
+				</div>
+			</section>
+
+			<!-- Final CTA Section -->
+			<FinalCTA client:visible />
+		</main>
+
+		<!-- Footer -->
+		<footer id="contact" class="bg-primary text-white section-padding">
+			<div class="container-custom flex flex-col md:flex-row md:items-start md:justify-between gap-12">
+				<div class="max-w-xs">
+					<div class="font-extrabold tracking-tight text-2xl">
+						<span>CareReceptionist</span><span class="text-secondary"> AI</span>
+					</div>
+					<p class="text-sm text-white/50 mt-4 leading-relaxed">
+						HIPAA-secure voice AI for US dental clinics. Never miss a patient call again.
+					</p>
+					<p class="text-xs text-white/30 mt-6 font-medium">
+						Built exclusively for modern dental practices.
+					</p>
+				</div>
+
+				<div class="flex flex-wrap gap-x-16 gap-y-8 text-sm font-semibold">
+					<div class="flex flex-col gap-3">
+						<span class="text-accent uppercase tracking-wider text-xs font-bold">Product</span>
+						<a href="/how-it-works" class="text-white hover:text-white transition-colors">How It Works</a>
+						<a href="/#pricing" class="text-white/50 hover:text-white transition-colors">Pricing</a>
+						<a href="/#features" class="text-white/50 hover:text-white transition-colors">Features</a>
+						<a href="/#demo" class="text-white/50 hover:text-white transition-colors">Demo</a>
+					</div>
+					<div class="flex flex-col gap-3">
+						<span class="text-accent uppercase tracking-wider text-xs font-bold">Company</span>
+						<a href="/privacy" class="text-white/50 hover:text-white transition-colors">Privacy Policy</a>
+						<a href="/contact" class="text-white/50 hover:text-white transition-colors">Contact</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="container-custom mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/30">
+				<div>© 2026 CareReceptionist AI. All rights reserved.</div>
+				<div>Built by Vikas.</div>
+			</div>
+		</footer>
+	</div>
+</Layout>
+
+<script>
+	const header = document.getElementById('main-header');
+	const navContainer = document.getElementById('nav-container');
+
+	window.addEventListener('scroll', () => {
+		if (window.scrollY > 20) {
+			header?.classList.add('bg-white/80', 'backdrop-blur-lg', 'border-border/80', 'shadow-sm');
+			header?.classList.remove('bg-transparent', 'border-transparent');
+			navContainer?.classList.remove('h-20');
+			navContainer?.classList.add('h-16');
+		} else {
+			header?.classList.remove('bg-white/80', 'backdrop-blur-lg', 'border-border/80', 'shadow-sm');
+			header?.classList.add('bg-transparent', 'border-transparent');
+			navContainer?.classList.add('h-20');
+			navContainer?.classList.remove('h-16');
+		}
+	});
+
+	const mobileMenuButton = document.getElementById('mobile-menu-button');
+	const mobileMenu = document.getElementById('mobile-menu');
+	const mobileLinks = document.querySelectorAll('.mobile-link');
+	const menuBars = [
+		document.getElementById('menu-bar-1'),
+		document.getElementById('menu-bar-2'),
+		document.getElementById('menu-bar-3')
+	];
+
+	function toggleMenu() {
+		const isExpanded = mobileMenuButton?.getAttribute('aria-expanded') === 'true';
+		mobileMenuButton?.setAttribute('aria-expanded', (!isExpanded).toString());
+
+		if (!isExpanded) {
+			mobileMenu?.classList.remove('invisible', 'opacity-0');
+			mobileMenu?.classList.add('visible', 'opacity-100');
+			document.body.style.overflow = 'hidden';
+			menuBars[0]?.classList.add('rotate-45', 'translate-y-[9px]');
+			menuBars[1]?.classList.add('opacity-0', 'translate-x-2');
+			menuBars[2]?.classList.add('-rotate-45', '-translate-y-[9px]');
+		} else {
+			mobileMenu?.classList.add('invisible', 'opacity-0');
+			mobileMenu?.classList.remove('visible', 'opacity-100');
+			document.body.style.overflow = '';
+			menuBars[0]?.classList.remove('rotate-45', 'translate-y-[9px]');
+			menuBars[1]?.classList.remove('opacity-0', 'translate-x-2');
+			menuBars[2]?.classList.remove('-rotate-45', '-translate-y-[9px]');
+		}
+	}
+
+	mobileMenuButton?.addEventListener('click', toggleMenu);
+
+	mobileLinks.forEach(link => {
+		link.addEventListener('click', () => {
+			if (mobileMenuButton?.getAttribute('aria-expanded') === 'true') {
+				toggleMenu();
+			}
+		});
+	});
+
+	const revealElements = document.querySelectorAll('.reveal');
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('active');
+			}
+		});
+	}, { threshold: 0.1 });
+
+	revealElements.forEach(el => observer.observe(el));
+
+	const faqButtons = document.querySelectorAll('.faq-button');
+	faqButtons.forEach(button => {
+		button.addEventListener('click', () => {
+			const answer = button.nextElementSibling as HTMLElement;
+			const icon = button.querySelector('svg');
+			const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+			faqButtons.forEach(otherButton => {
+				if (otherButton !== button) {
+					const otherAnswer = otherButton.nextElementSibling as HTMLElement;
+					otherAnswer.style.maxHeight = '0';
+					otherButton.querySelector('svg')?.classList.remove('rotate-180');
+					otherButton.setAttribute('aria-expanded', 'false');
+				}
+			});
+
+			if (!isExpanded) {
+				answer.style.maxHeight = answer.scrollHeight + 'px';
+				icon?.classList.add('rotate-180');
+				button.setAttribute('aria-expanded', 'true');
+			} else {
+				answer.style.maxHeight = '0';
+				icon?.classList.remove('rotate-180');
+				button.setAttribute('aria-expanded', 'false');
+			}
+		});
+	});
+</script>
+
+<style>
+	.reveal {
+		opacity: 0;
+		transform: translateY(24px);
+		transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+	}
+
+	.reveal.active {
+		opacity: 1;
+		transform: translateY(0);
+	}
+</style>
