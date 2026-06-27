@@ -100,7 +100,7 @@ export const PricingSection: React.FC = () => {
                 <div className="flex flex-col items-center sm:items-end text-center sm:text-right flex-1">
                   <div className="flex items-start gap-1">
                     <span className="text-5xl sm:text-6xl font-extrabold text-gradient tracking-tight">
-                      $1,199
+                      $599
                     </span>
                     <span className="text-sm sm:text-base text-muted-foreground mt-1.5 sm:mt-2 font-medium">/month</span>
                   </div>

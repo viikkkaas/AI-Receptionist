@@ -70,7 +70,7 @@ export const FinalCTA: React.FC = () => {
           <span>
             Join{' '}
             <span className="text-secondary">
-              50+
+              15+
             </span>{' '}
             dental practices
           </span>
