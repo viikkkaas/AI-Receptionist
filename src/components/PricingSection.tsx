@@ -11,7 +11,7 @@ const leftFeatures = [
 ];
 
 const rightFeatures = [
-  'Up to 1,500 mins/month included',
+  'Up to 2,000 mins/month included',
   'Google Calendar Integration',
   'SMS Follow-ups',
   'HIPAA-conscious Architecture',
