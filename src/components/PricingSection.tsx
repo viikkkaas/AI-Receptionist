@@ -4,18 +4,18 @@ import { motion } from 'framer-motion';
 const leftFeatures = [
   '24/7 AI Receptionist',
   'Appointment Scheduling',
+  'Google Calendar Integration',
+  'Smart SMS Notifications',
   'Emergency Call Routing',
-  'Call Recording & Analytics',
-  'Custom AI Training',
-  'Monthly Performance Reports',
+  'Review Request Automation',
 ];
 
 const rightFeatures = [
+  'Call Recording & Analytics',
+  'Custom AI Training',
   'Up to 2,000 mins/month included',
-  'Google Calendar Integration',
-  'SMS Follow-ups',
   'HIPAA-conscious Architecture',
-  'English Support',
+  'Monthly Performance Reports',
   'Dedicated Onboarding',
 ];
 
@@ -109,7 +109,7 @@ export const PricingSection: React.FC = () => {
               </div>
             </motion.div>
 
-            <div className="my-10 h-px bg-gradient-to-r from-transparent via-border/40 to-transparent" />
+            <div className="my-4 h-px bg-gradient-to-r from-transparent via-border/40 to-transparent" />
 
             <motion.p
               variants={fadeVariants}
