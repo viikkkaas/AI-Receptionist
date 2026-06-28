@@ -70,7 +70,7 @@ export const FinalCTA: React.FC = () => {
           <span>
             Join{' '}
             <span className="text-secondary">
-              15+
+              50+
             </span>{' '}
             dental practices
           </span>
@@ -114,14 +114,6 @@ export const FinalCTA: React.FC = () => {
                 d="M14 5l7 7m0 0l-7 7m7-7H3"
               />
             </svg>
-          </a>
-
-          <a
-            href="https://calendly.com/vikas-p-2706/30min"
-            className="group relative inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-4 rounded-xl border border-white/10 bg-white/[0.03] text-white/50 hover:bg-white/[0.08] hover:border-white/20 hover:text-white transition-all duration-300 w-full sm:w-auto"
-          >
-            <span className="text-sm font-semibold">Talk to our team</span>
-            <span className="text-sm font-bold text-white">→</span>
           </a>
         </motion.div>
 

@@ -223,7 +223,7 @@ export const RevenueCalculator: React.FC = () => {
                     rel="noopener noreferrer"
                     className="flex w-full items-center justify-center gap-2 rounded-xl bg-white text-primary py-4 text-base font-bold shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 cursor-pointer"
                   >
-                    Calculate Your ROI
+                    Reclaim Your Revenue
                     <span className="text-lg leading-none">→</span>
                   </a>
                 </div>

@@ -13,11 +13,11 @@ interface TestimonialItem {
 
 const testimonials: TestimonialItem[] = [
   {
-    name: 'Dr. Sarah Johnson',
-    credentials: 'DDS',
-    practice: 'Bright Smile Dental',
-    location: 'Austin, TX',
-    avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=150',
+    name: 'Dr. Tamara Marjan',
+    credentials: 'DMD',
+    practice: '',
+    location: 'Chicago, IL',
+    avatar: 'https://res.cloudinary.com/dnpteehr6/image/upload/v1782645904/dr-tamara-marjan-dmd.png',
     rating: 5,
     text: (
       <>
@@ -30,11 +30,11 @@ const testimonials: TestimonialItem[] = [
     ),
   },
   {
-    name: 'Dr. Michael Chen',
+    name: 'Dr. Braulio Ulloa',
     credentials: 'DMD',
-    practice: 'Advanced Family Dentistry',
-    location: 'Chicago, IL',
-    avatar: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=150',
+    practice: '',
+    location: 'San Francisco, CA',
+    avatar: 'https://res.cloudinary.com/dnpteehr6/image/upload/v1782645388/dr_braulio.jpg',
     rating: 5,
     text: (
       <>
@@ -51,11 +51,11 @@ const testimonials: TestimonialItem[] = [
     ),
   },
   {
-    name: 'Dr. Emily Carter',
-    credentials: 'DDS',
-    practice: 'Premier Dental Care',
-    location: 'Miami, FL',
-    avatar: 'https://images.unsplash.com/photo-1594824813573-246434de83fb?auto=format&fit=crop&q=80&w=150',
+    name: 'Dr. Silvy Cherian',
+    credentials: 'GD',
+    practice: '',
+    location: 'Philadelphia, PA',
+    avatar: 'https://res.cloudinary.com/dnpteehr6/image/upload/v1782646735/dr_silvy_cherian_gd.png',
     rating: 5,
     text: (
       <>
