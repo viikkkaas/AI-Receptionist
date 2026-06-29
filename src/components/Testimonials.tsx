@@ -15,7 +15,7 @@ const testimonials: TestimonialItem[] = [
   {
     name: 'Dr. Tamara Marjan',
     credentials: 'DMD',
-    practice: '',
+    practice: 'Minty Dental Boutique',
     location: 'Chicago, IL',
     avatar: 'https://res.cloudinary.com/dnpteehr6/image/upload/v1782645904/dr-tamara-marjan-dmd.png',
     rating: 5,
@@ -32,7 +32,7 @@ const testimonials: TestimonialItem[] = [
   {
     name: 'Dr. Braulio Ulloa',
     credentials: 'DMD',
-    practice: '',
+    practice: 'UDC Dental Center',
     location: 'San Francisco, CA',
     avatar: 'https://res.cloudinary.com/dnpteehr6/image/upload/v1782645388/dr_braulio.jpg',
     rating: 5,
@@ -53,7 +53,7 @@ const testimonials: TestimonialItem[] = [
   {
     name: 'Dr. Silvy Cherian',
     credentials: 'GD',
-    practice: '',
+    practice: 'Ritt Dental',
     location: 'Philadelphia, PA',
     avatar: 'https://res.cloudinary.com/dnpteehr6/image/upload/v1782646735/dr_silvy_cherian_gd.png',
     rating: 5,
