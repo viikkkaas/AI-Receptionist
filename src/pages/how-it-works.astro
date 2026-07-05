@@ -8,7 +8,7 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 <Layout>
 	<div id="top" class="min-h-screen bg-background text-foreground selection:bg-secondary/20 overflow-x-hidden">
 		<!-- Header -->
-		<header class="fixed top-0 inset-x-0 z-50 transition-all duration-500 bg-transparent border-b border-transparent" id="main-header">
+		<header class="fixed top-0 inset-x-0 z-50 transition-all duration-500 bg-transparent border-b border-transparent contain-paint" id="main-header">
 			<nav class="container-custom h-20 flex items-center justify-between transition-all duration-500" id="nav-container">
 				<a href="/" class="font-extrabold tracking-tight text-xl flex items-center gap-2 group text-primary">
 					<span>CareReceptionist</span><span class="text-secondary"> AI</span>
@@ -67,7 +67,7 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 
 				<div class="relative container-custom text-center max-w-4xl">
 					<div class="reveal">
-						<div class="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-semibold text-secondary mb-6">
+						<div class="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-semibold text-secondary mb-5 sm:mb-6">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket w-3.5 h-3.5"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
 							Simple Setup
 						</div>
@@ -77,11 +77,11 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 							<span class="text-secondary">Live in Under a Week</span>
 						</h1>
 
-						<p class="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+						<p class="mt-5 sm:mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
 							From kickoff to a fully operational AI receptionist—without changing your phone number, disrupting your workflow, or requiring complicated setup.
 						</p>
 
-						<div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+						<div class="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
 							<Button title="Book Your Free Demo →" />
 						</div>
 					</div>
@@ -118,12 +118,12 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 										<span class="text-xs text-muted-foreground font-medium">~2 days</span>
 									</div>
 								</div>
-								<div class="flex-1 card-premium p-8 md:p-10 group hover:-translate-y-1">
+								<div class="flex-1 card-premium p-6 sm:p-8 md:p-10 group hover:-translate-y-1">
 									<div class="hidden md:flex items-center gap-3 mb-5">
 										<span class="text-xs font-mono font-bold text-secondary bg-secondary/10 px-3 py-1.5 rounded-full">Step 1</span>
 										<span class="text-xs text-muted-foreground font-medium">Estimated duration: ~2 days</span>
 									</div>
-									<h3 class="text-2xl font-extrabold text-primary">We Train Your AI</h3>
+									<h3 class="text-xl sm:text-2xl font-extrabold text-primary">We Train Your AI</h3>
 									<p class="mt-4 text-muted-foreground leading-relaxed text-base max-w-2xl">
 										We customize your AI using your clinic's services, providers, office hours, scheduling preferences, and workflows.
 									</p>
@@ -145,12 +145,12 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 										<span class="text-xs text-muted-foreground font-medium">~1 day</span>
 									</div>
 								</div>
-								<div class="flex-1 card-premium p-8 md:p-10 group hover:-translate-y-1">
+								<div class="flex-1 card-premium p-6 sm:p-8 md:p-10 group hover:-translate-y-1">
 									<div class="hidden md:flex items-center gap-3 mb-5">
 										<span class="text-xs font-mono font-bold text-secondary bg-secondary/10 px-3 py-1.5 rounded-full">Step 2</span>
 										<span class="text-xs text-muted-foreground font-medium">Estimated duration: ~1 day</span>
 									</div>
-									<h3 class="text-2xl font-extrabold text-primary">Calls Flow to Your Existing Number</h3>
+									<h3 class="text-xl sm:text-2xl font-extrabold text-primary">Calls Flow to Your Existing Number</h3>
 									<p class="mt-4 text-muted-foreground leading-relaxed text-base max-w-2xl">
 										No new phone numbers. No complicated migration. Patients continue calling your existing number while CareReceptionist AI answers every call.
 									</p>
@@ -172,12 +172,12 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 										<span class="text-xs text-muted-foreground font-medium">Ongoing</span>
 									</div>
 								</div>
-								<div class="flex-1 card-premium p-8 md:p-10 group hover:-translate-y-1">
+								<div class="flex-1 card-premium p-6 sm:p-8 md:p-10 group hover:-translate-y-1">
 									<div class="hidden md:flex items-center gap-3 mb-5">
 										<span class="text-xs font-mono font-bold text-secondary bg-secondary/10 px-3 py-1.5 rounded-full">Step 3</span>
 										<span class="text-xs text-muted-foreground font-medium">Ongoing</span>
 									</div>
-									<h3 class="text-2xl font-extrabold text-primary">Appointments Book Themselves</h3>
+									<h3 class="text-xl sm:text-2xl font-extrabold text-primary">Appointments Book Themselves</h3>
 									<p class="mt-4 text-muted-foreground leading-relaxed text-base max-w-2xl">
 										Appointments are booked directly into your calendar, SMS confirmations are sent automatically, and review requests go out after each visit — all while your team focuses on exceptional patient care.
 									</p>
@@ -200,7 +200,7 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 					</div>
 
 					<div class="reveal">
-						<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-0 relative">
+						<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-5 md:gap-0 relative">
 							<div class="hidden md:block absolute top-9 left-0 right-0 h-px bg-border/80 -z-0"></div>
 
 							{[...Array(4)].map((_, i) => {
@@ -254,7 +254,7 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 						</div>
 					</div>
 
-					<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+					<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
 						{[...Array(7)].map((_, i) => {
 							const items = [
 								{ title: 'AI Training', desc: 'Custom-trained on your clinic protocols and services', icon: 'sparkles' },
@@ -267,7 +267,7 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 							];
 							const item = items[i];
 							return (
-								<div class="reveal card-premium p-6 group hover:-translate-y-1.5" style={`transition-delay: ${i * 60}ms`}>
+								<div class="reveal card-premium p-5 sm:p-6 group hover:-translate-y-1.5" style={`transition-delay: ${i * 60}ms`}>
 									<div class="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
 										{item.icon === 'sparkles' && <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path></svg>}
 										{item.icon === 'calendar' && <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="m9 16 2 2 4-4"></path></svg>}
@@ -313,7 +313,7 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 
 		<!-- Footer -->
 		<footer id="contact" class="bg-primary text-white section-padding">
-			<div class="container-custom flex flex-col md:flex-row md:items-start md:justify-between gap-12">
+			<div class="container-custom flex flex-col md:flex-row md:items-start md:justify-between gap-8 sm:gap-12">
 				<div class="max-w-xs">
 					<div class="font-extrabold tracking-tight text-2xl">
 						<span>CareReceptionist</span><span class="text-secondary"> AI</span>
@@ -326,7 +326,7 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 					</p>
 				</div>
 
-				<div class="flex flex-wrap gap-x-16 gap-y-8 text-sm font-semibold">
+				<div class="flex flex-wrap gap-x-12 sm:gap-x-16 gap-y-6 sm:gap-y-8 text-sm font-semibold">
 					<div class="flex flex-col gap-3">
 						<span class="text-accent uppercase tracking-wider text-xs font-bold">Product</span>
 						<a href="/how-it-works" class="text-white hover:text-white transition-colors">How It Works</a>
@@ -353,15 +353,21 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 <script>
 	const header = document.getElementById('main-header');
 	const navContainer = document.getElementById('nav-container');
+	const isMobile = () => window.innerWidth < 768;
 
 	window.addEventListener('scroll', () => {
 		if (window.scrollY > 20) {
-			header?.classList.add('bg-white/80', 'backdrop-blur-lg', 'border-border/80', 'shadow-sm');
-			header?.classList.remove('bg-transparent', 'border-transparent');
+			if (isMobile()) {
+				header?.classList.add('bg-white', 'border-border/80', 'shadow-sm');
+				header?.classList.remove('bg-transparent', 'border-transparent', 'backdrop-blur-lg');
+			} else {
+				header?.classList.add('bg-white/80', 'backdrop-blur-lg', 'border-border/80', 'shadow-sm');
+				header?.classList.remove('bg-transparent', 'border-transparent');
+			}
 			navContainer?.classList.remove('h-20');
 			navContainer?.classList.add('h-16');
 		} else {
-			header?.classList.remove('bg-white/80', 'backdrop-blur-lg', 'border-border/80', 'shadow-sm');
+			header?.classList.remove('bg-white/80', 'backdrop-blur-lg', 'border-border/80', 'shadow-sm', 'bg-white');
 			header?.classList.add('bg-transparent', 'border-transparent');
 			navContainer?.classList.add('h-20');
 			navContainer?.classList.remove('h-16');
@@ -413,9 +419,10 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 		entries.forEach(entry => {
 			if (entry.isIntersecting) {
 				entry.target.classList.add('active');
+				observer.unobserve(entry.target);
 			}
 		});
-	}, { threshold: 0.1 });
+	}, { threshold: 0.05, rootMargin: '50px' });
 
 	revealElements.forEach(el => observer.observe(el));
 
@@ -449,10 +456,15 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 </script>
 
 <style>
+	.contain-paint {
+		contain: paint;
+	}
+
 	.reveal {
 		opacity: 0;
 		transform: translateY(24px);
 		transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+		will-change: transform, opacity;
 	}
 
 	.reveal.active {

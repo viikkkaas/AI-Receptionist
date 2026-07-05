@@ -71,8 +71,8 @@ const stats: StatItem[] = [
 export const ResultsROI: React.FC = () => {
   return (
     <section id="results" className="section-padding bg-white relative overflow-hidden">
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 right-10 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+		<div className="hidden md:block absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
+			<div className="hidden md:block absolute bottom-1/4 right-10 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-custom relative z-10">
         <div className="section-header">
@@ -109,18 +109,18 @@ export const ResultsROI: React.FC = () => {
           </motion.p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 md:gap-6 max-w-5xl mx-auto">
-          {stats.map((stat, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 0.7, delay: i * 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative flex flex-col items-center text-center px-6 py-10 rounded-2xl bg-white border border-border/60 hover:border-secondary/20 transition-all duration-500 hover:shadow-[0_8px_30px_rgba(15,23,42,0.04)]"
-            >
-              <div className="mb-3">
-                <span className="text-5xl sm:text-6xl font-extrabold tracking-tighter text-primary">
+		<div className="grid md:grid-cols-3 gap-5 md:gap-6 max-w-5xl mx-auto">
+			{stats.map((stat, i) => (
+				<motion.div
+					key={i}
+					initial={{ opacity: 0, y: 30 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true, margin: '-50px' }}
+					transition={{ duration: 0.7, delay: i * 0.15, ease: [0.16, 1, 0.3, 1] }}
+					className="group relative flex flex-col items-center text-center px-5 sm:px-6 py-8 sm:py-10 rounded-2xl bg-white border border-border/60 hover:border-secondary/20 transition-all duration-500 hover:shadow-[0_8px_30px_rgba(15,23,42,0.04)]"
+				>
+					<div className="mb-3">
+						<span className="text-5xl sm:text-6xl font-extrabold tracking-tighter text-primary">
                   <AnimatedCounter value={stat.value} suffix={stat.value === '10K+' ? 'K+' : ''} />
                   {stat.value === '100' ? '%' : ''}
                 </span>

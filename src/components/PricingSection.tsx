@@ -41,7 +41,7 @@ export const PricingSection: React.FC = () => {
       className="relative section-padding scroll-mt-24 overflow-hidden bg-white"
     >
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_40%,#000_70%,transparent_100%)] opacity-20 pointer-events-none" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[350px] bg-secondary/10 blur-[130px] rounded-full pointer-events-none" />
+		<div className="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[350px] bg-secondary/10 blur-[130px] rounded-full pointer-events-none" />
 
       <div className="container-custom relative z-10">
         <div className="section-header">
@@ -74,14 +74,14 @@ export const PricingSection: React.FC = () => {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="relative max-w-[740px] mx-auto"
         >
-          <div className="bg-white rounded-3xl border border-border/30 shadow-[0_20px_60px_-12px_rgba(15,23,42,0.08)] p-8 sm:p-12 lg:p-14">
+          <div 		className="bg-white rounded-3xl border border-border/30 shadow-[0_20px_60px_-12px_rgba(15,23,42,0.08)] p-6 sm:p-12 lg:p-14">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             >
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-6 p-6 sm:p-8 rounded-2xl bg-muted/20 border border-border/20">
+              <div 		className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 p-5 sm:p-8 rounded-2xl bg-muted/20 border border-border/20">
                 <div className="flex flex-col items-center sm:items-start text-center sm:text-left flex-1">
                   <span className="text-[44px] sm:text-[51px] font-extrabold text-primary tracking-tight">$497</span>
                   <span className="text-xs text-muted-foreground font-semibold uppercase tracking-wider mt-1">One-Time Setup</span>
@@ -138,7 +138,7 @@ export const PricingSection: React.FC = () => {
               </h4>
             </motion.div>
 
-            <div className="grid sm:grid-cols-2 gap-x-10 gap-y-4">
+            <div 		className="grid sm:grid-cols-2 gap-x-6 sm:gap-x-10 gap-y-3 sm:gap-y-4">
               <div className="space-y-4">
                 {leftFeatures.map((feature, i) => (
                   <motion.div
@@ -180,7 +180,7 @@ export const PricingSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="mt-12 p-6 sm:p-8 rounded-2xl bg-violet-50/70"
+		className="mt-8 sm:mt-12 p-5 sm:p-8 rounded-2xl bg-violet-50/70"
             >
               <p className="text-base font-semibold text-violet-800">
                 Recover just{' '}
@@ -202,7 +202,7 @@ export const PricingSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-10"
+		className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10"
             >
               <div className="flex items-center gap-3">
                 <svg className="w-5 h-5 text-secondary" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">

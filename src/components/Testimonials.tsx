@@ -90,8 +90,8 @@ const cardVariants = {
 export const Testimonials: React.FC = () => {
   return (
     <section id="testimonials" className="section-padding bg-white relative overflow-hidden">
-      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-3xl pointer-events-none -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+		<div className="hidden md:block absolute top-1/2 left-0 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-3xl pointer-events-none -translate-y-1/2" />
+			<div className="hidden md:block absolute bottom-0 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-custom relative z-10">
         <div className="section-header">
@@ -131,14 +131,14 @@ export const Testimonials: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-50px' }}
-          className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto items-stretch"
+		className="grid md:grid-cols-3 gap-5 md:gap-6 max-w-6xl mx-auto items-stretch"
         >
           {testimonials.map((item, i) => (
             <motion.div
               key={i}
               variants={cardVariants}
               whileHover={{ y: -6, transition: { duration: 0.3 } }}
-              className="card-premium flex flex-col justify-between p-7 sm:p-8 relative overflow-hidden"
+		className="card-premium flex flex-col justify-between p-6 sm:p-8 relative overflow-hidden"
             >
               <div>
                 <div className="flex gap-1 mb-5">

@@ -35,8 +35,8 @@ export const RevenueCalculator: React.FC = () => {
 
   return (
     <section id="calculator" className="section-padding gradient-section relative overflow-hidden border-y border-border/50">
-      <div className="absolute top-0 right-1/4 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+		<div className="hidden md:block absolute top-0 right-1/4 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
+			<div className="hidden md:block absolute bottom-0 left-1/4 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container-custom relative z-10">
         <div className="section-header">
@@ -72,7 +72,7 @@ export const RevenueCalculator: React.FC = () => {
         </div>
 
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start max-w-6xl mx-auto">
-          <div className="lg:col-span-7 card-premium p-8 sm:p-10 space-y-8">
+		<div className="lg:col-span-7 card-premium p-6 sm:p-10 space-y-6 sm:space-y-8">
             <div className="space-y-4">
               <div className="flex justify-between items-center">
                 <label htmlFor="input-calls" className="font-semibold text-foreground text-base sm:text-lg">
@@ -169,7 +169,7 @@ export const RevenueCalculator: React.FC = () => {
               </div>
             </div>
 
-            <div className="pt-6 border-t border-border/60 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-sm text-muted-foreground font-medium">
+		<div className="pt-5 sm:pt-6 border-t border-border/60 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 sm:gap-4 text-sm text-muted-foreground font-medium">
               <div className="flex items-center gap-2">
                 <span className="flex h-2 w-2 rounded-full bg-secondary" />
                 <span>Missed Calls / Month: <strong className="text-foreground">{(Math.round(missedCalls * 10) / 10).toFixed(1)}</strong></span>
@@ -184,7 +184,7 @@ export const RevenueCalculator: React.FC = () => {
           <div className="lg:col-span-5 w-full">
             <motion.div
               layout
-              className="relative overflow-hidden rounded-2xl bg-primary p-8 sm:p-10 text-white shadow-[0_24px_50px_-12px_rgba(15,23,42,0.4)] border border-white/10"
+		className="relative overflow-hidden rounded-2xl bg-primary p-6 sm:p-10 text-white shadow-[0_24px_50px_-12px_rgba(15,23,42,0.4)] border border-white/10"
             >
               <div className="absolute inset-0 bg-gradient-to-tr from-secondary/10 via-transparent to-accent/5 pointer-events-none" />
               <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-full blur-2xl pointer-events-none" />
@@ -200,7 +200,7 @@ export const RevenueCalculator: React.FC = () => {
                       key={animatedLostRevenue}
                       initial={{ scale: 0.98, opacity: 0.9 }}
                       animate={{ scale: 1, opacity: 1 }}
-                      className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white"
+		className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white"
                     >
                       ~{formatCurrency(animatedLostRevenue)}
                     </motion.span>
@@ -239,7 +239,7 @@ export const RevenueCalculator: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-primary leading-snug md:leading-relaxed max-w-3xl mx-auto px-4"
+		className="text-xl sm:text-3xl md:text-4xl font-bold tracking-tight text-primary leading-snug md:leading-relaxed max-w-3xl mx-auto px-4"
           >
             CareReceptionist pays for itself with just{' '}
             <span className="text-gradient">

@@ -37,24 +37,24 @@ export const FinalCTA: React.FC = () => {
     <section className="relative section-padding overflow-hidden bg-primary">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(59,130,246,0.08),transparent_70%)] pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[700px] bg-secondary/5 blur-[150px] rounded-full pointer-events-none" />
-      <div className="absolute -bottom-40 right-0 w-[500px] h-[500px] bg-secondary/5 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute -top-40 left-0 w-[400px] h-[400px] bg-primary/4 blur-[100px] rounded-full pointer-events-none" />
+		<div className="hidden md:block absolute -bottom-40 right-0 w-[500px] h-[500px] bg-secondary/5 blur-[120px] rounded-full pointer-events-none" />
+			<div className="hidden md:block absolute -top-40 left-0 w-[400px] h-[400px] bg-primary/4 blur-[100px] rounded-full pointer-events-none" />
 
-      <div
-        className="absolute inset-0 opacity-[0.02] pointer-events-none mix-blend-overlay"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E")`,
-        }}
-      />
+			<div
+				className="hidden md:block absolute inset-0 opacity-[0.02] pointer-events-none mix-blend-overlay"
+				style={{
+					backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E")`,
+				}}
+			/>
 
-      <div
-        className="absolute inset-0 opacity-[0.03] pointer-events-none"
-        style={{
-          backgroundImage:
-            'linear-gradient(rgba(59,130,246,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.1) 1px, transparent 1px)',
-          backgroundSize: '60px 60px',
-        }}
-      />
+			<div
+				className="hidden md:block absolute inset-0 opacity-[0.03] pointer-events-none"
+				style={{
+					backgroundImage:
+						'linear-gradient(rgba(59,130,246,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.1) 1px, transparent 1px)',
+					backgroundSize: '60px 60px',
+				}}
+			/>
 
       <motion.div
         initial="hidden"
@@ -121,14 +121,14 @@ export const FinalCTA: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="mt-16 flex flex-wrap justify-center items-center gap-3 max-w-3xl mx-auto"
+		className="mt-12 sm:mt-16 flex flex-wrap justify-center items-center gap-2 sm:gap-3 max-w-3xl mx-auto"
         >
           {trustBadges.map((badge, i) => (
             <motion.span
               key={badge.label}
               custom={i}
               variants={badgeFade}
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-xs sm:text-sm font-semibold bg-white/[0.03] border border-white/10 text-white/50 hover:border-secondary/40 hover:text-white/80 hover:-translate-y-0.5 transition-all duration-300 cursor-default select-none"
+		className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-sm font-semibold bg-white/[0.03] border border-white/10 text-white/50 hover:border-secondary/40 hover:text-white/80 hover:-translate-y-0.5 transition-all duration-300 cursor-default select-none"
             >
               {badge.icon === 'shield' && (
                 <svg className="w-4 h-4 text-secondary/80" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
