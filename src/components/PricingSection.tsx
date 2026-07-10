@@ -83,7 +83,7 @@ export const PricingSection: React.FC = () => {
             >
               <div 		className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 p-5 sm:p-8 rounded-2xl bg-muted/20 border border-border/20">
                 <div className="flex flex-col items-center sm:items-start text-center sm:text-left flex-1">
-                  <span className="text-[44px] sm:text-[51px] font-extrabold text-primary tracking-tight">$497</span>
+                  <span className="text-[44px] sm:text-[51px] font-extrabold text-primary tracking-tight">$597</span>
                   <span className="text-xs text-muted-foreground font-semibold uppercase tracking-wider mt-1">One-Time Setup</span>
                   <span className="text-[10px] leading-tight text-muted-foreground/60 mt-2 max-w-[220px]">Covers BAA execution, PM software integration, and custom AI voice training</span>
                 </div>
@@ -101,7 +101,7 @@ export const PricingSection: React.FC = () => {
                 <div className="flex flex-col items-center sm:items-end text-center sm:text-right flex-1">
                   <div className="flex items-start gap-1">
                     <span className="text-5xl sm:text-6xl font-extrabold text-gradient tracking-tight">
-                      $1199
+                      $1799
                     </span>
                     <span className="text-sm sm:text-base text-muted-foreground mt-1.5 sm:mt-2 font-medium">/month</span>
                   </div>
