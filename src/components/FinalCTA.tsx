@@ -165,3 +165,5 @@ export const FinalCTA: React.FC = () => {
     </section>
   );
 };
+
+export default FinalCTA;

@@ -11,6 +11,8 @@
   --color-muted-foreground: #64748B;
   --color-accent: #10B981;
   --color-accent-foreground: #ffffff;
+  --color-danger: #DC2626;
+  --color-danger-foreground: #ffffff;
   --color-card: #ffffff;
   --color-card-foreground: #1E293B;
   --color-border: #E2E8F0;

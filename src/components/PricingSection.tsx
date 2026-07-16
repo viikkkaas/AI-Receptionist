@@ -190,7 +190,7 @@ export const PricingSection: React.FC = () => {
                 .
               </p>
               <p className="mt-2 text-sm text-violet-600/80 leading-relaxed">
-                CareReceptionist AI often pays for itself with a single recovered patient each month.
+                CareReceptionist AI often pays for itself with a single recovered patient each week.
               </p>
               <p className="mt-3 text-xs text-violet-400">
                 *Typical practice estimate. Results vary.
@@ -276,3 +276,5 @@ export const PricingSection: React.FC = () => {
     </section>
   );
 };
+
+export default PricingSection;

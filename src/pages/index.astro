@@ -20,26 +20,26 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 				</a>
 
 				<div class="hidden md:flex items-center gap-10 text-sm font-semibold text-muted-foreground">
+					<a href="#problem" class="hover:text-secondary transition-colors relative group py-2">
+						Problem
+						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+					</a>
+					<a href="#solution" class="hover:text-secondary transition-colors relative group py-2">
+						Solution
+						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+					</a>
 					<a href="/how-it-works" class="hover:text-secondary transition-colors relative group py-2">
 						How It Works
 						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
 					</a>
-					<a href="/#pricing" class="hover:text-secondary transition-colors relative group py-2">
+					<a href="#pricing" class="hover:text-secondary transition-colors relative group py-2">
 						Pricing
-						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
-					</a>
-					<a href="/#features" class="hover:text-secondary transition-colors relative group py-2">
-						Features
-						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
-					</a>
-					<a href="/#contact" class="hover:text-secondary transition-colors relative group py-2">
-						Contact
 						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
 					</a>
 				</div>
 
 				<div class="hidden md:flex items-center gap-4">
-					<Button />
+					<Button title="Start Revenue Recovery →" />
 				</div>
 
 				<button class="md:hidden p-3 -mr-3 flex items-center justify-center text-primary z-[60] relative" aria-label="Toggle menu" id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">
@@ -54,12 +54,12 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 			<div id="mobile-menu" class="fixed inset-0 z-50 invisible opacity-0 transition-all duration-300 md:hidden">
 				<div class="absolute inset-0 bg-white/95 backdrop-blur-2xl"></div>
 				<div class="relative h-full flex flex-col items-center justify-center gap-8 p-8 text-center">
+					<a href="#problem" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Problem</a>
+					<a href="#solution" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Solution</a>
 					<a href="/how-it-works" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">How It Works</a>
 					<a href="#pricing" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Pricing</a>
-					<a href="#features" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Features</a>
-					<a href="#contact" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Contact</a>
 					<div class="mt-4 scale-125">
-						<Button />
+						<Button title="Start Revenue Recovery →" />
 					</div>
 				</div>
 			</div>
@@ -67,50 +67,52 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 
 		<main>
 			<!-- Hero Section -->
-			<section class="relative pt-36 pb-20 sm:pt-52 sm:pb-32 overflow-hidden bg-white">
+			<section class="relative pt-18 pb-20 sm:pt-[104px] sm:pb-32 overflow-hidden bg-white">
 				<div class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_-20%,rgba(59,130,246,0.06),transparent_70%)]"></div>
 
 				<div class="relative container-custom grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 					<div class="flex flex-col items-start reveal">
-						<div class="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-semibold text-secondary mb-5 sm:mb-6">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check w-3.5 h-3.5"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+						<div class="inline-flex items-center gap-2 rounded-full bg-secondary/10 border border-secondary/20 px-4 py-1.5 text-xs font-semibold text-secondary mb-5 sm:mb-6">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building w-3.5 h-3.5"><rect width="16" height="16" x="4" y="2" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg>
 							Built for high-end US dental clinics
 						</div>
 
-						<h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] text-primary">
-							Catch Every Missed Call &<br />
-							<span class="text-secondary">Automate 5-Star</span> Google Reviews.
+						<h1 class="text-[33px] sm:text-[57px] lg:text-[69px] font-black tracking-tight leading-[1.08] text-primary">
+							The Front Office Operating System for<br />
+							<span class="text-secondary">Growing Dental Practices.</span>
 						</h1>
 
-						<p class="mt-5 sm:mt-6 text-lg sm:text-xl text-muted-foreground max-w-xl leading-relaxed">
-							The only AI receptionist that answers <strong class="text-foreground">24/7</strong> AND texts every happy patient to boost your <strong class="text-foreground">Google Rating</strong>. Stop losing revenue to voicemail and invisible search rankings.
+						<p class="mt-5 sm:mt-6 text-[16px] sm:text-[18px] text-muted-foreground max-w-xl leading-relaxed">
+							Your front desk handles patients in the chair. We handle everything else — the calls, the scheduling, the follow-ups, the reviews. One system. No extra headcount.
+						</p>
+
+						<p class="mt-3 text-sm font-semibold text-secondary">
+							Practices using CareReceptionist recover an average of $10K+ per month in previously missed revenue.
 						</p>
 
 						<div class="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
-							<Button title="Start Getting Reviews & Calls" />
-							<a href="#demo" class="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-border bg-white px-8 py-3.5 text-base font-semibold text-foreground hover:border-secondary/40 hover:text-secondary hover:bg-secondary/5 transition-all hover:scale-[1.02] active:scale-[0.98]">
-								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play w-4 h-4 fill-current"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"></path></svg>
-								Watch Demo
+							<Button title="Start Your Practice's Revenue Recovery →" />
+							<a href="#problem" class="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-border bg-white px-8 py-3.5 text-base font-semibold text-foreground hover:border-secondary/40 hover:text-secondary hover:bg-secondary/5 transition-all hover:scale-[1.02] active:scale-[0.98]">
+								See What You're Missing
 							</a>
 						</div>
 
-						<!-- Trust signals below hero CTA -->
 						<div class="mt-6 sm:mt-8 flex flex-wrap items-center gap-x-5 sm:gap-x-6 gap-y-2 text-xs text-muted-foreground font-medium">
 							<span class="flex items-center gap-1.5">
-								<svg class="w-3.5 h-3.5 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-								HIPAA-conscious
+								<svg class="w-3.5 h-3.5 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+								HIPAA Compliant | BAA Signed
 							</span>
 							<span class="flex items-center gap-1.5">
-								<svg class="w-3.5 h-3.5 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+								<svg class="w-3.5 h-3.5 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
 								Live in 7 Days
 							</span>
 							<span class="flex items-center gap-1.5">
-								<svg class="w-3.5 h-3.5 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-								24/7 Coverage
+								<svg class="w-3.5 h-3.5 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+								Integrates with Dentrix & Eaglesoft
 							</span>
 							<span class="flex items-center gap-1.5">
-								<svg class="w-3.5 h-3.5 text-accent" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-								No Contracts
+								<svg class="w-3.5 h-3.5 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+								No Long-Term Contracts
 							</span>
 						</div>
 					</div>
@@ -118,18 +120,18 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 					<div class="relative lg:block reveal" style="transition-delay: 200ms">
 						<div class="relative bg-white rounded-2xl shadow-2xl border border-border/80 group overflow-hidden">
 							<div class="rounded-xl w-full aspect-[4/3] bg-gradient-to-br from-primary via-primary/95 to-secondary/20 flex items-center justify-center overflow-hidden relative group-hover:scale-[1.02] transition-transform duration-700">
-								<img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800" alt="Dental clinic" class="w-full h-full object-cover" loading="lazy" />
+								<img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800" alt="Modern dental practice" class="w-full h-full object-cover" loading="lazy" />
 							</div>
 							<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent pointer-events-none"></div>
 
 							<div class="absolute top-4 sm:top-6 -right-2 sm:-right-3 glass p-3 rounded-xl sm:p-3.5 sm:rounded-xl shadow-xl animate-bounce-slow">
 								<div class="flex items-center gap-3">
-									<div class="w-9 h-9 rounded-full bg-accent flex items-center justify-center">
+									<div class="w-9 h-9 rounded-full bg-secondary flex items-center justify-center">
 										<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
 									</div>
 									<div>
-										<div class="text-[10px] text-muted-foreground uppercase font-bold tracking-wider">Patient Experience</div>
-										<div class="text-xs font-bold text-primary">"Is Dr. Smith available for a cleaning?"</div>
+										<div class="text-[10px] text-muted-foreground uppercase font-bold tracking-wider">Patient Booking</div>
+										<div class="text-xs font-bold text-primary">"I need a cleaning next Thursday."</div>
 									</div>
 								</div>
 							</div>
@@ -156,171 +158,172 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 				</div>
 			</div>
 
-			<!-- Results & ROI Section -->
+			<!-- Results & ROI Section (Problem) -->
 			<ResultsROI client:visible />
 
+			<!-- Pain Amplification -->
 			<!-- Revenue Calculator -->
 			<RevenueCalculator client:visible />
 
-			<!-- Safety Net Section -->
-			<section class="section-padding bg-primary relative overflow-hidden border-y border-white/10">
+			<!-- Solution Section -->
+			<section id="solution" class="section-padding bg-primary relative overflow-hidden border-y border-white/10 scroll-mt-24">
 				<div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(59,130,246,0.06),transparent_70%)] pointer-events-none"></div>
 				<div class="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-secondary/5 blur-[120px] rounded-full pointer-events-none" />
-
 				<div class="container-custom relative z-10">
 					<div class="section-header">
 						<div class="reveal">
-							<div class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold text-secondary mb-5">
-								Zero-Error Philosophy
-							</div>
-							<h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white">Smart Enough for Routine.<br /> Confident Enough to Hand Off.</h2>
-							<p class="mt-4 text-white/60 text-lg">Built to handle the routine, and smart enough to know when to escalate.</p>
+							<h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white">Your Front Office. Operating at Full Capacity.</h2>
+							<p class="mt-4 text-white/60 text-lg">Not a replacement for your team. A force multiplier for everything they do.</p>
 						</div>
 					</div>
-
 					<div class="grid md:grid-cols-3 gap-5 sm:gap-6 relative">
-				<div class="hidden md:block absolute top-1/2 left-[30%] right-[30%] h-px bg-white/10 -translate-y-1/2 z-0"></div>
+						<div class="hidden md:block absolute top-1/2 left-[16%] right-[16%] h-px bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-y-1/2 z-0"></div>
+						
+						<!-- Card 1: Calls -->
+						<div class="reveal relative z-10 p-6 sm:p-8 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] hover:border-secondary/30 hover:-translate-y-1 transition-all duration-500 group" style="transition-delay: 0ms">
+							<div class="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-5">
+								<div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-secondary/20 border border-secondary/30 flex items-center justify-center text-secondary group-hover:scale-110 group-hover:rotate-[-8deg] transition-all duration-500 flex-shrink-0">
+									<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+								</div>
+								<div class="text-left">
+									<div class="text-2xl sm:text-3xl font-black text-white tracking-tight">100%</div>
+									<div class="text-[10px] sm:text-xs text-white/40 uppercase tracking-widest font-semibold">Call Answer Rate</div>
+								</div>
+							</div>
+							<h3 class="font-bold text-lg text-white">Calls That Used to Go to Voicemail</h3>
+							<p class="mt-2 text-sm text-white/60 leading-relaxed">Every patient call gets picked up — before the second ring. Your front desk keeps working. The phone is handled.</p>
+							<div class="mt-4 pt-4 border-t border-white/10 flex items-center gap-2 text-xs">
+								<span class="text-red-400/70">Before: 33% missed</span>
+								<svg class="w-3 h-3 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+								<span class="text-secondary font-semibold">After: 100% answered</span>
+							</div>
+						</div>
 
-				<div class="reveal relative z-10 flex flex-col items-center text-center p-6 sm:p-8 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] hover:border-secondary/30 transition-all duration-300" style="transition-delay: 0ms">
-					<div class="w-14 h-14 rounded-xl bg-secondary/20 border border-secondary/30 flex items-center justify-center text-secondary mb-5 sm:mb-6">
-						<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-					</div>
-					<h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3 text-white">1. Triage</h3>
-					<p class="text-sm text-white/60 leading-relaxed">AI instantly identifies the intent: booking, question, or complex inquiry.</p>
-				</div>
+						<!-- Card 2: Appointments -->
+						<div class="reveal relative z-10 p-6 sm:p-8 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] hover:border-secondary/30 hover:-translate-y-1 transition-all duration-500 group" style="transition-delay: 100ms">
+							<div class="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-5">
+								<div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-secondary/20 border border-secondary/30 flex items-center justify-center text-secondary group-hover:scale-110 group-hover:rotate-[-8deg] transition-all duration-500 flex-shrink-0">
+									<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="m9 16 2 2 4-4"></path></svg>
+								</div>
+								<div class="text-left">
+									<div class="text-2xl sm:text-3xl font-black text-white tracking-tight">24/7</div>
+									<div class="text-[10px] sm:text-xs text-white/40 uppercase tracking-widest font-semibold">Self-Service Booking</div>
+								</div>
+							</div>
+							<h3 class="font-bold text-lg text-white">Appointments That Book Themselves</h3>
+							<p class="mt-2 text-sm text-white/60 leading-relaxed">Your patient calls at 8 PM. They want a cleaning next Thursday. It goes on your calendar. No one from your team was involved.</p>
+							<div class="mt-4 pt-4 border-t border-white/10 flex items-center gap-2 text-xs">
+								<span class="text-red-400/70">Before: Phone tag</span>
+								<svg class="w-3 h-3 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+								<span class="text-secondary font-semibold">After: Instant booking</span>
+							</div>
+						</div>
 
-				<div class="reveal relative z-10 flex flex-col items-center text-center p-6 sm:p-8 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] hover:border-secondary/30 transition-all duration-300" style="transition-delay: 100ms">
-					<div class="w-14 h-14 rounded-xl bg-secondary/20 border border-secondary/30 flex items-center justify-center text-secondary mb-5 sm:mb-6">
-						<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+						<!-- Card 3: Reviews -->
+						<div class="reveal relative z-10 p-6 sm:p-8 rounded-2xl bg-accent/[0.03] border border-accent/20 hover:bg-accent/[0.06] hover:border-accent/40 hover:-translate-y-1 transition-all duration-500 group" style="transition-delay: 200ms">
+							<div class="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-5">
+								<div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-accent/20 border border-accent/30 flex items-center justify-center text-accent group-hover:scale-110 group-hover:rotate-[-8deg] transition-all duration-500 flex-shrink-0">
+									<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+								</div>
+								<div class="text-left">
+									<div class="text-2xl sm:text-3xl font-black text-white tracking-tight">4.9★</div>
+									<div class="text-[10px] sm:text-xs text-white/40 uppercase tracking-widest font-semibold">Average Google Rating</div>
+								</div>
+							</div>
+							<h3 class="font-bold text-lg text-white">Reviews That Generate Automatically</h3>
+							<p class="mt-2 text-sm text-white/60 leading-relaxed">After every appointment, a text goes out asking for a review. Happy patients leave 5 stars. Your Google rating climbs.</p>
+							<div class="mt-4 pt-4 border-t border-white/10 flex items-center gap-2 text-xs">
+								<span class="text-red-400/70">Before: 27 reviews</span>
+								<svg class="w-3 h-3 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+								<span class="text-accent font-semibold">After: 112 reviews</span>
+							</div>
+						</div>
 					</div>
-					<h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3 text-white">2. Resolve</h3>
-					<p class="text-sm text-white/60 leading-relaxed">Routine calls are handled instantly — bookings, hours, insurance questions.</p>
-				</div>
-
-				<div class="reveal relative z-10 flex flex-col items-center text-center p-6 sm:p-8 rounded-2xl bg-accent/[0.03] border border-accent/20 hover:bg-accent/[0.06] hover:border-accent/40 transition-all duration-300" style="transition-delay: 200ms">
-					<div class="w-14 h-14 rounded-xl bg-accent/20 border border-accent/30 flex items-center justify-center text-accent mb-5 sm:mb-6">
-						<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="19" x2="19" y1="8" y2="14"></line><line x1="22" x2="16" y1="11" y2="11"></line></svg>
-					</div>
-					<h3 class="font-bold text-lg sm:text-xl mb-2 sm:mb-3 text-white">3. Handoff</h3>
-					<p class="text-sm text-white/60 leading-relaxed">Complex cases or emergencies are flagged. Your team steps in immediately.</p>
-				</div>
-			</div>
 				</div>
 			</section>
 
-			<!-- Revenue Multiplier Section -->
-			<section class="section-padding bg-gradient-to-b from-primary to-primary/95 relative overflow-hidden border-b border-white/10">
-				<div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_0%,rgba(59,130,246,0.08),transparent_70%)] pointer-events-none"></div>
-				<div class="hidden md:block absolute top-1/3 right-0 w-[500px] h-[500px] bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
-
-				<div class="container-custom relative z-10">
+			<!-- Benefits Section -->
+			<section class="section-padding relative overflow-hidden bg-muted/30">
+				<div class="container-custom">
 					<div class="section-header">
 						<div class="reveal">
-							<div class="inline-flex items-center gap-2 rounded-full bg-accent/10 border border-accent/20 px-4 py-1.5 text-xs font-semibold text-accent mb-5">
-								<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-								Revenue Multiplier
-							</div>
-							<h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white">Turn Patients into <span class="text-secondary">5-Star</span> Marketing Assets.</h2>
-							<p class="mt-4 text-white/60 text-lg max-w-2xl mx-auto">Every appointment is a chance to dominate local search. We close the loop — from booking to review — automatically.</p>
+							<div class="badge mb-5">What Changes</div>
+							<h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary">What Changes When You Install CareReceptionist</h2>
+							<p class="mt-4 text-muted-foreground text-lg">Six outcomes that transform your practice operations.</p>
 						</div>
 					</div>
-
-					<div class="grid md:grid-cols-2 gap-4 sm:gap-6 mb-10 sm:mb-14">
-						<div class="reveal flex items-start gap-3 sm:gap-4 p-5 sm:p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] hover:border-accent/30 transition-all duration-300" style="transition-delay: 0ms">
-							<div class="w-12 h-12 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center shrink-0">
-								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-							</div>
-							<div>
-								<h3 class="font-bold text-white text-base">Auto-SMS Review Requests</h3>
-								<p class="mt-1.5 text-sm text-white/50 leading-relaxed">Sent instantly after appointment completion — no manual follow-up, no forgetting.</p>
+					<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+						<!-- Revenue Recovery Hero Card -->
+						<div class="reveal card-premium p-6 sm:p-8 hover:-translate-y-1.5 col-span-full relative overflow-hidden group" style="transition-delay: 0ms">
+							<div class="absolute -top-24 -right-24 w-64 h-64 bg-secondary/[0.04] blur-3xl rounded-full pointer-events-none group-hover:bg-secondary/[0.08] transition-all duration-700"></div>
+							<div class="absolute -bottom-8 -left-8 w-32 h-32 bg-secondary/[0.03] blur-2xl rounded-full pointer-events-none"></div>
+							<div class="relative z-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
+								<div class="flex-shrink-0">
+									<div class="text-4xl sm:text-5xl md:text-6xl font-black text-primary gradient-accent bg-clip-text text-transparent leading-none">$50K+</div>
+									<div class="text-[10px] sm:text-xs text-muted-foreground uppercase tracking-widest font-bold mt-1.5">Recovered Revenue / Year</div>
+								</div>
+								<div class="sm:border-l sm:border-border sm:pl-8 flex-1">
+									<h3 class="font-bold text-xl text-foreground">Revenue Recovery</h3>
+									<p class="mt-1 text-sm text-muted-foreground leading-relaxed">The $50k+ you're losing to missed calls starts coming back. System pays for itself with one patient.</p>
+								</div>
+								<div class="sm:ml-auto flex-shrink-0">
+									<span class="inline-flex items-center gap-1.5 text-xs font-semibold text-secondary bg-secondary/10 rounded-full px-3 py-1.5 border border-secondary/20">#1 impact</span>
+								</div>
 							</div>
 						</div>
 
-						<div class="reveal flex items-start gap-3 sm:gap-4 p-5 sm:p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] hover:border-accent/30 transition-all duration-300" style="transition-delay: 100ms">
-							<div class="w-12 h-12 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center shrink-0">
-								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></svg>
+						<!-- Take Your Time Back -->
+						<div class="reveal card-premium p-6 sm:p-8 hover:-translate-y-1.5 group" style="transition-delay: 100ms">
+							<div class="w-10 h-10 rounded-lg bg-primary/5 border border-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
 							</div>
-							<div>
-								<h3 class="font-bold text-white text-base"><span class="text-accent">300% More Reviews</span></h3>
-								<p class="mt-1.5 text-sm text-white/50 leading-relaxed">SMS generates <strong class="text-white/80">3x more reviews</strong> than email — and we do it all automatically.</p>
-							</div>
+							<h3 class="font-bold text-lg text-foreground">Take Your Time Back</h3>
+							<p class="mt-2 text-sm text-muted-foreground leading-relaxed">20+ hours per week reclaimed from phone juggling — back to your patients and your practice.</p>
 						</div>
 
-						<div class="reveal flex items-start gap-3 sm:gap-4 p-5 sm:p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] hover:border-accent/30 transition-all duration-300" style="transition-delay: 200ms">
-							<div class="w-12 h-12 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center shrink-0">
-								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+						<!-- More New Patients -->
+						<div class="reveal card-premium p-6 sm:p-8 hover:-translate-y-1.5 group" style="transition-delay: 200ms">
+							<div class="w-10 h-10 rounded-lg bg-primary/5 border border-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
 							</div>
-							<div>
-								<h3 class="font-bold text-white text-base"><span class="text-accent">Revenue Impact</span></h3>
-								<p class="mt-1.5 text-sm text-white/50 leading-relaxed">A <strong class="text-white/80">1-star rating increase</strong> boosts clinic revenue by <strong class="text-white/80">~9%</strong> — that's <strong class="text-white/80">$50k+ extra</strong> for the average practice.</p>
-							</div>
+							<h3 class="font-bold text-lg text-foreground">More New Patients</h3>
+							<p class="mt-2 text-sm text-muted-foreground leading-relaxed">Every call is answered. Every caller is converted. The leakage stops.</p>
 						</div>
 
-						<div class="reveal flex items-start gap-3 sm:gap-4 p-5 sm:p-6 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] hover:border-accent/30 transition-all duration-300" style="transition-delay: 300ms">
-							<div class="w-12 h-12 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center shrink-0">
-								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+						<!-- Dominant Google Ratings -->
+						<div class="reveal card-premium p-6 sm:p-8 hover:-translate-y-1.5 group" style="transition-delay: 300ms">
+							<div class="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center text-accent mb-4 group-hover:scale-110 group-hover:bg-accent/20 transition-all duration-300">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
 							</div>
-							<div>
-								<h3 class="font-bold text-white text-base">Set & Forget</h3>
-								<p class="mt-1.5 text-sm text-white/50 leading-relaxed">Fully automated via our AI workflow. No dashboards to check, no campaigns to launch.</p>
-							</div>
+							<h3 class="font-bold text-lg text-foreground">Dominant Google Ratings</h3>
+							<p class="mt-2 text-sm text-muted-foreground leading-relaxed">More reviews. Higher ratings. Better search placement.</p>
 						</div>
-					</div>
 
-					<!-- Flow Diagram -->
-					<div class="reveal max-w-4xl mx-auto" style="transition-delay: 400ms">
-						<div class="rounded-2xl bg-white/[0.04] border border-white/10 p-5 sm:p-8">
-							<div class="text-xs font-bold text-accent uppercase tracking-widest mb-4 sm:mb-5 text-center">The Review Automation Flow</div>
-							<div class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-0">
-								<div class="flex flex-col items-center text-center px-3 sm:px-4 py-2 sm:py-3">
-									<div class="w-12 h-12 rounded-full bg-secondary/20 border border-secondary/30 flex items-center justify-center mb-2">
-										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-									</div>
-									<span class="text-xs font-bold text-white/70">Appointment<br />Booked</span>
-								</div>
-
-								<div class="text-white/20 text-2xl hidden sm:block">
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-								</div>
-								<div class="text-white/20 text-2xl sm:hidden rotate-90">
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-								</div>
-
-								<div class="flex flex-col items-center text-center px-4 py-3">
-									<div class="w-12 h-12 rounded-full bg-secondary/20 border border-secondary/30 flex items-center justify-center mb-2">
-										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-									</div>
-									<span class="text-xs font-bold text-white/70">AI Call<br />Ends</span>
-								</div>
-
-								<div class="text-white/20 text-2xl hidden sm:block">
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-								</div>
-								<div class="text-white/20 text-2xl sm:hidden rotate-90">
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-								</div>
-
-								<div class="flex flex-col items-center text-center px-4 py-3">
-									<div class="w-12 h-12 rounded-full bg-accent/20 border border-accent/30 flex items-center justify-center mb-2">
-										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-									</div>
-									<span class="text-xs font-bold text-white/70">SMS Review<br />Sent</span>
-								</div>
-
-								<div class="text-white/20 text-2xl hidden sm:block">
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-								</div>
-								<div class="text-white/20 text-2xl sm:hidden rotate-90">
-									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-								</div>
-
-								<div class="flex flex-col items-center text-center px-4 py-3">
-									<div class="w-12 h-12 rounded-full bg-accent/20 border border-accent/30 flex items-center justify-center mb-2">
-										<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-									</div>
-									<span class="text-xs font-bold text-white/70">5-Star Review<br />Posted</span>
-								</div>
+						<!-- Happier Front Desk Staff -->
+						<div class="reveal card-premium p-6 sm:p-8 hover:-translate-y-1.5 group" style="transition-delay: 400ms">
+							<div class="w-10 h-10 rounded-lg bg-primary/5 border border-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
 							</div>
+							<h3 class="font-bold text-lg text-foreground">Happier Front Desk Staff</h3>
+							<p class="mt-2 text-sm text-muted-foreground leading-relaxed">Interruptions drop by 60%. Stress drops. Retention improves.</p>
+						</div>
+
+						<!-- Referral-Grade Experience -->
+						<div class="reveal card-premium p-6 sm:p-8 hover:-translate-y-1.5 group" style="transition-delay: 500ms">
+							<div class="w-10 h-10 rounded-lg bg-primary/5 border border-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+							</div>
+							<h3 class="font-bold text-lg text-foreground">Referral-Grade Experience</h3>
+							<p class="mt-2 text-sm text-muted-foreground leading-relaxed">Patients who get immediate answers and easy booking refer their friends.</p>
+						</div>
+
+						<!-- Peace of Mind -->
+						<div class="reveal card-premium p-6 sm:p-8 hover:-translate-y-1.5 group" style="transition-delay: 600ms">
+							<div class="w-10 h-10 rounded-lg bg-primary/5 border border-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+							</div>
+							<h3 class="font-bold text-lg text-foreground">Peace of Mind</h3>
+							<p class="mt-2 text-sm text-muted-foreground leading-relaxed">Covered during lunch, after hours, weekends, and when your front desk is swamped. 48+ uncovered hours per week, reclaimed.</p>
 						</div>
 					</div>
 				</div>
@@ -331,45 +334,30 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 				<div class="container-custom">
 					<div class="section-header">
 						<div class="reveal">
-							<div class="badge mb-5">
-								Built for Dental
-							</div>
-							<h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary">Your Full-Cycle Patient Acquisition System</h2>
-							<p class="mt-4 text-muted-foreground text-lg">From the first ring to the 5-star review — everything your practice needs to capture revenue and dominate local search.</p>
+							<div class="badge mb-5">Capabilities</div>
+							<h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary">How We Deliver These Results</h2>
+							<p class="mt-4 text-muted-foreground text-lg">Every capability is designed to produce a specific outcome for your practice.</p>
 						</div>
 					</div>
-
 					<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-						<FeatureCard title="Automated Reputation Engine" description="We don't just answer phones; we fill your Google profile with 5-star social proof automatically — no effort required.">
-							<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+						<FeatureCard title="Every patient gets an answer — even after your office closes" description="A patient calls at 9 PM. They don't wait until morning. A real conversation. A booked appointment. A confirmation text.">
+							<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
 						</FeatureCard>
-
-						<FeatureCard title="Answers Every Call, Every Time" description="First-ring pickup means no patient is ever left waiting — even during lunch rushes." delay="100ms">
-							<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M16 2v6h6"></path><path d="m22 2-6 6"></path><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg>
-						</FeatureCard>
-
-						<FeatureCard title="Books Appointments Automatically" description="Integrates with your practice management software to schedule real appointments in real-time." delay="200ms">
-							<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M16 14v2.2l1.6 1"></path><path d="M16 2v4"></path><path d="M21 7.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3.5"></path><path d="M3 10h5"></path><path d="M8 2v4"></path><circle cx="16" cy="16" r="6"></circle></svg>
-						</FeatureCard>
-
-						<FeatureCard title="Flags Emergencies Instantly" description="Trained to identify clinical emergencies and prioritize them for immediate human attention." delay="300ms">
+						<FeatureCard title="Emergencies go straight to your team" description="Trained to recognize clinical urgency. Cracked tooth → emergency line. Routine cleaning → booked automatically." delay="100ms">
 							<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M18 5h4"></path><path d="M20 3v4"></path><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg>
 						</FeatureCard>
-
-						<FeatureCard title="Smart SMS Notifications" description="Automatically sends booking confirmations, reschedule alerts, and cancellation notices to keep every patient informed." delay="400ms">
+						<FeatureCard title="Every happy patient leaves a review — automatically" description="After each appointment, an SMS review request fires. 5-star reviews accumulate. Your Google rating climbs." delay="200ms">
+							<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+						</FeatureCard>
+						<FeatureCard title="Patients book without playing phone tag" description="New patients call, see available times, pick one. It goes on your calendar instantly. No back-and-forth." delay="300ms">
+							<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="m9 16 2 2 4-4"></path></svg>
+						</FeatureCard>
+						<FeatureCard title="Patients never wonder 'did they get my booking?'" description="Confirmation texts immediately. Reminders at 48h and 24h. Reschedules handled automatically. Fewer no-shows." delay="400ms">
 							<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><line x1="8" x2="16" y1="10" y2="10"></line><line x1="8" x2="16" y1="14" y2="14"></line></svg>
 						</FeatureCard>
-
-						<FeatureCard title="HIPAA-Compliant by Design" description="Enterprise-grade security and signed BAA agreements protect every patient conversation." delay="500ms">
+						<FeatureCard title="Every conversation is HIPAA-protected" description="Signed BAA. End-to-end encryption. Audit logs. Annual security audits." delay="500ms">
 							<svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
 						</FeatureCard>
-					</div>
-
-					<!-- Trust signal near features -->
-					<div class="reveal mt-12 text-center">
-						<p class="text-sm text-muted-foreground/60 font-medium">
-							Trusted by growing dental practices across the United States.
-						</p>
 					</div>
 				</div>
 			</section>
@@ -427,9 +415,6 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 			<!-- Pricing Section -->
 			<PricingSection client:visible />
 
-			<!-- Final CTA Section -->
-			<FinalCTA client:visible />
-
 			<!-- FAQ Section -->
 			<section id="faq" class="section-padding scroll-mt-24 bg-muted/30">
 				<div class="container-custom max-w-3xl">
@@ -452,6 +437,9 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 					</div>
 				</div>
 			</section>
+
+			<!-- Final CTA Section -->
+			<FinalCTA client:visible />
 		</main>
 
 		<!-- Footer -->

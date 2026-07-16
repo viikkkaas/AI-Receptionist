@@ -57,7 +57,7 @@ export const RevenueCalculator: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl sm:text-5xl font-extrabold tracking-tight text-primary leading-tight"
           >
-            What are missed calls costing your{' '}
+            What are missed calls actually costing your{' '}
             <span className="text-gradient">practice?</span>
           </motion.h2>
           <motion.p
@@ -245,7 +245,7 @@ export const RevenueCalculator: React.FC = () => {
             <span className="text-gradient">
               one recovered patient
             </span>{' '}
-            per month.
+             per week.
           </motion.h3>
         </div>
 
