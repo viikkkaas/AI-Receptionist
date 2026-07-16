@@ -11,9 +11,9 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 ---
 
 <Layout>
-	<div id="top" class="min-h-screen bg-background text-foreground selection:bg-secondary/20 overflow-x-hidden">
-		<!-- Header -->
-		<header class="fixed top-0 inset-x-0 z-50 transition-all duration-500 bg-transparent border-b border-transparent contain-paint" id="main-header">
+	<div id="top" class="min-h-screen bg-background text-foreground selection:bg-secondary/20 overflow-x-hidden pb-[72px] md:pb-0">
+		<!-- ==================== DESKTOP HEADER (unchanged) ==================== -->
+		<header class="hidden md:block fixed top-0 inset-x-0 z-50 transition-all duration-500 bg-transparent border-b border-transparent contain-paint" id="main-header">
 			<nav class="container-custom h-20 flex items-center justify-between transition-all duration-500" id="nav-container">
 				<a href="#top" class="font-extrabold tracking-tight text-xl flex items-center gap-2 group text-primary">
 					<span>CareReceptionist</span><span class="text-secondary"> AI</span>
@@ -65,9 +65,31 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 			</div>
 		</header>
 
+		<!-- ==================== MOBILE BOTTOM NAV BAR ==================== -->
+		<nav class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur-xl border-t border-border/80 safe-bottom will-change-transform" id="mobile-bottom-nav">
+			<div class="flex items-center justify-around h-[72px] px-2 max-w-xl mx-auto">
+				<a href="#top" class="flex flex-col items-center justify-center gap-1 min-w-[56px] py-2 bottom-nav-link text-secondary">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-home"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+					<span class="text-[10px] font-semibold">Home</span>
+				</a>
+				<a href="/how-it-works" class="flex flex-col items-center justify-center gap-1 min-w-[56px] py-2 bottom-nav-link text-muted-foreground hover:text-secondary transition-colors">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+					<span class="text-[10px] font-semibold">How It Works</span>
+				</a>
+				<a href="#pricing" class="flex flex-col items-center justify-center gap-1 min-w-[56px] py-2 bottom-nav-link text-muted-foreground hover:text-secondary transition-colors">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tag"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2Z"></path><path d="M7 7h.01"></path></svg>
+					<span class="text-[10px] font-semibold">Pricing</span>
+				</a>
+				<a href="https://calendly.com/vikas-p-2706/30min" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center justify-center gap-1 min-w-[56px] py-2 text-muted-foreground hover:text-secondary transition-colors">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>
+					<span class="text-[10px] font-semibold">Book Demo</span>
+				</a>
+			</div>
+		</nav>
+
 		<main>
-			<!-- Hero Section -->
-			<section class="relative pt-18 pb-20 sm:pt-[104px] sm:pb-32 overflow-hidden bg-white">
+			<!-- ==================== DESKTOP HERO (unchanged) ==================== -->
+			<section class="hidden md:block relative pt-18 pb-20 sm:pt-[104px] sm:pb-32 overflow-hidden bg-white">
 				<div class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_-20%,rgba(59,130,246,0.06),transparent_70%)]"></div>
 
 				<div class="relative container-custom grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -140,8 +162,78 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 				</div>
 			</section>
 
-			<!-- Trust Strip -->
-			<div class="bg-primary py-5">
+			<!-- ==================== MOBILE HERO ==================== -->
+			<section class="md:hidden relative pt-14 pb-10 overflow-hidden bg-white">
+				<div class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_-20%,rgba(59,130,246,0.06),transparent_70%)]"></div>
+
+				<div class="relative px-5 max-w-xl mx-auto">
+					<div class="flex items-center gap-2 rounded-full bg-secondary/10 border border-secondary/20 px-3.5 py-1 text-[11px] font-semibold text-secondary mb-5 w-fit">
+						Built for US dental clinics
+					</div>
+
+					<h1 class="text-[28px] font-black tracking-tight leading-[1.12] text-primary">
+						The Front Office OS for<br />
+						<span class="text-secondary">Growing Dental Practices.</span>
+					</h1>
+
+					<p class="mt-4 text-[15px] text-muted-foreground leading-relaxed">
+						Your front desk handles patients in the chair. We handle the calls, scheduling, follow-ups, and reviews — automatically.
+					</p>
+
+					<p class="mt-3 text-sm font-semibold text-secondary">
+						Recover $10K+/month in previously missed revenue.
+					</p>
+
+					<div class="mt-6 flex flex-col gap-3">
+						<a href="https://calendly.com/vikas-p-2706/30min" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 rounded-xl gradient-accent text-primary-foreground shadow-glow px-6 py-4 text-base font-bold active:scale-[0.97] transition-all duration-200">
+							Start Revenue Recovery
+							<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+							</svg>
+						</a>
+						<a href="#problem" class="flex items-center justify-center gap-2 rounded-xl border-2 border-border bg-white px-6 py-3.5 text-sm font-semibold text-foreground active:scale-[0.97] transition-all duration-200">
+							See What You're Missing
+						</a>
+					</div>
+
+					<div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[11px] text-muted-foreground font-medium">
+						<span class="flex items-center gap-1">
+							<svg class="w-3 h-3 text-secondary shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+							HIPAA Compliant
+						</span>
+						<span class="flex items-center gap-1">
+							<svg class="w-3 h-3 text-secondary shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+							Live in 7 Days
+						</span>
+						<span class="flex items-center gap-1">
+							<svg class="w-3 h-3 text-secondary shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+							No Contracts
+						</span>
+					</div>
+
+					<div class="mt-8 -mx-5">
+						<div class="relative bg-white rounded-2xl shadow-xl border border-border/80 mx-5 overflow-hidden">
+							<div class="w-full aspect-[4/3] bg-gradient-to-br from-primary via-primary/95 to-secondary/20 overflow-hidden">
+								<img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=800" alt="Modern dental practice" class="w-full h-full object-cover" loading="lazy" />
+							</div>
+							<div class="absolute top-3 -right-1 glass p-2.5 rounded-xl shadow-lg">
+								<div class="flex items-center gap-2">
+									<div class="w-7 h-7 rounded-full bg-secondary flex items-center justify-center shrink-0">
+										<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+									</div>
+									<div>
+										<div class="text-[9px] text-muted-foreground uppercase font-bold tracking-wider">Patient Booking</div>
+										<div class="text-[11px] font-bold text-primary">"I need a cleaning next Thursday."</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ==================== DESKTOP TRUST STRIP (unchanged) ==================== -->
+			<div class="hidden md:flex bg-primary py-5">
 				<div class="container-custom flex flex-col md:flex-row items-center justify-center gap-8 md:gap-14 text-white/80 text-sm font-medium">
 					<div class="flex items-center gap-2.5">
 						<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
@@ -158,15 +250,40 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 				</div>
 			</div>
 
-			<!-- Results & ROI Section (Problem) -->
+			<!-- ==================== MOBILE TRUST STRIP ==================== -->
+			<div class="md:hidden bg-primary py-3.5 overflow-hidden">
+				<div class="flex items-center gap-6 overflow-x-auto px-5 scrollbar-none snap-x snap-mandatory" style="-webkit-overflow-scrolling: touch;">
+					<div class="flex items-center gap-2 text-white/80 text-[12px] font-medium shrink-0 snap-start">
+						<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent shrink-0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+						<span>HIPAA Compliant</span>
+					</div>
+					<div class="flex items-center gap-2 text-white/80 text-[12px] font-medium shrink-0 snap-start">
+						<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent shrink-0"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+						<span>BAA Signed</span>
+					</div>
+					<div class="flex items-center gap-2 text-white/80 text-[12px] font-medium shrink-0 snap-start">
+						<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent shrink-0"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+						<span>256-bit Encryption</span>
+					</div>
+					<div class="flex items-center gap-2 text-white/80 text-[12px] font-medium shrink-0 snap-start">
+						<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent shrink-0"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+						<span>Live in 7 Days</span>
+					</div>
+					<div class="flex items-center gap-2 text-white/80 text-[12px] font-medium shrink-0 snap-start">
+						<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent shrink-0"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+						<span>Dentrix & Eaglesoft</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- Results & ROI Section (Problem) — shared component, unchanged -->
 			<ResultsROI client:visible />
 
-			<!-- Pain Amplification -->
-			<!-- Revenue Calculator -->
+			<!-- Pain Amplification / Revenue Calculator — shared component, unchanged -->
 			<RevenueCalculator client:visible />
 
-			<!-- Solution Section -->
-			<section id="solution" class="section-padding bg-primary relative overflow-hidden border-y border-white/10 scroll-mt-24">
+			<!-- ==================== DESKTOP SOLUTION SECTION (unchanged) ==================== -->
+			<section id="solution" class="hidden md:block section-padding bg-primary relative overflow-hidden border-y border-white/10 scroll-mt-24">
 				<div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(59,130,246,0.06),transparent_70%)] pointer-events-none"></div>
 				<div class="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-secondary/5 blur-[120px] rounded-full pointer-events-none" />
 				<div class="container-custom relative z-10">
@@ -178,8 +295,7 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 					</div>
 					<div class="grid md:grid-cols-3 gap-5 sm:gap-6 relative">
 						<div class="hidden md:block absolute top-1/2 left-[16%] right-[16%] h-px bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-y-1/2 z-0"></div>
-						
-						<!-- Card 1: Calls -->
+
 						<div class="reveal relative z-10 p-6 sm:p-8 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] hover:border-secondary/30 hover:-translate-y-1 transition-all duration-500 group" style="transition-delay: 0ms">
 							<div class="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-5">
 								<div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-secondary/20 border border-secondary/30 flex items-center justify-center text-secondary group-hover:scale-110 group-hover:rotate-[-8deg] transition-all duration-500 flex-shrink-0">
@@ -199,7 +315,6 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 							</div>
 						</div>
 
-						<!-- Card 2: Appointments -->
 						<div class="reveal relative z-10 p-6 sm:p-8 rounded-2xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] hover:border-secondary/30 hover:-translate-y-1 transition-all duration-500 group" style="transition-delay: 100ms">
 							<div class="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-5">
 								<div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-secondary/20 border border-secondary/30 flex items-center justify-center text-secondary group-hover:scale-110 group-hover:rotate-[-8deg] transition-all duration-500 flex-shrink-0">
@@ -219,7 +334,6 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 							</div>
 						</div>
 
-						<!-- Card 3: Reviews -->
 						<div class="reveal relative z-10 p-6 sm:p-8 rounded-2xl bg-accent/[0.03] border border-accent/20 hover:bg-accent/[0.06] hover:border-accent/40 hover:-translate-y-1 transition-all duration-500 group" style="transition-delay: 200ms">
 							<div class="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-5">
 								<div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-accent/20 border border-accent/30 flex items-center justify-center text-accent group-hover:scale-110 group-hover:rotate-[-8deg] transition-all duration-500 flex-shrink-0">
@@ -242,8 +356,78 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 				</div>
 			</section>
 
-			<!-- Benefits Section -->
-			<section class="section-padding relative overflow-hidden bg-muted/30">
+			<!-- ==================== MOBILE SOLUTION SECTION ==================== -->
+			<section id="solution-mobile" class="md:hidden section-padding bg-primary relative overflow-hidden border-y border-white/10">
+				<div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(59,130,246,0.06),transparent_70%)] pointer-events-none" />
+				<div class="px-5 max-w-xl mx-auto">
+					<div class="text-center mb-8">
+						<h2 class="text-[26px] font-extrabold tracking-tight text-white leading-tight">Your Front Office. Operating at Full Capacity.</h2>
+						<p class="mt-3 text-[14px] text-white/60">A force multiplier for your team, not a replacement.</p>
+					</div>
+
+					<div class="flex flex-col gap-4">
+						<div class="p-5 rounded-2xl bg-white/[0.03] border border-white/10">
+							<div class="flex items-center gap-3 mb-3">
+								<div class="w-10 h-10 rounded-xl bg-secondary/20 border border-secondary/30 flex items-center justify-center text-secondary shrink-0">
+									<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+								</div>
+								<div>
+									<div class="text-xl font-black text-white">100%</div>
+									<div class="text-[9px] text-white/40 uppercase tracking-widest font-semibold">Call Answer Rate</div>
+								</div>
+							</div>
+							<h3 class="font-bold text-[15px] text-white">Calls That Used to Go to Voicemail</h3>
+							<p class="mt-1.5 text-[13px] text-white/60 leading-relaxed">Every patient call gets picked up before the second ring. Your front desk stays focused on patients in the chair.</p>
+							<div class="mt-3 pt-3 border-t border-white/10 flex items-center gap-2 text-[11px]">
+								<span class="text-red-400/70">Before: 33% missed</span>
+								<svg class="w-2.5 h-2.5 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+								<span class="text-secondary font-semibold">After: 100% answered</span>
+							</div>
+						</div>
+
+						<div class="p-5 rounded-2xl bg-white/[0.03] border border-white/10">
+							<div class="flex items-center gap-3 mb-3">
+								<div class="w-10 h-10 rounded-xl bg-secondary/20 border border-secondary/30 flex items-center justify-center text-secondary shrink-0">
+									<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="m9 16 2 2 4-4"></path></svg>
+								</div>
+								<div>
+									<div class="text-xl font-black text-white">24/7</div>
+									<div class="text-[9px] text-white/40 uppercase tracking-widest font-semibold">Self-Service Booking</div>
+								</div>
+							</div>
+							<h3 class="font-bold text-[15px] text-white">Appointments That Book Themselves</h3>
+							<p class="mt-1.5 text-[13px] text-white/60 leading-relaxed">Patient calls at 8 PM, books a cleaning for next Thursday. It goes on your calendar. No team involvement.</p>
+							<div class="mt-3 pt-3 border-t border-white/10 flex items-center gap-2 text-[11px]">
+								<span class="text-red-400/70">Before: Phone tag</span>
+								<svg class="w-2.5 h-2.5 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+								<span class="text-secondary font-semibold">After: Instant booking</span>
+							</div>
+						</div>
+
+						<div class="p-5 rounded-2xl bg-accent/[0.03] border border-accent/20">
+							<div class="flex items-center gap-3 mb-3">
+								<div class="w-10 h-10 rounded-xl bg-accent/20 border border-accent/30 flex items-center justify-center text-accent shrink-0">
+									<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+								</div>
+								<div>
+									<div class="text-xl font-black text-white">4.9★</div>
+									<div class="text-[9px] text-white/40 uppercase tracking-widest font-semibold">Average Google Rating</div>
+								</div>
+							</div>
+							<h3 class="font-bold text-[15px] text-white">Reviews That Generate Automatically</h3>
+							<p class="mt-1.5 text-[13px] text-white/60 leading-relaxed">After every appointment, a text asks for a review. Happy patients leave 5 stars. Your Google rating climbs.</p>
+							<div class="mt-3 pt-3 border-t border-white/10 flex items-center gap-2 text-[11px]">
+								<span class="text-red-400/70">Before: 27 reviews</span>
+								<svg class="w-2.5 h-2.5 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+								<span class="text-accent font-semibold">After: 112 reviews</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ==================== DESKTOP BENEFITS SECTION (unchanged) ==================== -->
+			<section class="hidden md:block section-padding relative overflow-hidden bg-muted/30">
 				<div class="container-custom">
 					<div class="section-header">
 						<div class="reveal">
@@ -253,7 +437,6 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 						</div>
 					</div>
 					<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-						<!-- Revenue Recovery Hero Card -->
 						<div class="reveal card-premium p-6 sm:p-8 hover:-translate-y-1.5 col-span-full relative overflow-hidden group" style="transition-delay: 0ms">
 							<div class="absolute -top-24 -right-24 w-64 h-64 bg-secondary/[0.04] blur-3xl rounded-full pointer-events-none group-hover:bg-secondary/[0.08] transition-all duration-700"></div>
 							<div class="absolute -bottom-8 -left-8 w-32 h-32 bg-secondary/[0.03] blur-2xl rounded-full pointer-events-none"></div>
@@ -272,7 +455,6 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 							</div>
 						</div>
 
-						<!-- Take Your Time Back -->
 						<div class="reveal card-premium p-6 sm:p-8 hover:-translate-y-1.5 group" style="transition-delay: 100ms">
 							<div class="w-10 h-10 rounded-lg bg-primary/5 border border-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
 								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
@@ -281,7 +463,6 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 							<p class="mt-2 text-sm text-muted-foreground leading-relaxed">20+ hours per week reclaimed from phone juggling — back to your patients and your practice.</p>
 						</div>
 
-						<!-- More New Patients -->
 						<div class="reveal card-premium p-6 sm:p-8 hover:-translate-y-1.5 group" style="transition-delay: 200ms">
 							<div class="w-10 h-10 rounded-lg bg-primary/5 border border-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
 								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
@@ -290,7 +471,6 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 							<p class="mt-2 text-sm text-muted-foreground leading-relaxed">Every call is answered. Every caller is converted. The leakage stops.</p>
 						</div>
 
-						<!-- Dominant Google Ratings -->
 						<div class="reveal card-premium p-6 sm:p-8 hover:-translate-y-1.5 group" style="transition-delay: 300ms">
 							<div class="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center text-accent mb-4 group-hover:scale-110 group-hover:bg-accent/20 transition-all duration-300">
 								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
@@ -299,7 +479,6 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 							<p class="mt-2 text-sm text-muted-foreground leading-relaxed">More reviews. Higher ratings. Better search placement.</p>
 						</div>
 
-						<!-- Happier Front Desk Staff -->
 						<div class="reveal card-premium p-6 sm:p-8 hover:-translate-y-1.5 group" style="transition-delay: 400ms">
 							<div class="w-10 h-10 rounded-lg bg-primary/5 border border-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
 								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
@@ -308,7 +487,6 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 							<p class="mt-2 text-sm text-muted-foreground leading-relaxed">Interruptions drop by 60%. Stress drops. Retention improves.</p>
 						</div>
 
-						<!-- Referral-Grade Experience -->
 						<div class="reveal card-premium p-6 sm:p-8 hover:-translate-y-1.5 group" style="transition-delay: 500ms">
 							<div class="w-10 h-10 rounded-lg bg-primary/5 border border-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
 								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
@@ -317,7 +495,6 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 							<p class="mt-2 text-sm text-muted-foreground leading-relaxed">Patients who get immediate answers and easy booking refer their friends.</p>
 						</div>
 
-						<!-- Peace of Mind -->
 						<div class="reveal card-premium p-6 sm:p-8 hover:-translate-y-1.5 group" style="transition-delay: 600ms">
 							<div class="w-10 h-10 rounded-lg bg-primary/5 border border-primary/10 flex items-center justify-center text-primary mb-4 group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-300">
 								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
@@ -329,7 +506,76 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 				</div>
 			</section>
 
-			<!-- Features Section -->
+			<!-- ==================== MOBILE BENEFITS SECTION ==================== -->
+			<section class="md:hidden section-padding relative overflow-hidden bg-muted/30">
+				<div class="px-5 max-w-xl mx-auto">
+					<div class="text-center mb-8">
+						<div class="inline-flex items-center gap-2 rounded-full bg-secondary/10 border border-secondary/20 px-3 py-1 text-[11px] font-semibold text-secondary mb-4">What Changes</div>
+						<h2 class="text-[23px] font-extrabold tracking-tight text-primary leading-tight">What Changes When You Install CareReceptionist</h2>
+					</div>
+
+					<div class="flex flex-col gap-3">
+						<div class="bg-white rounded-2xl border border-border/80 p-5">
+							<div class="flex items-center gap-4 mb-2">
+								<div class="text-2xl font-black text-primary gradient-accent bg-clip-text text-transparent leading-none">$50K+</div>
+								<span class="text-[10px] font-semibold text-secondary bg-secondary/10 rounded-full px-2.5 py-1 border border-secondary/20 ml-auto shrink-0">#1 impact</span>
+							</div>
+							<h3 class="font-bold text-[15px] text-foreground">Revenue Recovery</h3>
+							<p class="mt-1 text-[13px] text-muted-foreground leading-relaxed">The $50k+ you're losing to missed calls starts coming back. System pays for itself with one patient.</p>
+						</div>
+
+						<div class="bg-white rounded-2xl border border-border/80 p-5">
+							<div class="w-9 h-9 rounded-lg bg-primary/5 border border-primary/10 flex items-center justify-center text-primary mb-3">
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+							</div>
+							<h3 class="font-bold text-[15px] text-foreground">Take Your Time Back</h3>
+							<p class="mt-1 text-[13px] text-muted-foreground leading-relaxed">20+ hours per week reclaimed from phone juggling — back to your patients and your practice.</p>
+						</div>
+
+						<div class="bg-white rounded-2xl border border-border/80 p-5">
+							<div class="w-9 h-9 rounded-lg bg-primary/5 border border-primary/10 flex items-center justify-center text-primary mb-3">
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+							</div>
+							<h3 class="font-bold text-[15px] text-foreground">More New Patients</h3>
+							<p class="mt-1 text-[13px] text-muted-foreground leading-relaxed">Every call is answered. Every caller is converted. The leakage stops.</p>
+						</div>
+
+						<div class="bg-white rounded-2xl border border-border/80 p-5">
+							<div class="w-9 h-9 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center text-accent mb-3">
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+							</div>
+							<h3 class="font-bold text-[15px] text-foreground">Dominant Google Ratings</h3>
+							<p class="mt-1 text-[13px] text-muted-foreground leading-relaxed">More reviews. Higher ratings. Better search placement.</p>
+						</div>
+
+						<div class="bg-white rounded-2xl border border-border/80 p-5">
+							<div class="w-9 h-9 rounded-lg bg-primary/5 border border-primary/10 flex items-center justify-center text-primary mb-3">
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+							</div>
+							<h3 class="font-bold text-[15px] text-foreground">Happier Front Desk Staff</h3>
+							<p class="mt-1 text-[13px] text-muted-foreground leading-relaxed">Interruptions drop by 60%. Stress drops. Retention improves.</p>
+						</div>
+
+						<div class="bg-white rounded-2xl border border-border/80 p-5">
+							<div class="w-9 h-9 rounded-lg bg-primary/5 border border-primary/10 flex items-center justify-center text-primary mb-3">
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+							</div>
+							<h3 class="font-bold text-[15px] text-foreground">Referral-Grade Experience</h3>
+							<p class="mt-1 text-[13px] text-muted-foreground leading-relaxed">Patients who get immediate answers and easy booking refer their friends.</p>
+						</div>
+
+						<div class="bg-white rounded-2xl border border-border/80 p-5">
+							<div class="w-9 h-9 rounded-lg bg-primary/5 border border-primary/10 flex items-center justify-center text-primary mb-3">
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+							</div>
+							<h3 class="font-bold text-[15px] text-foreground">Peace of Mind</h3>
+							<p class="mt-1 text-[13px] text-muted-foreground leading-relaxed">Covered during lunch, after hours, weekends, and when your front desk is swamped.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Features Section — shared, unchanged -->
 			<section id="features" class="section-padding scroll-mt-24 bg-white">
 				<div class="container-custom">
 					<div class="section-header">
@@ -362,7 +608,7 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 				</div>
 			</section>
 
-			<!-- Demo Section -->
+			<!-- Demo Section — shared, unchanged -->
 			<section id="demo" class="section-padding scroll-mt-24 bg-muted/30">
 				<div class="container-custom max-w-5xl">
 					<div class="section-header">
@@ -381,7 +627,7 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 				</div>
 			</section>
 
-			<!-- About Section -->
+			<!-- About Section — shared, unchanged -->
 			<section class="section-padding scroll-mt-24 bg-muted/30">
 				<div class="container-custom max-w-5xl">
 					<div class="section-header">
@@ -409,13 +655,13 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 				</div>
 			</section>
 
-			<!-- Testimonials Section -->
+			<!-- Testimonials Section — shared component, unchanged -->
 			<Testimonials client:visible />
 
-			<!-- Pricing Section -->
+			<!-- Pricing Section — shared component, unchanged -->
 			<PricingSection client:visible />
 
-			<!-- FAQ Section -->
+			<!-- FAQ Section — shared, unchanged -->
 			<section id="faq" class="section-padding scroll-mt-24 bg-muted/30">
 				<div class="container-custom max-w-3xl">
 					<div class="section-header">
@@ -438,12 +684,12 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 				</div>
 			</section>
 
-			<!-- Final CTA Section -->
+			<!-- Final CTA Section — shared component, unchanged -->
 			<FinalCTA client:visible />
 		</main>
 
-		<!-- Footer -->
-		<footer id="contact" class="bg-primary text-white section-padding">
+		<!-- ==================== DESKTOP FOOTER (unchanged) ==================== -->
+		<footer id="contact" class="hidden md:block bg-primary text-white section-padding">
 			<div class="container-custom flex flex-col md:flex-row md:items-start md:justify-between gap-8 sm:gap-12">
 				<div class="max-w-xs">
 					<div class="font-extrabold tracking-tight text-2xl">
@@ -477,33 +723,116 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 				<div>© 2026 CareReceptionist AI. All rights reserved.</div>
 			</div>
 		</footer>
+
+		<!-- ==================== MOBILE FOOTER ==================== -->
+		<footer class="md:hidden bg-primary text-white py-10">
+			<div class="px-5 max-w-xl mx-auto">
+				<div class="text-center">
+					<div class="font-extrabold tracking-tight text-xl">
+						<span>CareReceptionist</span><span class="text-secondary"> AI</span>
+					</div>
+					<p class="text-[12px] text-white/50 mt-3 leading-relaxed max-w-xs mx-auto">
+						Catch every call, book every appointment, and flood your Google profile with 5-star reviews — automatically.
+					</p>
+				</div>
+
+				<div class="flex justify-center gap-8 mt-6 text-[13px] font-semibold">
+					<div class="flex flex-col gap-2.5 items-center">
+						<span class="text-accent uppercase tracking-wider text-[10px] font-bold">Product</span>
+						<a href="/how-it-works" class="text-white/50 hover:text-white transition-colors">How It Works</a>
+						<a href="/#pricing" class="text-white/50 hover:text-white transition-colors">Pricing</a>
+					</div>
+					<div class="flex flex-col gap-2.5 items-center">
+						<span class="text-accent uppercase tracking-wider text-[10px] font-bold">Company</span>
+						<a href="/privacy" class="text-white/50 hover:text-white transition-colors">Privacy</a>
+						<a href="/contact" class="text-white/50 hover:text-white transition-colors">Contact</a>
+					</div>
+				</div>
+
+				<div class="mt-8 pt-6 border-t border-white/5 text-center text-[11px] text-white/30">
+					© 2026 CareReceptionist AI. All rights reserved.
+				</div>
+			</div>
+		</footer>
+
+		<!-- ==================== MOBILE STICKY CTA (appears on scroll) ==================== -->
+		<div id="mobile-sticky-cta" class="md:hidden fixed bottom-[72px] inset-x-0 z-40 bg-white/95 backdrop-blur-xl border-t border-border/80 px-5 py-3 translate-y-full opacity-0 transition-all duration-500 safe-bottom">
+			<div class="max-w-xl mx-auto">
+				<a href="https://calendly.com/vikas-p-2706/30min" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 rounded-xl gradient-accent text-primary-foreground shadow-glow px-6 py-3.5 text-sm font-bold active:scale-[0.97] transition-all duration-200 w-full">
+					Book Your Free Demo
+					<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+					</svg>
+				</a>
+			</div>
+		</div>
 	</div>
 </Layout>
 
 <script>
+	// ==================== NEW MOBILE BOTTOM NAV ACTIVE LINK ====================
+	(function() {
+		const navLinks = document.querySelectorAll('#mobile-bottom-nav .bottom-nav-link');
+		const sections = ['#top', '/how-it-works', '#pricing'];
+		const currentPath = window.location.pathname;
+
+		navLinks.forEach((link, i) => {
+			const href = link.getAttribute('href');
+			if (href === currentPath || (href.startsWith('#') && i === 0 && (currentPath === '/' || currentPath === ''))) {
+				link.classList.add('text-secondary');
+				link.classList.remove('text-muted-foreground');
+			}
+		});
+	})();
+
+	// ==================== MOBILE STICKY CTA ON SCROLL ====================
+	(function() {
+		const stickyCta = document.getElementById('mobile-sticky-cta');
+		if (!stickyCta) return;
+
+		let ctaShown = false;
+		const heroEnd = document.querySelector('.md\\:hidden.pt-14') || document.querySelector('section');
+
+		window.addEventListener('scroll', () => {
+			if (window.innerWidth >= 768) return;
+			const scrollY = window.scrollY || window.pageYOffset;
+
+			if (scrollY > 400 && !ctaShown) {
+				stickyCta.classList.remove('translate-y-full', 'opacity-0');
+				ctaShown = true;
+			} else if (scrollY <= 400 && ctaShown) {
+				stickyCta.classList.add('translate-y-full', 'opacity-0');
+				ctaShown = false;
+			}
+		}, { passive: true });
+	})();
+
+	// ==================== EXISTING DESKTOP HEADER SCROLL BEHAVIOR ====================
 	const header = document.getElementById('main-header');
 	const navContainer = document.getElementById('nav-container');
 	const isMobile = () => window.innerWidth < 768;
 
 	window.addEventListener('scroll', () => {
+		if (!header) return;
 		if (window.scrollY > 20) {
 			if (isMobile()) {
-				header?.classList.add('bg-white', 'border-border/80', 'shadow-sm');
-				header?.classList.remove('bg-transparent', 'border-transparent', 'backdrop-blur-lg');
+				header.classList.add('bg-white', 'border-border/80', 'shadow-sm');
+				header.classList.remove('bg-transparent', 'border-transparent', 'backdrop-blur-lg');
 			} else {
-				header?.classList.add('bg-white/80', 'backdrop-blur-lg', 'border-border/80', 'shadow-sm');
-				header?.classList.remove('bg-transparent', 'border-transparent');
+				header.classList.add('bg-white/80', 'backdrop-blur-lg', 'border-border/80', 'shadow-sm');
+				header.classList.remove('bg-transparent', 'border-transparent');
 			}
 			navContainer?.classList.remove('h-20');
 			navContainer?.classList.add('h-16');
 		} else {
-			header?.classList.remove('bg-white/80', 'backdrop-blur-lg', 'border-border/80', 'shadow-sm', 'bg-white');
-			header?.classList.add('bg-transparent', 'border-transparent');
+			header.classList.remove('bg-white/80', 'backdrop-blur-lg', 'border-border/80', 'shadow-sm', 'bg-white');
+			header.classList.add('bg-transparent', 'border-transparent');
 			navContainer?.classList.add('h-20');
 			navContainer?.classList.remove('h-16');
 		}
 	});
 
+	// ==================== EXISTING MOBILE MENU TOGGLE ====================
 	const mobileMenuButton = document.getElementById('mobile-menu-button');
 	const mobileMenu = document.getElementById('mobile-menu');
 	const mobileLinks = document.querySelectorAll('.mobile-link');
@@ -514,19 +843,20 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 	];
 
 	function toggleMenu() {
-		const isExpanded = mobileMenuButton?.getAttribute('aria-expanded') === 'true';
-		mobileMenuButton?.setAttribute('aria-expanded', (!isExpanded).toString());
+		if (!mobileMenuButton || !mobileMenu) return;
+		const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+		mobileMenuButton.setAttribute('aria-expanded', (!isExpanded).toString());
 
 		if (!isExpanded) {
-			mobileMenu?.classList.remove('invisible', 'opacity-0');
-			mobileMenu?.classList.add('visible', 'opacity-100');
+			mobileMenu.classList.remove('invisible', 'opacity-0');
+			mobileMenu.classList.add('visible', 'opacity-100');
 			document.body.style.overflow = 'hidden';
 			menuBars[0]?.classList.add('rotate-45', 'translate-y-[9px]');
 			menuBars[1]?.classList.add('opacity-0', 'translate-x-2');
 			menuBars[2]?.classList.add('-rotate-45', '-translate-y-[9px]');
 		} else {
-			mobileMenu?.classList.add('invisible', 'opacity-0');
-			mobileMenu?.classList.remove('visible', 'opacity-100');
+			mobileMenu.classList.add('invisible', 'opacity-0');
+			mobileMenu.classList.remove('visible', 'opacity-100');
 			document.body.style.overflow = '';
 			menuBars[0]?.classList.remove('rotate-45', 'translate-y-[9px]');
 			menuBars[1]?.classList.remove('opacity-0', 'translate-x-2');
@@ -544,6 +874,7 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 		});
 	});
 
+	// ==================== EXISTING REVEAL OBSERVER ====================
 	const revealElements = document.querySelectorAll('.reveal');
 	const observer = new IntersectionObserver((entries) => {
 		entries.forEach(entry => {
@@ -556,27 +887,28 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 
 	revealElements.forEach(el => observer.observe(el));
 
+	// ==================== EXISTING FAQ ACCORDION ====================
 	const faqButtons = document.querySelectorAll('.faq-button');
 	faqButtons.forEach(button => {
 		button.addEventListener('click', () => {
-			const answer = button.nextElementSibling as HTMLElement;
+			const answer = button.nextElementSibling;
 			const icon = button.querySelector('svg');
 			const isExpanded = button.getAttribute('aria-expanded') === 'true';
 
 			faqButtons.forEach(otherButton => {
 				if (otherButton !== button) {
-					const otherAnswer = otherButton.nextElementSibling as HTMLElement;
-					otherAnswer.style.maxHeight = '0';
+					const otherAnswer = otherButton.nextElementSibling;
+					if (otherAnswer) otherAnswer.style.maxHeight = '0';
 					otherButton.querySelector('svg')?.classList.remove('rotate-180');
 					otherButton.setAttribute('aria-expanded', 'false');
 				}
 			});
 
-			if (!isExpanded) {
+			if (!isExpanded && answer) {
 				answer.style.maxHeight = answer.scrollHeight + 'px';
 				icon?.classList.add('rotate-180');
 				button.setAttribute('aria-expanded', 'true');
-			} else {
+			} else if (answer) {
 				answer.style.maxHeight = '0';
 				icon?.classList.remove('rotate-180');
 				button.setAttribute('aria-expanded', 'false');
@@ -616,5 +948,24 @@ import { FinalCTA } from '../components/FinalCTA.tsx';
 	@keyframes fadeIn {
 		from { opacity: 0; transform: translateY(-10px); }
 		to { opacity: 1; transform: translateY(0); }
+	}
+
+	/* Mobile bottom nav safe area */
+	.safe-bottom {
+		padding-bottom: env(safe-area-inset-bottom, 0px);
+	}
+
+	/* Mobile horizontal scrollbar hide */
+	.scrollbar-none {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+	.scrollbar-none::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Mobile sticky CTA safe area */
+	#mobile-sticky-cta.safe-bottom {
+		padding-bottom: max(env(safe-area-inset-bottom, 0px), 12px);
 	}
 </style>

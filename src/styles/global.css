@@ -103,3 +103,26 @@
     box-shadow: 0 0 30px rgba(59, 130, 246, 0.25);
   }
 }
+
+/* Mobile tap highlight reset */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Safe area for notched phones */
+@supports (padding: max(0px)) {
+  .safe-bottom {
+    padding-bottom: max(env(safe-area-inset-bottom, 0px), 0px);
+  }
+}
+
+/* Smooth momentum scrolling */
+.momentum-scroll {
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+/* Disable text size adjust on orientation change */
+html {
+  -webkit-text-size-adjust: 100%;
+}
