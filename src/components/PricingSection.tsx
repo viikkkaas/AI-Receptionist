@@ -21,7 +21,6 @@ const rightFeatures = [
 
 const trustBadges = [
   { text: 'HIPAA-conscious' },
-  { text: '7-Day Trial' },
   { text: 'Cancel Anytime' },
 ];
 
@@ -81,32 +80,13 @@ export const PricingSection: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             >
-              <div 		className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 p-5 sm:p-8 rounded-2xl bg-muted/20 border border-border/20">
-                <div className="flex flex-col items-center sm:items-start text-center sm:text-left flex-1">
-                  <span className="text-[44px] sm:text-[51px] font-extrabold text-primary tracking-tight">$597</span>
-                  <span className="text-xs text-muted-foreground font-semibold uppercase tracking-wider mt-1">One-Time Setup</span>
-                  <span className="text-[10px] leading-tight text-muted-foreground/60 mt-2 max-w-[220px]">Covers BAA execution, PM software integration, and custom AI voice training</span>
-                </div>
-
-                <div className="hidden sm:block w-px h-16 bg-border/30" />
-
-                <div className="flex items-center justify-center">
-                  <span className="px-4 py-1.5 rounded-full text-xs font-bold bg-white text-muted-foreground/60 border border-border/30 uppercase tracking-widest shadow-sm select-none">
-                    THEN
-                  </span>
-                </div>
-
-                <div className="hidden sm:block w-px h-16 bg-border/30" />
-
-                <div className="flex flex-col items-center sm:items-end text-center sm:text-right flex-1">
-                  <div className="flex items-start gap-1">
-                    <span className="text-5xl sm:text-6xl font-extrabold text-gradient tracking-tight">
-                      $1799
-                    </span>
-                    <span className="text-sm sm:text-base text-muted-foreground mt-1.5 sm:mt-2 font-medium">/month</span>
-                  </div>
-                  <span className="text-xs text-accent font-semibold mt-1.5">✓ All-inclusive voice & data</span>
-                </div>
+              <div className="flex flex-col items-center text-center p-5 sm:p-8 rounded-2xl bg-muted/20 border border-border/20">
+                <span className="text-[32px] sm:text-[36px] font-extrabold text-primary tracking-tight leading-tight">
+                  Custom Pricing Built For Your Practice
+                </span>
+                <span className="text-sm text-muted-foreground mt-3 max-w-[480px] leading-relaxed">
+                  Pricing depends on call volume and practice size — see your custom plan on a free demo call.
+                </span>
               </div>
             </motion.div>
 
@@ -192,9 +172,6 @@ export const PricingSection: React.FC = () => {
               <p className="mt-2 text-sm text-violet-600/80 leading-relaxed">
                 CareReceptionist AI often pays for itself with a single recovered patient each week.
               </p>
-              <p className="mt-3 text-xs text-violet-400">
-                *Typical practice estimate. Results vary.
-              </p>
             </motion.div>
 
             <motion.div
@@ -246,9 +223,7 @@ export const PricingSection: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </a>
-              <p className="mt-3 text-center text-xs text-muted-foreground">
-                No credit card required
-              </p>
+
             </motion.div>
           </div>
         </motion.div>
