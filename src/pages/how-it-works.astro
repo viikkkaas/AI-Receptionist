@@ -3,9 +3,61 @@ import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button.astro';
 import FAQItem from '../components/FAQItem.astro';
 import { FinalCTA } from '../components/FinalCTA.tsx';
+
+const pageTitle = 'How It Works — CareReceptionist AI Receptionist for Dental Practices';
+const pageDescription = "From kickoff to a fully operational AI receptionist in under a week — without changing your phone number or disrupting your workflow. See how CareReceptionist AI works for your dental practice.";
+
+const faqSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'FAQPage',
+	mainEntity: [
+		{
+			'@type': 'Question',
+			name: 'How long does onboarding take?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Most clinics are live within 5-7 business days. We start with a discovery call, train the AI on your practice, integrate with your existing systems, test thoroughly, and go live — all within a single week.',
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Do I need a new phone number?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'No. We route calls through your existing phone number. Patients keep calling the same number they have always called — CareReceptionist AI answers when your team cannot.',
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Will my staff need training?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Minimal to none. Your team continues working as usual. The AI handles overflow calls and after-hours bookings. We provide a quick walkthrough so everyone understands how the handoff system works.',
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'Can you integrate with my existing scheduling workflow?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Yes. We integrate with leading practice management systems used by dental clinics. Our team handles the integration so appointments flow directly into your existing calendar.',
+			},
+		},
+		{
+			'@type': 'Question',
+			name: 'What if the AI cannot handle a call?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'The AI is trained to recognize when a call needs human attention. Complex cases, emergencies, or unusual requests are immediately flagged and handed off to your team in real-time.',
+			},
+		},
+	],
+};
+
+const jsonLd = JSON.stringify([faqSchema]);
 ---
 
-<Layout>
+<Layout title={pageTitle} description={pageDescription} canonical="https://www.carereceptionistai.com/how-it-works" jsonLd={jsonLd}>
 	<div id="top" class="min-h-screen bg-background text-foreground selection:bg-secondary/20 overflow-x-hidden">
 		<!-- Header -->
 		<header class="fixed top-0 inset-x-0 z-50 transition-all duration-500 bg-transparent border-b border-transparent contain-paint" id="main-header">

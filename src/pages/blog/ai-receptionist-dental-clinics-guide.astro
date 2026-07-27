@@ -1,0 +1,187 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Button from '../../components/Button.astro';
+
+const pageTitle = 'AI Receptionist for Dental Clinics: The Complete Guide | CareReceptionist AI';
+const pageDescription = 'Everything dental practice owners need to know about AI receptionists: how they work, what they cost, and how they help recover missed revenue. Complete guide for 2026.';
+const pageCanonical = 'https://www.carereceptionistai.com/blog/ai-receptionist-dental-clinics-guide';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is an AI receptionist for dental clinics?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'An AI receptionist is a voice AI system that answers patient calls, handles appointment scheduling, sends SMS confirmations, and manages review requests automatically. It integrates with your existing practice management system and phone number.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Will an AI receptionist replace my front desk staff?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. AI receptionists work alongside your team by handling overflow calls and after-hours bookings. Your front desk staff continues focusing on patients in the clinic while the AI manages phone traffic.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does an AI receptionist for dental clinics cost?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'AI receptionist services for dental clinics typically start around $1,000 to $2,000 per month depending on call volume and features. Most practices recover the cost within the first month from recovered missed revenue.',
+      },
+    },
+  ],
+};
+
+const jsonLd = JSON.stringify([faqSchema]);
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} jsonLd={jsonLd}>
+  <div class="min-h-screen bg-background text-foreground selection:bg-secondary/20 overflow-x-hidden">
+    <header class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur-lg border-b border-border/80 shadow-sm">
+      <nav class="container-custom h-16 flex items-center justify-between">
+        <a href="/" class="font-extrabold tracking-tight text-xl flex items-center gap-2 text-primary">
+          <span>CareReceptionist</span><span class="text-secondary"> AI</span>
+        </a>
+        <div class="hidden md:flex items-center gap-4">
+          <Button variant="ghost" href="https://app.carereceptionistai.com/login" title="Login" target="_self" />
+          <Button title="Book Free Demo" />
+        </div>
+      </nav>
+    </header>
+
+    <main class="pt-28 pb-20">
+      <article class="container-custom max-w-3xl">
+        <div class="mb-8">
+          <a href="/blog" class="text-sm text-muted-foreground hover:text-secondary transition-colors">&larr; Back to Blog</a>
+        </div>
+
+        <div class="mb-6 flex items-center gap-3 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+          <span class="text-secondary">Guide</span>
+          <span class="w-1 h-1 rounded-full bg-muted-foreground/40"></span>
+          <span>10 min read</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl font-black tracking-tight text-primary leading-[1.12]">
+          AI Receptionist for Dental Clinics: The Complete Guide
+        </h1>
+
+        <div class="mt-4 flex items-center gap-3 text-sm text-muted-foreground">
+          <span>By Vikas</span>
+          <span class="w-1 h-1 rounded-full bg-muted-foreground/40"></span>
+          <span>July 2026</span>
+        </div>
+
+        <div class="mt-10 prose prose-lg max-w-none text-muted-foreground leading-relaxed space-y-6">
+          <p class="text-lg font-medium text-foreground">
+            Dental practices face a unique challenge: your phone is your highest-converting marketing channel, yet it is also your most unreliable. When a prospective patient calls and no one answers, that lead is gone — likely to a competitor. AI receptionists for dental clinics have emerged as the definitive solution to this problem.
+          </p>
+
+          <h2 class="text-2xl font-extrabold text-primary tracking-tight mt-10">What Is a Dental AI Receptionist?</h2>
+
+          <p>
+            An AI receptionist is a voice artificial intelligence system purpose-built for dental practices. Unlike generic voice assistants, a dental AI receptionist understands clinical terminology — prophy, SRP, endodontics, crown prep — and follows your specific scheduling workflows. It answers calls, books appointments, sends confirmations, and handles routine inquiries without any human involvement.
+          </p>
+
+          <p>
+            The key distinction is that this is not an answering service. Answering services take messages and promise callbacks. An AI receptionist completes transactions: it schedules appointments, updates your calendar, sends SMS confirmations, and follows up automatically. It is an active member of your front office team, not a message-taking intermediary.
+          </p>
+
+          <h2 class="text-2xl font-extrabold text-primary tracking-tight mt-10">How an AI Receptionist Works</h2>
+
+          <p>
+            When a patient calls your existing number, the AI receptionist answers within one to two seconds. The conversation flows naturally: the AI introduces itself, asks how it can help, and guides the caller through scheduling. It checks available time slots from your connected calendar, offers options, and books the appointment instantly.
+          </p>
+
+          <p>
+            If a patient has an emergency — cracked tooth, severe pain, uncontrolled bleeding — the AI recognizes the urgency and immediately routes the call to your team. For routine requests like rescheduling or checking insurance, the AI handles everything autonomously.
+          </p>
+
+          <p>
+            After the appointment, the system sends an automated SMS review request. Happy patients leave five-star reviews, rapidly improving your Google rating and local search visibility.
+          </p>
+
+          <h2 class="text-2xl font-extrabold text-primary tracking-tight mt-10">Benefits for Dental Practices</h2>
+
+          <p>
+            The benefits fall into four categories: revenue recovery, operational efficiency, patient experience, and staff retention.
+          </p>
+
+          <h3 class="text-lg font-bold text-primary mt-6">Revenue Recovery</h3>
+          <p>
+            Every call answered is a potential booking. Practices using AI receptionists report recovering $5,000 to $15,000 per month in previously missed revenue. The system pays for itself within weeks.
+          </p>
+
+          <h3 class="text-lg font-bold text-primary mt-6">Operational Efficiency</h3>
+          <p>
+            Front desk staff reclaim 15 to 20 hours per week that was previously spent on phone interruptions. They focus on in-clinic patient care, insurance verification, and treatment coordination.
+          </p>
+
+          <h3 class="text-lg font-bold text-primary mt-6">Patient Experience</h3>
+          <p>
+            Patients get immediate answers 24/7. They book appointments at 8 PM on a Sunday. They receive confirmation texts and reminders automatically. The experience is seamless and modern.
+          </p>
+
+          <h3 class="text-lg font-bold text-primary mt-6">Staff Retention</h3>
+          <p>
+            Front desk burnout drops significantly when the constant phone interruption is eliminated. Practices report lower turnover and higher job satisfaction among front office staff.
+          </p>
+
+          <h2 class="text-2xl font-extrabold text-primary tracking-tight mt-10">Integration with Practice Management Systems</h2>
+
+          <p>
+            A critical requirement for any dental AI receptionist is deep integration with your existing practice management software. Leading systems like Dentrix and Eaglesoft are the backbone of dental practice operations. An AI receptionist must be able to read and write appointment data directly to these systems.
+          </p>
+
+          <p>
+            <a href="/blog/dentrix-eaglesoft-ai-integration" class="text-secondary font-semibold hover:underline">Read our deep dive on Dentrix and Eaglesoft AI integration</a> to understand how the technical integration works and what to look for in a vendor.
+          </p>
+
+          <h2 class="text-2xl font-extrabold text-primary tracking-tight mt-10">What to Look for in an AI Receptionist Vendor</h2>
+
+          <p>
+            Not all AI receptionists are created equal. Here are the critical requirements for dental practices:
+          </p>
+
+          <ul class="space-y-3">
+            <li><strong>Dental-specific training:</strong> The AI must understand dental terminology and clinical workflows. Generic AI systems cannot distinguish between a routine cleaning and an SRP quad.</li>
+            <li><strong>PMS integration:</strong> Direct integration with Dentrix, Eaglesoft, or your existing practice management system is non-negotiable.</li>
+            <li><strong>HIPAA compliance:</strong> The vendor must sign a BAA and use enterprise-grade encryption for all patient data.</li>
+            <li><strong>Live in days, not months:</strong> Setup should take under two weeks, not a lengthy IT project.</li>
+            <li><strong>Transparent pricing:</strong> No long-term contracts, no hidden fees, and clear pricing based on your call volume.</li>
+          </ul>
+
+          <h2 class="text-2xl font-extrabold text-primary tracking-tight mt-10">Cost Analysis</h2>
+
+          <p>
+            Most dental AI receptionist services range from $1,000 to $2,500 per month depending on call volume and feature set. Setup fees are typically $500 to $1,000. Compare this to the cost of an additional front desk employee ($30,000 to $45,000 per year including benefits) or the revenue lost from missed calls ($50,000 to $100,000 per year).
+          </p>
+
+          <p>
+            The ROI calculation is straightforward. If your practice recovers even one additional patient per week at $500 average production, that is $26,000 per year. The AI pays for itself many times over.
+          </p>
+
+          <h2 class="text-2xl font-extrabold text-primary tracking-tight mt-10">Getting Started</h2>
+
+          <p>
+            Implementation is typically a five to seven day process. The vendor conducts a discovery call to understand your workflows, trains the AI on your specific protocols, integrates with your practice management system, tests thoroughly, and goes live. Your patients continue calling the same number — nothing changes from their perspective except that every call is now answered.
+          </p>
+
+          <p>
+            Ready to see how an AI receptionist can transform your dental practice? <a href="/how-it-works" class="text-secondary font-semibold hover:underline">Learn how it works</a> or <a href="https://calendly.com/vikas-p-2706/30min" class="text-secondary font-semibold hover:underline">book a free demo</a>.
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <footer class="bg-primary text-white py-12">
+      <div class="container-custom text-center text-sm text-white/50">
+        <p>&copy; 2026 CareReceptionist AI. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+</Layout>

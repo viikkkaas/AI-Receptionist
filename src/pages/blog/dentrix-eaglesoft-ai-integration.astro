@@ -1,0 +1,202 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Button from '../../components/Button.astro';
+
+const pageTitle = 'Dentrix and Eaglesoft AI Integration Explained | CareReceptionist AI';
+const pageDescription = 'How AI receptionists integrate with Dentrix and Eaglesoft practice management systems. Technical deep dive on PMS integration for dental clinics.';
+const pageCanonical = 'https://www.carereceptionistai.com/blog/dentrix-eaglesoft-ai-integration';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Can AI receptionists integrate with Dentrix?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Leading AI receptionist solutions for dental practices integrate directly with Dentrix to read appointment availability, book new appointments, and sync patient data in real time.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can AI receptionists integrate with Eaglesoft?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Eaglesoft integration allows AI receptionists to access scheduling data, create appointments, and send automated confirmations directly through the practice management system.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need to change my practice management system to use an AI receptionist?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. AI receptionists are designed to integrate with your existing Dentrix or Eaglesoft setup. You keep your current PMS — the AI layer connects on top of it.',
+      },
+    },
+  ],
+};
+
+const jsonLd = JSON.stringify([faqSchema]);
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} jsonLd={jsonLd}>
+  <div class="min-h-screen bg-background text-foreground selection:bg-secondary/20 overflow-x-hidden">
+    <header class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur-lg border-b border-border/80 shadow-sm">
+      <nav class="container-custom h-16 flex items-center justify-between">
+        <a href="/" class="font-extrabold tracking-tight text-xl flex items-center gap-2 text-primary">
+          <span>CareReceptionist</span><span class="text-secondary"> AI</span>
+        </a>
+        <div class="hidden md:flex items-center gap-4">
+          <Button variant="ghost" href="https://app.carereceptionistai.com/login" title="Login" target="_self" />
+          <Button title="Book Free Demo" />
+        </div>
+      </nav>
+    </header>
+
+    <main class="pt-28 pb-20">
+      <article class="container-custom max-w-3xl">
+        <div class="mb-8">
+          <a href="/blog" class="text-sm text-muted-foreground hover:text-secondary transition-colors">&larr; Back to Blog</a>
+        </div>
+
+        <div class="mb-6 flex items-center gap-3 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+          <span class="text-secondary">Integration</span>
+          <span class="w-1 h-1 rounded-full bg-muted-foreground/40"></span>
+          <span>8 min read</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl font-black tracking-tight text-primary leading-[1.12]">
+          Dentrix and Eaglesoft AI Integration Explained
+        </h1>
+
+        <div class="mt-4 flex items-center gap-3 text-sm text-muted-foreground">
+          <span>By Vikas</span>
+          <span class="w-1 h-1 rounded-full bg-muted-foreground/40"></span>
+          <span>July 2026</span>
+        </div>
+
+        <div class="mt-10 prose prose-lg max-w-none text-muted-foreground leading-relaxed space-y-6">
+          <p class="text-lg font-medium text-foreground">
+            For an AI receptionist to be truly effective in a dental practice, it must integrate deeply with your practice management system. Dentrix and Eaglesoft dominate the U.S. dental market, and any AI solution that cannot read and write directly to these systems leaves critical functionality on the table. Here is exactly how integration works and why it matters.
+          </p>
+
+          <h2 class="text-2xl font-extrabold text-primary tracking-tight mt-10">Why PMS Integration Matters</h2>
+
+          <p>
+            Without PMS integration, an AI receptionist is little more than an intelligent answering machine. It can talk to patients, but it cannot take action. True integration means the AI can:
+          </p>
+
+          <ul class="space-y-2">
+            <li><strong>Check provider availability</strong> in real time from your Dentrix or Eaglesoft schedule</li>
+            <li><strong>Book appointments</strong> directly into your PMS without manual entry</li>
+            <li><strong>Block time slots</strong> immediately when a booking is confirmed</li>
+            <li><strong>Read patient data</strong> to personalize the conversation (greeting returning patients by name)</li>
+            <li><strong>Write notes</strong> to the appointment record for seamless handoff to your team</li>
+          </ul>
+
+          <p>
+            This level of integration transforms the AI from a phone filter into a functional member of your front office team.
+          </p>
+
+          <h2 class="text-2xl font-extrabold text-primary tracking-tight mt-10">How Dentrix Integration Works</h2>
+
+          <p>
+            Dentrix offers multiple integration pathways. The most common approach uses Dentrix's API layer to establish a secure, real-time connection between the AI receptionist and your practice database. When a patient calls, the AI queries your Dentrix schedule for available slots, presents options to the caller, and writes the confirmed appointment back to Dentrix instantly.
+          </p>
+
+          <p>
+            The integration also reads patient demographic data. If a returning patient calls, the AI recognizes them by caller ID, greets them by name, and has immediate context about their last visit, upcoming appointments, and preferred provider. This creates a personalized experience that mirrors what your best front desk staff deliver.
+          </p>
+
+          <p>
+            Security is paramount. The integration uses encrypted connections with role-based access controls. The AI can only read scheduling data and write appointments — it cannot access clinical records, financial information, or protected health information beyond what is necessary for scheduling.
+          </p>
+
+          <h2 class="text-2xl font-extrabold text-primary tracking-tight mt-10">How Eaglesoft Integration Works</h2>
+
+          <p>
+            Eaglesoft integration follows the same principles but works within Eaglesoft's architecture. The AI connects to Eaglesoft's database layer through an authenticated integration bridge. Appointment availability is queried in real time, and new appointments are created with all necessary fields: provider, operatory, procedure code, duration, and patient notes.
+          </p>
+
+          <p>
+            One advantage of Eaglesoft integration is the ability to manage multiple providers and operatories. The AI can check Dr. Smith's schedule versus Dr. Jones's schedule and offer the patient the earliest available appointment with their preferred provider. This level of sophistication requires deep integration that simple API wrappers cannot deliver.
+          </p>
+
+          <h2 class="text-2xl font-extrabold text-primary tracking-tight mt-10">The Setup Process</h2>
+
+          <p>
+            PMS integration setup typically takes one to two days. Your AI vendor's integration team works with your practice to configure the connection. Here is the typical workflow:
+          </p>
+
+          <ol class="space-y-3">
+            <li><strong>Discovery:</strong> Your vendor maps your specific PMS setup — which version of Dentrix or Eaglesoft you use, your provider schedule, appointment types, and duration rules.</li>
+            <li><strong>Connection:</strong> The integration bridge is installed on your practice network or connected via secure cloud authentication.</li>
+            <li><strong>Testing:</strong> The vendor runs test calls to verify that appointment availability is accurate and bookings write correctly to your PMS.</li>
+            <li><strong>Validation:</strong> Your team reviews test appointments in Dentrix or Eaglesoft to confirm everything appears correctly.</li>
+            <li><strong>Go live:</strong> The system is activated. Your patients continue calling the same number, but now the AI handles scheduling end to end.</li>
+          </ol>
+
+          <h2 class="text-2xl font-extrabold text-primary tracking-tight mt-10">What Happens During a Call</h2>
+
+          <p>
+            Here is the exact sequence when a patient calls and the AI handles a booking through your PMS:
+          </p>
+
+          <ol class="space-y-2">
+            <li>Patient calls your existing number. AI answers within 1-2 seconds.</li>
+            <li>AI identifies the patient by caller ID. "Welcome back, Mrs. Johnson!"</li>
+            <li>Patient requests a cleaning. AI queries Dentrix/Eaglesoft for available hygiene slots.</li>
+            <li>AI offers specific times: "Dr. Smith has availability this Thursday at 2 PM or next Monday at 10 AM."</li>
+            <li>Patient selects Thursday at 2 PM. AI creates the appointment in your PMS.</li>
+            <li>AI sends an SMS confirmation with the date, time, and provider details.</li>
+            <li>Two days before the appointment, the AI sends an automated reminder.</li>
+            <li>After the appointment, the AI sends a review request via SMS.</li>
+          </ol>
+
+          <p>
+            The entire transaction happens without any human involvement. Your front desk team is not interrupted. The patient gets immediate service. The appointment is in your system.
+          </p>
+
+          <h2 class="text-2xl font-extrabold text-primary tracking-tight mt-10">Common Questions About Integration</h2>
+
+          <p>
+            <strong>Will the integration slow down my PMS?</strong> No. The AI queries are lightweight and typically complete in under 200 milliseconds. Your staff will not notice any performance impact.
+          </p>
+
+          <p>
+            <strong>What happens if the internet goes down?</strong> Most AI receptionists have built-in failover. If the integration connection is lost, the AI can still take messages and commit them to a queue that syncs when connectivity is restored.
+          </p>
+
+          <p>
+            <strong>Can I customize which appointments the AI can book?</strong> Yes. You define which appointment types, providers, and time slots the AI has access to. Complex procedures can be restricted to manual booking only.
+          </p>
+
+          <h2 class="text-2xl font-extrabold text-primary tracking-tight mt-10">Choosing the Right Integration Partner</h2>
+
+          <p>
+            When evaluating AI receptionist vendors, ask specific questions about their Dentrix and Eaglesoft integration:
+          </p>
+
+          <ul class="space-y-2">
+            <li>Does the integration read real-time availability or use cached data?</li>
+            <li>Can the AI write appointments directly to the PMS, or does it create them in a separate system?</li>
+            <li>Does the integration support multiple providers and operatories?</li>
+            <li>What security certifications and encryption standards are used?</li>
+            <li>How long does setup typically take for your specific PMS version?</li>
+          </ul>
+
+          <p>
+            <a href="/" class="text-secondary font-semibold hover:underline">CareReceptionist AI</a> integrates with both Dentrix and Eaglesoft, with direct read/write access to your schedule. <a href="https://calendly.com/vikas-p-2706/30min" class="text-secondary font-semibold hover:underline">Book a demo</a> to see the integration in action and discuss your specific PMS setup.
+          </p>
+        </div>
+      </article>
+    </main>
+
+    <footer class="bg-primary text-white py-12">
+      <div class="container-custom text-center text-sm text-white/50">
+        <p>&copy; 2026 CareReceptionist AI. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+</Layout>

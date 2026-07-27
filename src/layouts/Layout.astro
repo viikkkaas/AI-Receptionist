@@ -1,6 +1,37 @@
 ---
 import '../styles/global.css';
+
+export interface Props {
+	title?: string;
+	description?: string;
+	canonical?: string;
+	ogImage?: string;
+	jsonLd?: string;
+}
+
+const {
+	title = 'CareReceptionist — The Front Office Operating System for Dental Practices',
+	description = 'The AI-powered front office operating system for U.S. dental practices. Answer every patient call, book appointments automatically, and recover missed revenue — without adding headcount. Live in 7 days. Integrates with Dentrix.',
+	canonical = 'https://www.carereceptionistai.com',
+	ogImage = 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1200',
+	jsonLd = '',
+} = Astro.props;
+
+const canonicalUrl = canonical.startsWith('http') ? canonical : `https://www.carereceptionistai.com${canonical}`;
+
+const organizationSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Organization',
+	name: 'CareReceptionist AI',
+	url: 'https://www.carereceptionistai.com',
+	logo: 'https://www.carereceptionistai.com/favicon.svg',
+	founder: {
+		'@type': 'Person',
+		name: 'Vikas',
+	},
+};
 ---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -14,10 +45,31 @@ import '../styles/global.css';
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 		<link rel="manifest" href="/site.webmanifest" />
+		<link rel="canonical" href={canonicalUrl} />
 		<meta name="generator" content={Astro.generator} />
-		<title>CareReceptionist — The Front Office Operating System for Dental Practices</title>
-		<meta name="description" content="The AI-powered front office operating system for U.S. dental practices. Answer every patient call, book appointments automatically, and recover missed revenue — without adding headcount. Live in 7 days. Integrates with Dentrix." />
+		<title>{title}</title>
+		<meta name="description" content={description} />
 		<meta name="keywords" content="dental front office software, dental call management, practice management system, dental patient acquisition, dental revenue recovery" />
+
+		<!-- OpenGraph -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImage} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:site_name" content="CareReceptionist AI" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImage} />
+
+		<!-- JSON-LD: Organization (always present) -->
+		<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)}></script>
+
+		<!-- JSON-LD: Page-specific (FAQPage, SoftwareApplication, etc.) -->
+		{jsonLd && <script type="application/ld+json" set:html={jsonLd}></script>}
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
