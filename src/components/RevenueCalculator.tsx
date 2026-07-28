@@ -41,8 +41,8 @@ export const RevenueCalculator: React.FC = () => {
       <div className="container-custom relative z-10">
         <div className="section-header">
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ y: 15 }}
+            whileInView={{ y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="badge mb-6"
@@ -51,8 +51,8 @@ export const RevenueCalculator: React.FC = () => {
           </motion.div>
 
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ y: 20 }}
+            whileInView={{ y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl sm:text-5xl font-extrabold tracking-tight text-primary leading-tight"
@@ -61,8 +61,8 @@ export const RevenueCalculator: React.FC = () => {
             <span className="text-gradient">practice?</span>
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ y: 20 }}
+            whileInView={{ y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15 }}
             className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto"
@@ -235,8 +235,8 @@ export const RevenueCalculator: React.FC = () => {
         {/* ROI Statement */}
         <div className="mt-24 text-center">
           <motion.h3
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ y: 20 }}
+            whileInView={{ y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
 		className="text-xl sm:text-3xl md:text-4xl font-bold tracking-tight text-primary leading-snug md:leading-relaxed max-w-3xl mx-auto px-4"
@@ -251,10 +251,7 @@ export const RevenueCalculator: React.FC = () => {
 
         {/* Disclaimer */}
         <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          initial={false}
           className="mt-16 text-center text-sm text-muted-foreground"
         >
           Based on typical practice estimates. Individual results vary.

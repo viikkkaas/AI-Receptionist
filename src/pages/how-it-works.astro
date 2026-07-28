@@ -472,6 +472,8 @@ const jsonLd = JSON.stringify([faqSchema]);
 		});
 	});
 
+	document.documentElement.classList.add('js-ready');
+
 	const revealElements = document.querySelectorAll('.reveal');
 	const observer = new IntersectionObserver((entries) => {
 		entries.forEach(entry => {
@@ -526,6 +528,11 @@ const jsonLd = JSON.stringify([faqSchema]);
 	}
 
 	.reveal.active {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	html:not(.js-ready) .reveal {
 		opacity: 1;
 		transform: translateY(0);
 	}

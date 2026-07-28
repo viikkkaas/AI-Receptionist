@@ -26,9 +26,8 @@ const trustBadges = [
 
 export const PricingSection: React.FC = () => {
   const fadeVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { y: 20 },
     visible: {
-      opacity: 1,
       y: 0,
       transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
     },
@@ -45,8 +44,8 @@ export const PricingSection: React.FC = () => {
       <div className="container-custom relative z-10">
         <div className="section-header">
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ y: 15 }}
+            whileInView={{ y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.6 }}
             className="badge mx-auto mb-6 w-fit"
@@ -55,8 +54,8 @@ export const PricingSection: React.FC = () => {
           </motion.div>
 
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ y: 20 }}
+            whileInView={{ y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-primary leading-[1.1]"
@@ -67,16 +66,16 @@ export const PricingSection: React.FC = () => {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ y: 40 }}
+          whileInView={{ y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="relative max-w-[740px] mx-auto"
         >
           <div 		className="bg-white rounded-3xl border border-border/30 shadow-[0_20px_60px_-12px_rgba(15,23,42,0.08)] p-6 sm:p-12 lg:p-14">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ y: 20 }}
+              whileInView={{ y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             >
@@ -123,8 +122,8 @@ export const PricingSection: React.FC = () => {
                 {leftFeatures.map((feature, i) => (
                   <motion.div
                     key={feature}
-                    initial={{ opacity: 0, y: 14 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ y: 14 }}
+                    whileInView={{ y: 0 }}
                     viewport={{ once: true, margin: '-50px' }}
                     transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: i * 0.04 }}
                     className="flex items-start gap-3"
@@ -140,8 +139,8 @@ export const PricingSection: React.FC = () => {
                 {rightFeatures.map((feature, i) => (
                   <motion.div
                     key={feature}
-                    initial={{ opacity: 0, y: 14 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial={{ y: 14 }}
+                    whileInView={{ y: 0 }}
                     viewport={{ once: true, margin: '-50px' }}
                     transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: (i + leftFeatures.length) * 0.04 }}
                     className="flex items-start gap-3"
@@ -156,8 +155,8 @@ export const PricingSection: React.FC = () => {
             </div>
 
             <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ y: 15 }}
+              whileInView={{ y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: 0.3 }}
 		className="mt-8 sm:mt-12 p-5 sm:p-8 rounded-2xl bg-violet-50/70"
@@ -175,8 +174,8 @@ export const PricingSection: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ y: 10 }}
+              whileInView={{ y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: 0.4 }}
 		className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10"
@@ -200,8 +199,8 @@ export const PricingSection: React.FC = () => {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ y: 15 }}
+              whileInView={{ y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.5, delay: 0.5 }}
               className="mt-10"
@@ -229,8 +228,8 @@ export const PricingSection: React.FC = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ y: 15 }}
+          whileInView={{ y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.5 }}
           className="mt-10 flex flex-wrap justify-center items-center gap-3"

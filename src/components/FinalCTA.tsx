@@ -14,18 +14,16 @@ const staggerContainer = {
 };
 
 const fadeSlideUp = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { y: 30 },
   visible: {
-    opacity: 1,
     y: 0,
     transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
   },
 };
 
 const badgeFade = {
-  hidden: { opacity: 0, y: 12, scale: 0.95 },
+  hidden: { y: 12, scale: 0.95 },
   visible: (i: number) => ({
-    opacity: 1,
     y: 0,
     scale: 1,
     transition: { duration: 0.5, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] },

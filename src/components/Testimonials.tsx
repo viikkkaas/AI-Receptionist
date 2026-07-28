@@ -77,9 +77,8 @@ const containerVariants = {
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { y: 30 },
   visible: {
-    opacity: 1,
     y: 0,
     transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
   },
@@ -94,8 +93,8 @@ export const Testimonials: React.FC = () => {
       <div className="container-custom relative z-10">
         <div className="section-header">
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ y: 15 }}
+            whileInView={{ y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="badge mb-6"
@@ -104,8 +103,8 @@ export const Testimonials: React.FC = () => {
           </motion.div>
 
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ y: 20 }}
+            whileInView={{ y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl sm:text-5xl font-extrabold tracking-tight text-primary leading-tight"
@@ -114,8 +113,8 @@ export const Testimonials: React.FC = () => {
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ y: 20 }}
+            whileInView={{ y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15 }}
             className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto"
