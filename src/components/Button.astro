@@ -1,14 +1,15 @@
 ---
 interface Props {
 	title?: string;
-	variant?: 'primary' | 'secondary' | 'ghost' | 'accent' | 'outline-white';
+	variant?: 'primary' | 'secondary' | 'ghost' | 'accent' | 'outline-white' | 'pill' | 'pill-ghost';
 	href?: string;
 	size?: 'default' | 'lg';
 	target?: string;
 	rel?: string;
+	icon?: 'arrow' | 'play' | 'none';
 }
 
-const { title, variant = 'primary', href = 'https://calendly.com/vikas-p-2706/30min', size = 'default', target = '_blank', rel = 'noopener noreferrer' } = Astro.props;
+const { title, variant = 'primary', href = 'https://calendly.com/vikas-p-2706/30min', size = 'default', target = '_blank', rel = 'noopener noreferrer', icon = 'arrow' } = Astro.props;
 
 const baseClasses = 'inline-flex items-center justify-center gap-2 font-bold transition-all duration-300';
 
@@ -17,19 +18,30 @@ const sizeClasses = {
 	lg: 'rounded-xl px-8 py-4 text-base',
 };
 
+const pillSizeClasses = 'rounded-full px-7 py-3.5 text-sm';
+
 const variants = {
 	primary: 'rounded-xl gradient-accent text-primary-foreground shadow-glow hover:scale-[1.03] hover:shadow-[0_0_30px_rgba(5,150,105,0.25)] active:scale-[0.98]',
 	secondary: 'rounded-xl border-2 border-border bg-white text-foreground hover:border-secondary/40 hover:text-secondary hover:bg-secondary/5 active:scale-[0.98]',
 	ghost: 'rounded-xl text-muted-foreground hover:text-foreground hover:bg-muted/50 active:scale-[0.98]',
 	accent: 'rounded-xl bg-accent text-white shadow-lg hover:bg-accent/90 hover:scale-[1.03] active:scale-[0.98]',
 	'outline-white': 'rounded-xl border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 active:scale-[0.98]',
+	pill: 'rounded-full bg-primary text-primary-foreground shadow-sm hover:bg-primary/90 hover:shadow-md active:scale-[0.98]',
+	'pill-ghost': 'rounded-full border-2 border-border bg-white text-foreground hover:border-gray-300 hover:text-gray-900 active:scale-[0.98]',
 };
+
+const showIcon = icon !== 'none' && (variant === 'primary' || variant === 'pill');
 ---
-<a href={href} target={target} rel={rel} class={`${baseClasses} ${sizeClasses[size]} ${variants[variant]}`}>
+<a href={href} target={target} rel={rel} class={`${baseClasses} ${variant === 'pill' || variant === 'pill-ghost' ? pillSizeClasses : sizeClasses[size]} ${variants[variant]}`}>
 	{title || "Start Your Practice's Revenue Recovery"}
-	{variant === 'primary' && (
+	{icon === 'arrow' && showIcon && (
 		<svg class="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
 			<path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+		</svg>
+	)}
+	{icon === 'play' && (
+		<svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+			<path d="M8 5v14l11-7z" />
 		</svg>
 	)}
 </a>

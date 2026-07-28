@@ -1,0 +1,332 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Button from '../components/Button.astro';
+import { caseStudies } from '../data/testimonials';
+
+const pageTitle = 'Case Studies — CareReceptionist AI';
+const pageDescription = 'Real results from real U.S. dental practices. See before and after metrics from practices that switched to CareReceptionist AI.';
+---
+
+<Layout title={pageTitle} description={pageDescription} canonical="https://www.carereceptionistai.com/case-studies">
+  <div id="top" class="min-h-screen bg-background text-foreground selection:bg-secondary/20 overflow-x-hidden">
+    <!-- Header -->
+    <header class="fixed top-0 inset-x-0 z-50 transition-all duration-500 bg-transparent border-b border-transparent contain-paint" id="main-header">
+      <nav class="container-custom h-20 flex items-center justify-between transition-all duration-500" id="nav-container">
+        <a href="/" class="font-extrabold tracking-tight text-xl flex items-center gap-2 group text-primary">
+          <span>CareReceptionist</span><span class="text-secondary"> AI</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-10 text-sm font-semibold text-muted-foreground">
+          <a href="/case-studies" class="text-secondary transition-colors relative group py-2">
+            Case Studies
+            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-secondary"></span>
+          </a>
+          <a href="/how-it-works" class="hover:text-secondary transition-colors relative group py-2">
+            How It Works
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="/#pricing" class="hover:text-secondary transition-colors relative group py-2">
+            Pricing
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="/#features" class="hover:text-secondary transition-colors relative group py-2">
+            Features
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </div>
+
+        <div class="hidden md:flex items-center gap-4">
+          <Button variant="ghost" href="https://app.carereceptionistai.com/login" title="Login" target="_self" />
+          <Button title="Book Free Demo" />
+        </div>
+
+        <button class="md:hidden p-3 -mr-3 flex items-center justify-center text-primary z-[60] relative" aria-label="Toggle menu" id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">
+          <div class="w-6 h-5 relative flex flex-col justify-between">
+            <span class="w-full h-0.5 bg-current transition-all duration-300 origin-left" id="menu-bar-1"></span>
+            <span class="w-full h-0.5 bg-current transition-all duration-300" id="menu-bar-2"></span>
+            <span class="w-full h-0.5 bg-current transition-all duration-300 origin-left" id="menu-bar-3"></span>
+          </div>
+        </button>
+      </nav>
+
+      <div id="mobile-menu" class="fixed inset-0 z-50 invisible opacity-0 transition-all duration-300 md:hidden">
+        <div class="absolute inset-0 bg-white/95 backdrop-blur-2xl"></div>
+        <div class="relative h-full flex flex-col items-center justify-center gap-8 p-8 text-center">
+          <a href="/case-studies" class="text-3xl font-bold text-secondary transition-colors mobile-link">Case Studies</a>
+          <a href="/how-it-works" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">How It Works</a>
+          <a href="/#pricing" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Pricing</a>
+          <a href="/#features" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Features</a>
+          <a href="/#contact" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Contact</a>
+          <a href="https://app.carereceptionistai.com/login" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Login</a>
+          <div class="mt-4 scale-125">
+            <Button title="Book Free Demo" />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Page Header -->
+      <section class="relative pt-36 pb-16 sm:pt-52 sm:pb-20 overflow-hidden bg-white">
+        <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_50%_-20%,rgba(59,130,246,0.06),transparent_70%)]"></div>
+
+        <div class="relative container-custom text-center max-w-4xl">
+          <div class="reveal">
+            <div class="inline-flex items-center gap-2 rounded-full bg-secondary/10 px-4 py-1.5 text-xs font-semibold text-secondary mb-5 sm:mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bar-chart-3 w-3.5 h-3.5"><path d="M3 3v18h18"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
+              Real Results
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.08] text-primary">
+              Case Studies
+            </h1>
+
+            <p class="mt-5 sm:mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Real results from real U.S. dental practices.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case Studies -->
+      <section class="section-padding bg-muted/30">
+        <div class="container-custom max-w-5xl">
+          {caseStudies.map((study, i) => (
+            <div id={study.slug} class="scroll-mt-24">
+              <div class="reveal card-premium p-8 sm:p-10 md:p-12">
+                <div class="flex flex-col md:flex-row gap-8 md:gap-12">
+                  <!-- Left column: avatar + identity (sticky on desktop) -->
+                  <div class="md:sticky md:top-28 md:self-start md:w-64 md:shrink-0">
+                    <div class="flex md:flex-col items-center md:items-start gap-4 md:gap-5">
+                      <img
+                        src={study.avatar}
+                        alt={`${study.name}, ${study.credentials}`}
+                        class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-secondary/20 shrink-0"
+                        loading={i === 0 ? 'eager' : 'lazy'}
+                      />
+                      <div>
+                        <div class="font-bold text-foreground text-lg md:text-xl leading-tight">
+                          {study.name}, <span class="text-base font-medium text-muted-foreground">{study.credentials}</span>
+                        </div>
+                        <div class="text-sm md:text-base text-muted-foreground font-medium mt-0.5">
+                          {study.practice}
+                        </div>
+                        <div class="text-xs md:text-sm text-secondary font-bold uppercase tracking-wider mt-1">
+                          {study.location}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Right column: Before/After comparison -->
+                  <div class="flex-1 min-w-0">
+                    <div class="grid grid-cols-2 gap-5 sm:gap-8">
+                      <div>
+                        <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-danger/80 bg-danger/5 rounded-full px-3 py-1.5">
+                          <span class="text-danger">&#10005;</span>
+                          Before
+                        </span>
+                        <ul class="mt-4 space-y-3">
+                          {study.before.map((item, j) => (
+                            <li key={j} class="text-sm sm:text-base text-muted-foreground flex items-start gap-2.5">
+                              <span class="text-danger mt-1 shrink-0 text-sm">&#10005;</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div>
+                        <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-accent bg-accent/5 rounded-full px-3 py-1.5">
+                          <span class="text-accent">&#10003;</span>
+                          After
+                        </span>
+                        <ul class="mt-4 space-y-3">
+                          {study.after.map((item, j) => (
+                            <li key={j} class="text-sm sm:text-base text-foreground font-medium flex items-start gap-2.5">
+                              <span class="text-accent mt-1 shrink-0 text-sm">&#10003;</span>
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- Pull quote -->
+                    <blockquote class="mt-8 pt-8 border-t border-border/60 text-xl sm:text-2xl leading-relaxed text-foreground font-medium italic">
+                      &ldquo;{study.quote}&rdquo;
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Divider between case studies -->
+              {i < caseStudies.length - 1 && (
+                <div class="my-12 sm:my-16 border-t border-border/40"></div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="section-padding bg-white">
+        <div class="container-custom text-center max-w-3xl">
+          <div class="reveal">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary">
+              Ready to See These Results in Your Practice?
+            </h2>
+            <p class="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
+              Book a free 10-minute demo and discover how CareReceptionist AI can help your practice recover missed revenue.
+            </p>
+            <div class="mt-8">
+              <Button title="Book Your Free Demo →" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-primary text-white section-padding">
+      <div class="container-custom flex flex-col md:flex-row md:items-start md:justify-between gap-8 sm:gap-12">
+        <div class="max-w-xs">
+          <div class="font-extrabold tracking-tight text-2xl">
+            <span>CareReceptionist</span><span class="text-secondary"> AI</span>
+          </div>
+          <p class="text-sm text-white/50 mt-4 leading-relaxed">
+            Catch every call, book every appointment, and flood your Google profile with 5-star reviews — automatically.
+          </p>
+          <p class="text-xs text-white/30 mt-6 font-medium">
+            Built exclusively for modern dental practices.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-x-12 sm:gap-x-16 gap-y-6 sm:gap-y-8 text-sm font-semibold">
+          <div class="flex flex-col gap-3">
+            <span class="text-accent uppercase tracking-wider text-xs font-bold">Product</span>
+            <a href="/case-studies" class="text-white hover:text-white transition-colors">Case Studies</a>
+            <a href="/how-it-works" class="text-white/50 hover:text-white transition-colors">How It Works</a>
+            <a href="/#pricing" class="text-white/50 hover:text-white transition-colors">Pricing</a>
+            <a href="/#features" class="text-white/50 hover:text-white transition-colors">Features</a>
+            <a href="/#demo" class="text-white/50 hover:text-white transition-colors">Demo</a>
+          </div>
+          <div class="flex flex-col gap-3">
+            <span class="text-accent uppercase tracking-wider text-xs font-bold">Learn more</span>
+            <a href="https://app.carereceptionistai.com/login" class="text-white/50 hover:text-white transition-colors">Login</a>
+          </div>
+          <div class="flex flex-col gap-3">
+            <span class="text-accent uppercase tracking-wider text-xs font-bold">Company</span>
+            <a href="/privacy" class="text-white/50 hover:text-white transition-colors">Privacy Policy</a>
+            <a href="/contact" class="text-white/50 hover:text-white transition-colors">Contact</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-custom mt-12 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/30">
+        <div>© 2026 CareReceptionist AI. All rights reserved.</div>
+      </div>
+    </footer>
+  </div>
+</Layout>
+
+<script>
+  document.documentElement.classList.add('js-ready');
+
+  const header = document.getElementById('main-header');
+  const navContainer = document.getElementById('nav-container');
+  const isMobile = () => window.innerWidth < 768;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      if (isMobile()) {
+        header?.classList.add('bg-white', 'border-border/80', 'shadow-sm');
+        header?.classList.remove('bg-transparent', 'border-transparent', 'backdrop-blur-lg');
+      } else {
+        header?.classList.add('bg-white/80', 'backdrop-blur-lg', 'border-border/80', 'shadow-sm');
+        header?.classList.remove('bg-transparent', 'border-transparent');
+      }
+      navContainer?.classList.remove('h-20');
+      navContainer?.classList.add('h-16');
+    } else {
+      header?.classList.remove('bg-white/80', 'backdrop-blur-lg', 'border-border/80', 'shadow-sm', 'bg-white');
+      header?.classList.add('bg-transparent', 'border-transparent');
+      navContainer?.classList.add('h-20');
+      navContainer?.classList.remove('h-16');
+    }
+  });
+
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+  const menuBars = [
+    document.getElementById('menu-bar-1'),
+    document.getElementById('menu-bar-2'),
+    document.getElementById('menu-bar-3')
+  ];
+
+  function toggleMenu() {
+    const isExpanded = mobileMenuButton?.getAttribute('aria-expanded') === 'true';
+    mobileMenuButton?.setAttribute('aria-expanded', (!isExpanded).toString());
+
+    if (!isExpanded) {
+      mobileMenu?.classList.remove('invisible', 'opacity-0');
+      mobileMenu?.classList.add('visible', 'opacity-100');
+      document.body.style.overflow = 'hidden';
+      menuBars[0]?.classList.add('rotate-45', 'translate-y-[9px]');
+      menuBars[1]?.classList.add('opacity-0', 'translate-x-2');
+      menuBars[2]?.classList.add('-rotate-45', '-translate-y-[9px]');
+    } else {
+      mobileMenu?.classList.add('invisible', 'opacity-0');
+      mobileMenu?.classList.remove('visible', 'opacity-100');
+      document.body.style.overflow = '';
+      menuBars[0]?.classList.remove('rotate-45', 'translate-y-[9px]');
+      menuBars[1]?.classList.remove('opacity-0', 'translate-x-2');
+      menuBars[2]?.classList.remove('-rotate-45', '-translate-y-[9px]');
+    }
+  }
+
+  mobileMenuButton?.addEventListener('click', toggleMenu);
+
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (mobileMenuButton?.getAttribute('aria-expanded') === 'true') {
+        toggleMenu();
+      }
+    });
+  });
+
+  const revealElements = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.05, rootMargin: '50px' });
+
+  revealElements.forEach(el => observer.observe(el));
+</script>
+
+<style>
+  .contain-paint {
+    contain: paint;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+  }
+
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  html:not(.js-ready) .reveal {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
