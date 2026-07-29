@@ -85,7 +85,8 @@ export const Testimonials: React.FC = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="relative flex items-center gap-4 sm:gap-8">
+          {/* Desktop arrows - beside content */}
+          <div className="hidden sm:flex items-center gap-4 sm:gap-8">
             <button
               onClick={prev}
               aria-label="Previous testimonial"
@@ -114,11 +115,11 @@ export const Testimonials: React.FC = () => {
                       className="w-14 h-14 rounded-full object-cover border-2 border-secondary/20 shrink-0"
                       loading="lazy"
                     />
-                    <div>
+                    <div className="min-w-0">
                       <div className="font-bold text-foreground text-base leading-tight">
                         {study.name}, <span className="text-sm font-medium text-muted-foreground">{study.credentials}</span>
                       </div>
-                      <div className="text-sm text-muted-foreground font-medium mt-0.5">
+                      <div className="text-sm text-muted-foreground font-medium mt-0.5 truncate">
                         {study.practice}
                       </div>
                       <div className="text-xs text-secondary font-bold uppercase tracking-wider">
@@ -127,14 +128,14 @@ export const Testimonials: React.FC = () => {
                     </div>
                   </div>
 
-                  <blockquote className="text-2xl sm:text-3xl leading-relaxed sm:leading-relaxed text-foreground font-medium">
+                  <blockquote className="text-lg sm:text-2xl lg:text-3xl leading-relaxed text-foreground font-medium">
                     &ldquo;{renderQuote(study.quote, study.highlightPhrase)}&rdquo;
                   </blockquote>
 
                   <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
                     <a
                       href={`/case-studies#${study.slug}`}
-                      className="inline-flex items-center justify-center gap-2 rounded-full bg-primary text-white px-7 py-3 text-sm font-bold hover:bg-primary/90 active:scale-[0.98] transition-all duration-200 shadow-sm"
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-primary text-white px-7 py-3 text-sm font-bold hover:bg-primary/90 active:scale-[0.98] transition-all duration-200 shadow-sm w-full sm:w-auto min-h-11"
                     >
                       Full Case Study
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -157,17 +158,91 @@ export const Testimonials: React.FC = () => {
             </button>
           </div>
 
-          <div className="flex justify-center gap-2.5 mt-8">
+          {/* Mobile: stacked layout with arrows below */}
+          <div className="sm:hidden">
+            <div className="card-premium p-5">
+              <AnimatePresence mode="wait" custom={direction}>
+                <motion.div
+                  key={study.slug}
+                  custom={direction}
+                  variants={quoteVariants}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
+                >
+                  <div className="flex items-center gap-3 mb-5">
+                    <img
+                      src={study.avatar}
+                      alt={`${study.name}, ${study.credentials}`}
+                      className="w-12 h-12 rounded-full object-cover border-2 border-secondary/20 shrink-0"
+                      loading="lazy"
+                    />
+                    <div className="min-w-0">
+                      <div className="font-bold text-foreground text-sm leading-tight">
+                        {study.name}, <span className="text-xs font-medium text-muted-foreground">{study.credentials}</span>
+                      </div>
+                      <div className="text-xs text-muted-foreground font-medium mt-0.5 truncate">
+                        {study.practice}
+                      </div>
+                      <div className="text-[10px] text-secondary font-bold uppercase tracking-wider">
+                        {study.location}
+                      </div>
+                    </div>
+                  </div>
+
+                  <blockquote className="text-base leading-relaxed text-foreground font-medium">
+                    &ldquo;{renderQuote(study.quote, study.highlightPhrase)}&rdquo;
+                  </blockquote>
+
+                  <div className="mt-5">
+                    <a
+                      href={`/case-studies#${study.slug}`}
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-primary text-white px-7 py-3 text-sm font-bold hover:bg-primary/90 active:scale-[0.98] transition-all duration-200 shadow-sm w-full min-h-11"
+                    >
+                      Full Case Study
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </a>
+                  </div>
+                </motion.div>
+              </AnimatePresence>
+
+              <div className="flex items-center justify-center gap-4 mt-4">
+                <button
+                  onClick={prev}
+                  aria-label="Previous testimonial"
+                  className="w-11 h-11 rounded-full bg-gray-100 hover:bg-gray-200 active:bg-gray-300 flex items-center justify-center text-primary transition-all duration-200 active:scale-95"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M15 18l-6-6 6-6" />
+                  </svg>
+                </button>
+                <button
+                  onClick={next}
+                  aria-label="Next testimonial"
+                  className="w-11 h-11 rounded-full bg-gray-100 hover:bg-gray-200 active:bg-gray-300 flex items-center justify-center text-primary transition-all duration-200 active:scale-95"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Dot indicators */}
+          <div className="flex justify-center gap-3 sm:gap-2.5 mt-6 sm:mt-8">
             {caseStudies.map((_, i) => (
               <button
                 key={i}
                 onClick={() => goTo(i)}
                 aria-label={`Go to testimonial ${i + 1}`}
-                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                className={`rounded-full transition-all duration-300 ${
                   i === active
-                    ? 'bg-secondary w-7'
+                    ? 'bg-secondary'
                     : 'bg-gray-300 hover:bg-gray-400'
-                }`}
+                } w-3 h-3 sm:w-2.5 sm:h-2.5 ${i === active ? 'sm:w-7' : ''}`}
               />
             ))}
           </div>

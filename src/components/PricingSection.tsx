@@ -117,7 +117,7 @@ export const PricingSection: React.FC = () => {
               </h4>
             </motion.div>
 
-            <div 		className="grid sm:grid-cols-2 gap-x-6 sm:gap-x-10 gap-y-3 sm:gap-y-4">
+            <div 		className="grid sm:grid-cols-2 gap-x-6 sm:gap-x-10 gap-y-4 sm:gap-y-4">
               <div className="space-y-4">
                 {leftFeatures.map((feature, i) => (
                   <motion.div

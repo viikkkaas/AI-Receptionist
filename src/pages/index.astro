@@ -181,24 +181,24 @@ const jsonLd = JSON.stringify([faqSchema, softwareSchema]);
 						{heroData.badge.text}
 					</div>
 
-					<h1 class="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] text-primary max-w-4xl">
+					<h1 class="text-[2.25rem] sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] text-primary max-w-4xl">
 						<span class="font-medium text-gray-600 tracking-[-0.03em]">{heroData.headline.light}</span>
 						<br class="hidden sm:block" />
 						<span class="text-gradient">{heroData.headline.bold}</span>
 					</h1>
 
-					<p class="mt-5 sm:mt-6 text-base sm:text-lg text-gray-500 max-w-[600px] leading-relaxed">
+					<p class="mt-5 sm:mt-6 text-[15px] sm:text-lg text-gray-500 max-w-[540px] leading-relaxed">
 						{heroData.subheadline}
 					</p>
 
-					<div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
-						<Button variant="pill" title={heroData.cta.primary.text} href={heroData.cta.primary.href} icon="arrow" />
-						<Button variant="pill-ghost" title={heroData.cta.secondary.text} href={heroData.cta.secondary.href} icon="play" />
+					<div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto px-5 sm:px-0">
+						<Button variant="pill" title={heroData.cta.primary.text} href={heroData.cta.primary.href} icon="arrow" class="w-full sm:w-auto min-h-12" />
+						<Button variant="pill-ghost" title={heroData.cta.secondary.text} href={heroData.cta.secondary.href} icon="play" class="w-full sm:w-auto min-h-12" />
 					</div>
 
 					<div class="mt-14 sm:mt-16 w-full max-w-2xl">
 						<p class="text-sm text-gray-400 font-medium mb-5">{heroData.stats.label}</p>
-						<div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+						<div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-x-8">
 							{heroData.stats.items.map((stat) => (
 								<div class="flex items-baseline gap-1.5">
 									<span class="text-2xl sm:text-3xl font-black text-primary tracking-tight">{stat.value}</span>
@@ -208,7 +208,7 @@ const jsonLd = JSON.stringify([faqSchema, softwareSchema]);
 						</div>
 					</div>
 
-					<div class="mt-8 pt-6 border-t border-gray-100 w-full max-w-2xl flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-gray-400 font-medium">
+					<div class="mt-8 pt-6 border-t border-gray-100 w-full max-w-2xl flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs text-gray-400 font-medium">
 						{heroData.compliance.map((item) => (
 							<span class="inline-flex items-center gap-1.5">
 								{item.icon === 'shield' && (

@@ -7,9 +7,10 @@ interface Props {
 	target?: string;
 	rel?: string;
 	icon?: 'arrow' | 'play' | 'none';
+	class?: string;
 }
 
-const { title, variant = 'primary', href = 'https://calendly.com/vikas-p-2706/30min', size = 'default', target = '_blank', rel = 'noopener noreferrer', icon = 'arrow' } = Astro.props;
+const { title, variant = 'primary', href = 'https://calendly.com/vikas-p-2706/30min', size = 'default', target = '_blank', rel = 'noopener noreferrer', icon = 'arrow', class: className = '' } = Astro.props;
 
 const baseClasses = 'inline-flex items-center justify-center gap-2 font-bold transition-all duration-300';
 
@@ -32,7 +33,7 @@ const variants = {
 
 const showIcon = icon !== 'none' && (variant === 'primary' || variant === 'pill');
 ---
-<a href={href} target={target} rel={rel} class={`${baseClasses} ${variant === 'pill' || variant === 'pill-ghost' ? pillSizeClasses : sizeClasses[size]} ${variants[variant]}`}>
+<a href={href} target={target} rel={rel} class={`${baseClasses} ${variant === 'pill' || variant === 'pill-ghost' ? pillSizeClasses : sizeClasses[size]} ${variants[variant]} ${className}`}>
 	{title || "Start Your Practice's Revenue Recovery"}
 	{icon === 'arrow' && showIcon && (
 		<svg class="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">

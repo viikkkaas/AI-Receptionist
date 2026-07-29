@@ -78,13 +78,13 @@ export const RevenueCalculator: React.FC = () => {
                 <label htmlFor="input-calls" className="font-semibold text-foreground text-base sm:text-lg">
                   New Patient Calls / Month
                 </label>
-                <div className="flex items-center gap-1.5 bg-muted px-3 py-1.5 rounded-xl border border-border/60">
+                <div className="flex items-center gap-1.5 bg-muted px-3 py-2 sm:py-1.5 rounded-xl border border-border/60">
                   <input
                     type="number"
                     id="input-calls"
                     value={calls}
                     onChange={(e) => setCalls(Math.max(0, parseInt(e.target.value) || 0))}
-                    className="w-12 text-right font-bold text-foreground bg-transparent focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                    className="w-14 sm:w-12 text-right font-bold text-foreground bg-transparent focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none min-h-[44px] sm:min-h-0"
                   />
                   <span className="text-xs text-muted-foreground font-bold">calls</span>
                 </div>
@@ -96,6 +96,7 @@ export const RevenueCalculator: React.FC = () => {
                 step="1"
                 value={calls}
                 onChange={(e) => setCalls(parseInt(e.target.value))}
+                aria-label="New patient calls per month"
                 className="w-full h-2 bg-muted rounded-lg appearance-none cursor-pointer accent-secondary focus:outline-none"
               />
               <div className="flex justify-between text-xs text-muted-foreground font-medium px-0.5">
@@ -110,13 +111,13 @@ export const RevenueCalculator: React.FC = () => {
                 <label htmlFor="input-missed" className="font-semibold text-foreground text-base sm:text-lg">
                   Percentage of Missed Calls
                 </label>
-                <div className="flex items-center gap-1 bg-muted px-3 py-1.5 rounded-xl border border-border/60">
+                <div className="flex items-center gap-1 bg-muted px-3 py-2 sm:py-1.5 rounded-xl border border-border/60">
                   <input
                     type="number"
                     id="input-missed"
                     value={missedPct}
                     onChange={(e) => setMissedPct(Math.min(100, Math.max(0, parseInt(e.target.value) || 0)))}
-                    className="w-8 text-right font-bold text-foreground bg-transparent focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                    className="w-12 sm:w-8 text-right font-bold text-foreground bg-transparent focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none min-h-[44px] sm:min-h-0"
                   />
                   <span className="text-xs text-muted-foreground font-bold">%</span>
                 </div>
@@ -128,6 +129,7 @@ export const RevenueCalculator: React.FC = () => {
                 step="1"
                 value={missedPct}
                 onChange={(e) => setMissedPct(parseInt(e.target.value))}
+                aria-label="Percentage of missed calls"
                 className="w-full h-2 bg-muted rounded-lg appearance-none cursor-pointer accent-secondary focus:outline-none"
               />
               <div className="flex justify-between text-xs text-muted-foreground font-medium px-0.5">
@@ -142,14 +144,14 @@ export const RevenueCalculator: React.FC = () => {
                 <label htmlFor="input-value" className="font-semibold text-foreground text-base sm:text-lg">
                   Avg. Value of One New Patient
                 </label>
-                <div className="flex items-center gap-1 bg-muted px-3 py-1.5 rounded-xl border border-border/60">
+                <div className="flex items-center gap-1 bg-muted px-3 py-2 sm:py-1.5 rounded-xl border border-border/60">
                   <span className="text-xs text-muted-foreground font-bold">$</span>
                   <input
                     type="number"
                     id="input-value"
                     value={patientValue}
                     onChange={(e) => setPatientValue(Math.max(0, parseInt(e.target.value) || 0))}
-                    className="w-16 text-right font-bold text-foreground bg-transparent focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                    className="w-20 sm:w-16 text-right font-bold text-foreground bg-transparent focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none min-h-[44px] sm:min-h-0"
                   />
                 </div>
               </div>
@@ -160,6 +162,7 @@ export const RevenueCalculator: React.FC = () => {
                 step="100"
                 value={patientValue}
                 onChange={(e) => setPatientValue(parseInt(e.target.value))}
+                aria-label="Average value of one new patient in dollars"
                 className="w-full h-2 bg-muted rounded-lg appearance-none cursor-pointer accent-secondary focus:outline-none"
               />
               <div className="flex justify-between text-xs text-muted-foreground font-medium px-0.5">
@@ -262,3 +265,31 @@ export const RevenueCalculator: React.FC = () => {
 };
 
 export default RevenueCalculator;
+
+<style>{`
+  @media (max-width: 639px) {
+    input[type="range"] {
+      height: 1.5rem;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      width: 44px;
+      height: 44px;
+      -webkit-appearance: none;
+      appearance: none;
+      background: var(--color-secondary);
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      cursor: pointer;
+    }
+    input[type="range"]::-moz-range-thumb {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--color-secondary);
+      border: 3px solid white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      cursor: pointer;
+    }
+  }
+`}</style>
