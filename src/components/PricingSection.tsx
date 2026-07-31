@@ -1,22 +1,38 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const leftFeatures = [
-  '24/7 AI Receptionist',
-  'Appointment Scheduling',
-  'Google Calendar Integration',
-  'Smart SMS Notifications',
-  'Emergency Call Routing',
-  'Review Request Automation',
-];
-
-const rightFeatures = [
-  'Call Recording & Analytics',
-  'Custom AI Training',
-  'Up to 2,000 mins/month included',
-  'HIPAA-conscious Architecture',
-  'Monthly Performance Reports',
-  'Dedicated Onboarding',
+const featureBundles = [
+  {
+    title: 'Call Coverage & Booking Infrastructure',
+    description:
+      'Never miss a call or a booking — coverage your patients can count on, 24/7.',
+    features: [
+      '24/7 AI Receptionist',
+      'Appointment Scheduling',
+      'Google Calendar Integration',
+      'Emergency Call Routing',
+      'Up to 2,000 mins/month included',
+    ],
+  },
+  {
+    title: 'Revenue Recovery System',
+    description: 'Turns missed calls into booked appointments and recovered revenue.',
+    features: [
+      'Smart SMS Notifications',
+      'Call Recording & Analytics',
+      'Custom AI Training',
+      'Monthly Performance Reports',
+    ],
+  },
+  {
+    title: 'Growth & Retention Layer',
+    description: 'Builds your reputation and keeps patients coming back.',
+    features: [
+      'Review Request Automation',
+      'HIPAA-conscious Architecture',
+      'Dedicated Onboarding',
+    ],
+  },
 ];
 
 const trustBadges = [
@@ -117,41 +133,32 @@ export const PricingSection: React.FC = () => {
               </h4>
             </motion.div>
 
-            <div 		className="grid sm:grid-cols-2 gap-x-6 sm:gap-x-10 gap-y-4 sm:gap-y-4">
-              <div className="space-y-4">
-                {leftFeatures.map((feature, i) => (
-                  <motion.div
-                    key={feature}
-                    initial={{ y: 14 }}
-                    whileInView={{ y: 0 }}
-                    viewport={{ once: true, margin: '-50px' }}
-                    transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: i * 0.04 }}
-                    className="flex items-start gap-3"
-                  >
-                    <svg className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-sm text-foreground/70">{feature}</span>
-                  </motion.div>
-                ))}
-              </div>
-              <div className="space-y-4">
-                {rightFeatures.map((feature, i) => (
-                  <motion.div
-                    key={feature}
-                    initial={{ y: 14 }}
-                    whileInView={{ y: 0 }}
-                    viewport={{ once: true, margin: '-50px' }}
-                    transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: (i + leftFeatures.length) * 0.04 }}
-                    className="flex items-start gap-3"
-                  >
-                    <svg className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span className="text-sm text-foreground/70">{feature}</span>
-                  </motion.div>
-                ))}
-              </div>
+            <div 		className="space-y-5">
+              {featureBundles.map((bundle, bi) => (
+                <motion.div
+                  key={bundle.title}
+                  initial={{ y: 14 }}
+                  whileInView={{ y: 0 }}
+                  viewport={{ once: true, margin: '-50px' }}
+                  transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: bi * 0.08 }}
+                  className="rounded-2xl border border-border/20 bg-muted/20 p-5 sm:p-6"
+                >
+                  <h5 className="text-sm font-bold text-foreground">{bundle.title}</h5>
+                  <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                    {bundle.description}
+                  </p>
+                  <div className="mt-4 space-y-3">
+                    {bundle.features.map((feature) => (
+                      <div key={feature} className="flex items-start gap-3">
+                        <svg className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span className="text-sm text-foreground/70">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
             </div>
 
             <motion.div

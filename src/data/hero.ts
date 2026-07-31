@@ -40,6 +40,5 @@ export const heroData = {
   compliance: [
     { icon: 'shield' as const, text: 'HIPAA Compliant | BAA Signed' },
     { icon: 'clock' as const, text: 'Live in 7 Days' },
-    { icon: 'file-text' as const, text: 'No Long-Term Contracts' },
   ] as HeroCompliance[],
 }
