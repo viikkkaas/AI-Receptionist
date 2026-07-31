@@ -7,6 +7,7 @@ import ResultsROI from '../components/ResultsROI.tsx';
 import RevenueCalculator from '../components/RevenueCalculator.tsx';
 import Testimonials from '../components/Testimonials.tsx';
 import { PricingSection } from '../components/PricingSection.tsx';
+import { AddOnsSection } from '../components/AddOnsSection.tsx';
 import { FinalCTA } from '../components/FinalCTA.tsx';
 import { heroData } from '../data/hero';
 
@@ -456,6 +457,9 @@ const jsonLd = JSON.stringify([faqSchema, softwareSchema]);
 
 			<!-- Pricing Section — shared component, unchanged -->
 			<PricingSection client:visible />
+
+			<!-- Add-Ons Section — shared component -->
+			<AddOnsSection client:visible />
 
 			<!-- FAQ Section — shared, unchanged -->
 			<section id="faq" class="section-padding scroll-mt-24 bg-muted/30">

@@ -7,10 +7,10 @@ const featureBundles = [
     description:
       'Never miss a call or a booking — coverage your patients can count on, 24/7.',
     features: [
-      '24/7 AI Receptionist',
-      'Appointment Scheduling',
-      'Google Calendar Integration',
-      'Emergency Call Routing',
+      '24/7 AI Receptionist — never miss a call, after-hours included',
+      'Appointment Booking, Reschedule & Cancel — fully automated, syncs to clinic calendar',
+      'Emergency Triage Handoff — urgent calls escalate to on-call dentist via SMS/call',
+      'Multi-Dentist & Multi-Location Routing',
       'Up to 2,000 mins/month included',
     ],
   },
@@ -18,19 +18,20 @@ const featureBundles = [
     title: 'Revenue Recovery System',
     description: 'Turns missed calls into booked appointments and recovered revenue.',
     features: [
-      'Smart SMS Notifications',
-      'Call Recording & Analytics',
-      'Custom AI Training',
-      'Monthly Performance Reports',
+      'Appointment Confirmation & No-Show Reduction — 48hr auto-confirm, flags at-risk slots',
+      'Recall & Hygiene Reminders — auto outreach for overdue 6-month cleanings',
+      'Insurance Intake (Basic) — collects carrier/subscriber ID, checks against accepted-insurance list, flags front desk to follow up',
+      'Weekly Performance Report — calls answered, appointments booked, no-shows prevented, reviews collected',
     ],
   },
   {
     title: 'Growth & Retention Layer',
     description: 'Builds your reputation and keeps patients coming back.',
     features: [
-      'Review Request Automation',
-      'HIPAA-conscious Architecture',
-      'Dedicated Onboarding',
+      'Automated Google Review Requests — sentiment-aware timing post-visit',
+      'Patient Memory System — remembers patient history and prior calls across every interaction',
+      'HIPAA-Compliant Infrastructure — BAA signed with all vendors',
+      'Dashboard Access (app.carereceptionistai.com) — appointments calendar, review analytics',
     ],
   },
 ];
