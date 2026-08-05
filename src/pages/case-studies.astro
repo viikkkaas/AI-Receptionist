@@ -313,20 +313,22 @@ const pageDescription = 'Real results from real U.S. dental practices. See befor
     contain: paint;
   }
 
-  .reveal {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-    will-change: transform, opacity;
-  }
+  @layer components {
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: transform, opacity;
+    }
 
-  .reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-  html:not(.js-ready) .reveal {
-    opacity: 1;
-    transform: translateY(0);
+    html:not(.js-ready) .reveal {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 </style>
