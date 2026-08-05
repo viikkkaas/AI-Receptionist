@@ -5,7 +5,7 @@ import FAQItem from '../components/FAQItem.astro';
 import { FinalCTA } from '../components/FinalCTA.tsx';
 
 const pageTitle = 'How It Works — CareReceptionist AI';
-const pageDescription = "From kickoff to a fully operational AI receptionist in under a week — without changing your phone or workflow. See how it works for your dental practice.";
+const pageDescription = "From kickoff to a fully operational AI front office in under a week — calls answered, appointments booked, no-shows reduced, and reviews flowing. See how it works for your dental practice.";
 
 const faqSchema = {
 	'@context': 'https://schema.org',
@@ -51,6 +51,14 @@ const faqSchema = {
 				text: 'The AI is trained to recognize when a call needs human attention. Complex cases, emergencies, or unusual requests are immediately flagged and handed off to your team in real-time.',
 			},
 		},
+		{
+			'@type': 'Question',
+			name: 'Can the AI make outbound calls?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Yes. Beyond answering incoming calls, the AI proactively calls patients to confirm upcoming appointments, follow up on care, and run satisfaction check-ins — keeping your schedule full and patients engaged.',
+			},
+		},
 	],
 };
 
@@ -79,6 +87,10 @@ const jsonLd = JSON.stringify([faqSchema]);
 						Features
 						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
 					</a>
+					<a href="/blog" class="hover:text-secondary transition-colors relative group py-2">
+						Blog
+						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
+					</a>
 					<a href="/#contact" class="hover:text-secondary transition-colors relative group py-2">
 						Contact
 						<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
@@ -105,6 +117,7 @@ const jsonLd = JSON.stringify([faqSchema]);
 					<a href="/how-it-works" class="text-3xl font-bold text-secondary transition-colors mobile-link">How It Works</a>
 					<a href="/#pricing" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Pricing</a>
 					<a href="/#features" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Features</a>
+					<a href="/blog" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Blog</a>
 					<a href="/#contact" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Contact</a>
 					<a href="https://app.carereceptionistai.com/login" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Login</a>
 					<div class="mt-4 scale-125">
@@ -127,16 +140,63 @@ const jsonLd = JSON.stringify([faqSchema]);
 						</div>
 
 						<h1 class="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight leading-[1.08] text-primary">
-							Your AI Receptionist,<br />
+							Your AI Front Office,<br />
 							<span class="text-secondary">Live in Under a Week</span>
 						</h1>
 
 						<p class="mt-5 sm:mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-							From kickoff to a fully operational AI receptionist—without changing your phone number, disrupting your workflow, or requiring complicated setup.
+							One platform that answers every call, books appointments, follows up with outbound calls, reduces no-shows, and turns patients into 5-star reviews — without changing your phone number or disrupting your workflow.
 						</p>
 
 						<div class="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center w-full sm:w-auto px-5 sm:px-0">
 							<Button title="Book Your Free Demo →" class="w-full sm:w-auto min-h-12" />
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Platform Overview Section -->
+			<section class="section-padding bg-white">
+				<div class="container-custom max-w-6xl">
+					<div class="section-header">
+						<div class="reveal">
+							<div class="badge mb-5">The AI Front Office Platform</div>
+							<h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary">More Than a Receptionist. Your Whole Front Office.</h2>
+							<p class="mt-4 text-muted-foreground text-lg">Your front desk does more than answer calls. So does our AI.</p>
+						</div>
+					</div>
+
+					<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
+						<div class="reveal card-premium p-5 sm:p-6 group hover:-translate-y-1.5">
+							<div class="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+							</div>
+							<h3 class="font-bold text-base text-primary">Inbound: Every Call Answered</h3>
+							<p class="mt-2 text-sm text-muted-foreground leading-relaxed">24/7 AI receptionist on your existing number. Appointments booked straight into your calendar, complex calls handed off to your team in real time.</p>
+						</div>
+
+						<div class="reveal card-premium p-5 sm:p-6 group hover:-translate-y-1.5" style="transition-delay: 60ms">
+							<div class="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><polyline points="22 8 22 2 16 2"></polyline><line x1="16" x2="22" y1="8" y2="2"></line><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+							</div>
+							<h3 class="font-bold text-base text-primary">Outbound: AI Calls Your Patients</h3>
+							<p class="mt-2 text-sm text-muted-foreground leading-relaxed">The AI proactively calls to confirm appointments, follow up on care, and run satisfaction check-ins — outbound calls that keep your schedule full.</p>
+						</div>
+
+						<div class="reveal card-premium p-5 sm:p-6 group hover:-translate-y-1.5" style="transition-delay: 120ms">
+							<div class="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="m9 16 2 2 4-4"></path></svg>
+							</div>
+							<h3 class="font-bold text-base text-primary">Retention: Fewer No-Shows</h3>
+							<p class="mt-2 text-sm text-muted-foreground leading-relaxed">48-hour auto-confirmations and smart reschedule flows that cut missed appointments before they cost you a chair.</p>
+						</div>
+
+						<div class="reveal card-premium p-5 sm:p-6 group hover:-translate-y-1.5" style="transition-delay: 180ms">
+							<div class="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+							</div>
+							<h3 class="font-bold text-base text-primary">Reputation: 5-Star Reviews</h3>
+							<p class="mt-2 text-sm text-muted-foreground leading-relaxed">Sentiment-timed review requests after every visit, with reputation analytics that track and grow your Google presence.</p>
 						</div>
 					</div>
 				</div>
@@ -148,8 +208,8 @@ const jsonLd = JSON.stringify([faqSchema]);
 					<div class="section-header">
 						<div class="reveal">
 							<div class="badge mb-5">How It Works</div>
-							<h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary">Your AI Receptionist, Live in Under a Week</h2>
-							<p class="mt-4 text-muted-foreground text-lg">From kickoff to a fully booked schedule — without changing your phone number.</p>
+							<h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary">Your AI Front Office, Live in Under a Week</h2>
+							<p class="mt-4 text-muted-foreground text-lg">From kickoff to a fully operational AI front office — without changing your phone number.</p>
 						</div>
 					</div>
 
@@ -308,13 +368,15 @@ const jsonLd = JSON.stringify([faqSchema]);
 						</div>
 					</div>
 
-					<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
-						{[...Array(7)].map((_, i) => {
+					<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5">
+						{[...Array(9)].map((_, i) => {
 							const items = [
 								{ title: 'AI Training', desc: 'Custom-trained on your clinic protocols and services', icon: 'sparkles' },
 								{ title: 'Calendar Integration', desc: 'Seamless sync with your practice management system', icon: 'calendar' },
 								{ title: 'Call Routing', desc: 'Intelligent routing to your existing phone number', icon: 'phone' },
 								{ title: 'Smart SMS Notifications', desc: 'Automated confirmations, reschedule alerts, and cancellation notices', icon: 'message' },
+								{ title: 'Outbound AI Calling', desc: 'Proactive calls to confirm appointments, follow up on care, and run check-ins', icon: 'outbound' },
+								{ title: 'No-Show Reduction', desc: 'Automated reminders and reschedule flows that cut missed appointments', icon: 'bell' },
 								{ title: 'Review Request Automation', desc: 'Post-appointment review prompts to boost your Google presence', icon: 'star' },
 								{ title: 'Launch Support', desc: 'Dedicated manager guides your go-live day', icon: 'rocket' },
 								{ title: 'Ongoing Optimization', desc: 'Continuous improvements and performance monitoring', icon: 'refresh' }
@@ -327,6 +389,8 @@ const jsonLd = JSON.stringify([faqSchema]);
 										{item.icon === 'calendar' && <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path><path d="m9 16 2 2 4-4"></path></svg>}
 										{item.icon === 'phone' && <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>}
 										{item.icon === 'message' && <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><line x1="8" x2="16" y1="10" y2="10"></line><line x1="8" x2="16" y1="14" y2="14"></line></svg>}
+										{item.icon === 'outbound' && <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><polyline points="22 8 22 2 16 2"></polyline><line x1="16" x2="22" y1="8" y2="2"></line><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>}
+										{item.icon === 'bell' && <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M10.268 21a2 2 0 0 0 3.464 0"></path><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"></path></svg>}
 										{item.icon === 'star' && <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>}
 										{item.icon === 'rocket' && <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>}
 										{item.icon === 'refresh' && <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"></path><path d="M16 16h5v5"></path></svg>}
@@ -357,6 +421,7 @@ const jsonLd = JSON.stringify([faqSchema]);
 						<FAQItem question="Will my staff need training?" answer="Minimal to none. Your team continues working as usual. The AI handles overflow calls and after-hours bookings. We provide a quick walkthrough so everyone understands how the handoff system works." delay="200ms" />
 						<FAQItem question="Can you integrate with my existing scheduling workflow?" answer="Yes. We integrate with leading practice management systems used by dental clinics. Our team handles the integration so appointments flow directly into your existing calendar." delay="300ms" />
 						<FAQItem question="What if the AI can't handle a call?" answer="The AI is trained to recognize when a call needs human attention. Complex cases, emergencies, or unusual requests are immediately flagged and handed off to your team in real-time." delay="400ms" />
+						<FAQItem question="Can the AI make outbound calls?" answer="Yes. Beyond answering incoming calls, the AI proactively calls patients to confirm upcoming appointments, follow up on care, and run satisfaction check-ins — keeping your schedule full and patients engaged." delay="500ms" />
 					</div>
 				</div>
 			</section>
@@ -373,7 +438,7 @@ const jsonLd = JSON.stringify([faqSchema]);
 						<span>CareReceptionist</span><span class="text-secondary"> AI</span>
 					</div>
 					<p class="text-sm text-white/50 mt-4 leading-relaxed">
-						HIPAA-secure voice AI for US dental clinics. Never miss a patient call again.
+						HIPAA-secure AI front office for US dental clinics. Never miss a call, booking, or review again.
 					</p>
 					<p class="text-xs text-white/30 mt-6 font-medium">
 						Built exclusively for modern dental practices.
@@ -392,6 +457,7 @@ const jsonLd = JSON.stringify([faqSchema]);
 					<div class="flex flex-col gap-3">
 						<span class="text-accent uppercase tracking-wider text-xs font-bold">Learn more</span>
 						<a href="https://app.carereceptionistai.com/login" class="text-white/50 hover:text-white transition-colors">Login</a>
+						<a href="/blog" class="text-white/50 hover:text-white transition-colors">Blog</a>
 					</div>
 					<div class="flex flex-col gap-3">
 						<span class="text-accent uppercase tracking-wider text-xs font-bold">Company</span>
