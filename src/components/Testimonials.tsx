@@ -112,6 +112,8 @@ export const Testimonials: React.FC = () => {
                     <img
                       src={study.avatar}
                       alt={`${study.name}, ${study.credentials}`}
+                      width="56"
+                      height="56"
                       className="w-14 h-14 rounded-full object-cover border-2 border-secondary/20 shrink-0"
                       loading="lazy"
                     />
@@ -174,6 +176,8 @@ export const Testimonials: React.FC = () => {
                     <img
                       src={study.avatar}
                       alt={`${study.name}, ${study.credentials}`}
+                      width="48"
+                      height="48"
                       className="w-12 h-12 rounded-full object-cover border-2 border-secondary/20 shrink-0"
                       loading="lazy"
                     />

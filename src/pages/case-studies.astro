@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button.astro';
 import { caseStudies } from '../data/testimonials';
 
-const pageTitle = 'Case Studies — CareReceptionist AI';
+const pageTitle = 'Dental AI Receptionist Case Studies | CareReceptionist AI';
 const pageDescription = 'Real results from real U.S. dental practices. See before and after metrics from practices that switched to CareReceptionist AI.';
 ---
 
@@ -106,6 +106,8 @@ const pageDescription = 'Real results from real U.S. dental practices. See befor
                       <img
                         src={study.avatar}
                         alt={`${study.name}, ${study.credentials}`}
+                        width="80"
+                        height="80"
                         class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover border-2 border-secondary/20 shrink-0"
                         loading={i === 0 ? 'eager' : 'lazy'}
                       />

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "command": {
+    "seo": {
+      "description": "Claude SEO: full audits, schema, GEO, local SEO, content, technical analysis. Usage: /seo audit <url>, /seo schema <url>, /seo geo <url>, /seo local <url>, /seo technical <url>, /seo content-brief <topic>",
+      "template": "Run the Claude SEO workflow the user requests. Load the `seo` skill (orchestrator) plus the relevant sub-skill for the requested command type. If the user passes a URL or topic as arguments, use it. Follow the skill's orchestration: spawn the matching subagents from .opencode/agent/ in parallel, run bundled scripts via the claude-seo runtime, and produce a prioritized markdown report with falsifiability checks per recommendation."
+    }
+  }
+}

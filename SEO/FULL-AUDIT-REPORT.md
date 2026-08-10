@@ -6,17 +6,17 @@
 
 ## Executive Summary
 
-**SEO Health Score: 68/100**
+**SEO Health Score: 71/100**
 
 | Category | Weight | Score | Notes |
 |---|---|---|---|
 | Technical SEO | 22% | 93 | Duplicate-URL crisis fixed; security headers hardened (CSP, HSTS+preload, CORS restricted); IndexNow live; sitemap noindex |
-| Content Quality / E-E-A-T | 23% | 40 | Citations added to S3 (6 sources), numbers verified vs sources; still no author credentials |
-| On-Page / SXO | 20% | 62 | 5/6 pages type-aligned; depth gaps; 1 mismatch |
+| Content Quality / E-E-A-T | 23% | 45 | Citations on S3 (6 sources); citable passages 3/3 posts (145–152 words, source-linked); author credentials still pending owner facts |
+| On-Page / SXO | 20% | 70 | 9/9 unique titles + metas; keyword titles on all pages; depth gaps; 1 type mismatch |
 | Schema / Structured Data | 10% | 80 | BlogPosting + og:article on all 3 posts live; Breadcrumb still missing |
 | Performance (CWV) | 10% | 70 | Strong LCP/CLS proxies; INP risk from framer-motion |
-| AI Search Readiness (GEO) | 10% | 70 | AI crawlers unblocked (CF robots overlay disabled 08-11); residual gap: no citable passages (H6) |
-| Images | 5% | 75 | Alt text + lazy + reserved boxes; no dimensions attrs |
+| AI Search Readiness (GEO) | 10% | 70 | AI crawlers unblocked (CF robots overlay disabled 08-11); citable passages 3/3 (H6 nearly closed) |
+| Images | 5% | 90 | Alt text 100% verified (6/6, descriptive); width/height on 5/6 (dynamic profile photo exempt) |
 
 **The one headline problem:** the trailing-slash fix is built but **not deployed** — the live site serves every page as two 200-OK URLs with conflicting canonical/sitemap signals. Deploying the working tree is the #1 action and unblocks everything else. **STATUS: FIXED + DEPLOYED 2026-08-10** (commit `10db358`; 9/9 live canonicals slash, 8/8 308 redirects verified). Duplicate-URL issue resolved.
 
@@ -142,6 +142,8 @@
 | 2026-08-11 | Health score 63 → **65/100** (Technical 87→93: headers + IndexNow + sitemap noindex) | ✅ DONE |
 | 2026-08-11 | Health score 65 → **68/100** (GEO 40→70: GPTBot/ClaudeBot block real, root-caused + resolved via CF robots overlay disable; residual GEO gap: no citable passages, H6) | ✅ DONE |
 | 2026-08-11 | H6 partial: consolidated citable passage (148 words, self-contained, all stats linked to sources) on S3 revenue post | ✅ DONE — build verified, pending push |
+| 2026-08-11 | **Score-push bundle (held for review, uncommitted):** alt-text audit — 6/6 imgs descriptive alt (100%, was already 100% — earlier audits left clean; 0 filename-dumps/empty); width/height added 5/6 (CLS); meta audit — 9/9 unique, 0 missing/dupes; title pass — 9/9 unique, 0 generic (2 fixed: case-studies + how-it-works now keyword-specific); citable passages extended to guide (145w) + dentrix (147w) — same verified stat set, only already-cited sources, 0 new claims → 3/3 posts have liftable blocks | ⏳ DONE locally — awaiting user review |
+| 2026-08-11 | Health score 68 → **71/100** (Content 40→45, On-page 62→70, Images 75→90) — pending review of score-push bundle | ⏳ DONE — pending user review |
 
 ---
 
