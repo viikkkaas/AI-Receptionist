@@ -1,6 +1,6 @@
 # FULL SEO AUDIT REPORT — carereceptionistai.com
 
-**Date:** 2026-08-10 (initial) · **Updated:** 2026-08-11 (post-P0 deploy + C2 correction + high-priority bundle live; score re-computed to 63/100, see Status Log at bottom)
+**Date:** 2026-08-10 (initial) · **Updated:** 2026-08-11 (post-P0 deploy + C2 correction + high-priority bundle live; robots "block" finding invalidated on recheck; score **63/100**, see Status Log at bottom)
 
 ---
 
@@ -15,7 +15,7 @@
 | On-Page / SXO | 20% | 62 | 5/6 pages type-aligned; depth gaps; 1 mismatch |
 | Schema / Structured Data | 10% | 80 | BlogPosting + og:article on all 3 posts live; Breadcrumb still missing |
 | Performance (CWV) | 10% | 70 | Strong LCP/CLS proxies; INP risk from framer-motion |
-| AI Search Readiness (GEO) | 10% | 40 | No citable passages; GPTBot/ClaudeBot blocked |
+| AI Search Readiness (GEO) | 10% | 40 | No citable passages; crawler access clean (early "blocked" finding invalidated on recheck 08-11) |
 | Images | 5% | 75 | Alt text + lazy + reserved boxes; no dimensions attrs |
 
 **The one headline problem:** the trailing-slash fix is built but **not deployed** — the live site serves every page as two 200-OK URLs with conflicting canonical/sitemap signals. Deploying the working tree is the #1 action and unblocks everything else. **STATUS: FIXED + DEPLOYED 2026-08-10** (commit `10db358`; 9/9 live canonicals slash, 8/8 308 redirects verified). Duplicate-URL issue resolved.
@@ -45,7 +45,7 @@
 **H1 — No Article/BlogPosting schema on any blog post; `og:type="website"` on articles.** All E-E-A-T-critical metadata (datePublished, author) missing from schema.
 **H2 — Zero internal links from pillars to blog** (0/3 pillar→spoke). The missed-calls post (S3) is nearly an orphan — 1 incoming link — yet it powers the product's #1 headline stat. Blog posts also lack footer nav (no privacy/contact links).
 **H3 — E-E-A-T near-absent:** "By Vikas" with no credentials/bio; zero cited sources for 13 YMYL claims on the revenue post (9 uncited, 69%); "trusted by dental practices" with no count; HIPAA/BAA claimed but undocumented; personal Gmail (`vikas.p.2706@gmail.com`) + personal Calendly as the only contact paths.
-**H4 — GPTBot + ClaudeBot blocked by Cloudflare managed robots** while OAI-SearchBot/PerplexityBot are allowed — the two largest AI-citation crawlers are excluded, killing GEO while the intent is clearly AI-visible.
+**H4 — ~~GPTBot + ClaudeBot blocked by Cloudflare managed robots~~** ⚠️ **FINDING INVALIDATED ON RECHECK 2026-08-11** — live robots.txt is clean (`Allow: /` for all agents; Cloudflare AI Crawl Control toggles all-off; no block exists at origin or edge). Original finding was stale cache. No GEO credit: GEO remains limited by content citability (H6), not crawler access.
 **H5 — Missing security headers:** no CSP, no X-Frame-Options, no X-Content-Type-Options, no Referrer-Policy; HSTS lacks includeSubDomains/preload. CORS `*` on HTML responses.
 **H6 — No citable passages anywhere:** zero self-contained 134–167-word answer blocks on any page (closest: guide "How an AI Receptionist Works" at 116 words).
 **H7 — Broken nav targets 404:** `/pricing/`, `/features/`, `/demo/` referenced in nav but don't exist.
@@ -125,8 +125,8 @@
 |---|---|---|
 | 2026-08-10 | P0 deploy: trailing-slash fixes + 308 redirects + guide restore + `.vercelignore` (commit `10db358`) | ✅ DONE — live verified (9/9 slash canonicals, 8/8 308s, sitemap 9/9) |
 | 2026-08-10 | C2 privacy "placeholder" corrected → **false positive** (CF email obfuscation; decoded `data-cfemail` = `vikas.p.2706@gmail.com`) | ✅ DONE |
-| 2026-08-10 | Robots: GPTBot/ClaudeBot blocks | ⏳ CF dashboard toggle (Bots → AI Bots off) + purge — user action |
-| 2026-08-10 | Health score recompute 58 → **60/100** (Technical 78→87, On-page 60→62; ~63 projected post-CF-toggle via GEO 40→70) | ✅ DONE |
+| 2026-08-10 | Robots: GPTBot/ClaudeBot blocks | ⚠️ **FINDING INVALIDATED ON RECHECK 2026-08-11** — live robots.txt clean (`Allow: /` all agents), CF AI Crawl Control toggles off; initial reading was stale cache. No block ever existed; no GEO credit taken |
+| 2026-08-10 | Health score recompute 58 → **60/100** (Technical 78→87, On-page 60→62) | ✅ DONE |
 | 2026-08-10 | High-queue: BlogPosting schema + `og:type=article` on all 3 posts (H1) | ✅ DONE (uncommitted) |
 | 2026-08-10 | High-queue: internal-link graph — S3 de-orphaned (home×2, S1, S2, case-study anchors, related-posts ×3 posts) (H2) | ✅ DONE (uncommitted) |
 | 2026-08-10 | High-queue: citations on S3 (6 external sources, verified via websearch; 2 claims reattributed honestly, 2 numbers corrected to source ranges) + FAQ schema sync (H3 partial) | ✅ DONE (uncommitted) |
@@ -134,4 +134,4 @@
 | 2026-08-10 | Personal Gmail as business contact (H3) | ⏳ FLAGGED only — swap requires owner decision |
 | 2026-08-10 | Source-verification pass on S3 numbers (user challenge): $850 confirmed on Slexium (dropped unsupported $1,300 top-end); $3,200–8,000 confirmed (Resonate/Slexium); miss-rate range corrected to 20–50% (Resonate's own stat is 20–38%, not 20–35%); turnover claim re-cited to Enrich (states SHRM 50–60% verbatim) + transparent math ($20–24K @ $40K salary) — SHRM "Real Costs of Recruitment" page itself only supports $4,700 cost-per-hire | ✅ DONE — build verified |
 | 2026-08-10 | Push high-queue bundle: BlogPosting schema, link graph, citations, corrected numbers, privacy date (commit after `10db358`) | ✅ DONE — commit `2b63e4e` pushed, Vercel auto-deployed; live-verified 2026-08-11 (3/3 BlogPosting + og:article, S3 no `$1,300`, 20–50%/20–38% live, enrich citation live, privacy "August 2026") |
-| 2026-08-11 | Health score recompute 60 → **63/100** (Schema 60→80, Content 34→40; ~66 projected post-CF-toggle via GEO 40→70) | ✅ DONE |
+| 2026-08-11 | Health score recompute 60 → **63/100** (Schema 60→80, Content 34→40). GEO stays 40 — no block existed to remove; GEO limited by content citability (H6), not crawler access. Claude-User 6 unsuccessful requests diagnosed as pre-purge cache staleness (ClaudeBot served old cached robots disallow; post-purge crawl shows 9/9 pages + all assets + sitemaps 200, zero 4xx/5xx) | ✅ DONE |
