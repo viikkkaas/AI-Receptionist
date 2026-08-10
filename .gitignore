@@ -1,27 +1,20 @@
-# build output
-dist/
-
-# generated types
-.astro/
-
 # dependencies
 node_modules/
 
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
+# build output
+dist/
 
-# environment variables
-.env
-.env.production
+# SEO tooling (Claude Code plugin + skills + agents) — not repo content
+.claude/
+.claude-seo/
+.opencode/
+claude-seo.cmd
+claude-seo.ps1
 
-# macOS-specific files
+# audit artifacts
+lighthouse-*
+screenshots/
+
+# os/editor
 .DS_Store
-
-# jetbrains setting folder
-.idea/
-
-# corrupted git backup
-.git-corrupted/
+Thumbs.db
