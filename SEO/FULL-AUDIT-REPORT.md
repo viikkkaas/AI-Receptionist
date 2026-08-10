@@ -1,6 +1,6 @@
 # FULL SEO AUDIT REPORT — carereceptionistai.com
 
-**Date:** 2026-08-10 (initial) · **Updated:** 2026-08-11 (post-P0 deploy + C2 correction + high-priority bundle live; robots "block" finding invalidated on recheck; score **63/100**, see Status Log at bottom)
+**Date:** 2026-08-10 (initial) · **Updated:** 2026-08-11 (post-P0 deploy + C2 correction + high-priority bundle live; robots "block" finding invalidated on recheck — see robots discrepancy row; security headers + Breadcrumb + IndexNow shipped; score **65/100**, see Status Log at bottom)
 
 ---
 
@@ -10,7 +10,7 @@
 
 | Category | Weight | Score | Notes |
 |---|---|---|---|
-| Technical SEO | 22% | 87 | Duplicate-URL crisis fixed + deployed (9/9 slash, 8/8 308s) |
+| Technical SEO | 22% | 93 | Duplicate-URL crisis fixed; security headers hardened (CSP, HSTS+preload, CORS restricted); IndexNow live; sitemap noindex |
 | Content Quality / E-E-A-T | 23% | 40 | Citations added to S3 (6 sources), numbers verified vs sources; still no author credentials |
 | On-Page / SXO | 20% | 62 | 5/6 pages type-aligned; depth gaps; 1 mismatch |
 | Schema / Structured Data | 10% | 80 | BlogPosting + og:article on all 3 posts live; Breadcrumb still missing |
@@ -135,3 +135,8 @@
 | 2026-08-10 | Source-verification pass on S3 numbers (user challenge): $850 confirmed on Slexium (dropped unsupported $1,300 top-end); $3,200–8,000 confirmed (Resonate/Slexium); miss-rate range corrected to 20–50% (Resonate's own stat is 20–38%, not 20–35%); turnover claim re-cited to Enrich (states SHRM 50–60% verbatim) + transparent math ($20–24K @ $40K salary) — SHRM "Real Costs of Recruitment" page itself only supports $4,700 cost-per-hire | ✅ DONE — build verified |
 | 2026-08-10 | Push high-queue bundle: BlogPosting schema, link graph, citations, corrected numbers, privacy date (commit after `10db358`) | ✅ DONE — commit `2b63e4e` pushed, Vercel auto-deployed; live-verified 2026-08-11 (3/3 BlogPosting + og:article, S3 no `$1,300`, 20–50%/20–38% live, enrich citation live, privacy "August 2026") |
 | 2026-08-11 | Health score recompute 60 → **63/100** (Schema 60→80, Content 34→40). GEO stays 40 — no block existed to remove; GEO limited by content citability (H6), not crawler access. Claude-User 6 unsuccessful requests diagnosed as pre-purge cache staleness (ClaudeBot served old cached robots disallow; post-purge crawl shows 9/9 pages + all assets + sitemaps 200, zero 4xx/5xx) | ✅ DONE |
+| 2026-08-11 | ⚠️ **Robots discrepancy**: user reported dashboard toggles off + robots clean; agent edge checks (both `www` + apex, no cache headers, 2026-08-10 19:11 GMT) still show CF-injected managed robots with GPTBot/ClaudeBot/Google-Extended/CCBot `Disallow: /` — origin `public/robots.txt` is clean; injection is CF "managed robots.txt" layer, likely a separate toggle from AI Crawl Control | ⚠️ PENDING user dashboard re-check + purge |
+| 2026-08-11 | Technical residual H5: security headers — CSP, `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`, `Referrer-Policy`, `Permissions-Policy`, HSTS `includeSubDomains; preload`, ACAO restricted to own origin (was `*`), `X-Robots-Tag: noindex` on sitemaps (commit `0affa75`) | ✅ DONE — live verified 9/9 headers |
+| 2026-08-11 | BreadcrumbList schema added to all 3 blog posts (commit `0affa75`) | ✅ DONE — live verified 3/3 |
+| 2026-08-11 | IndexNow: key `aa98164b99c7437a92d828a2450a4316` in `public/` + `scripts/indexnow.mjs` postbuild (15s fetch timeout; non-fatal on failure; 9 URLs from `sitemap-0.xml`; host `www.carereceptionistai.com`) (commit `0affa75`) | ✅ DONE — key live 200, ping 202 (9 URLs) |
+| 2026-08-11 | Health score 63 → **65/100** (Technical 87→93: headers + IndexNow + sitemap noindex) | ✅ DONE |
