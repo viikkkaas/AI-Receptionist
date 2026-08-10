@@ -12,12 +12,16 @@ export interface Props {
 const {
 	title = 'CareReceptionist — The Front Office Operating System for Dental Practices',
 	description = 'The AI-powered front office operating system for U.S. dental practices. Answer every patient call, book appointments automatically, and recover missed revenue — without adding headcount. Live in 7 days. Integrates with Dentrix.',
-	canonical = 'https://www.carereceptionistai.com',
+	canonical,
 	ogImage = 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1200',
 	jsonLd = '',
 } = Astro.props;
 
-const canonicalUrl = canonical.startsWith('http') ? canonical : `https://www.carereceptionistai.com${canonical}`;
+const canonicalPath = canonical
+	? (canonical.startsWith('http') ? new URL(canonical).pathname : canonical)
+	: Astro.url.pathname;
+const normalizedPath = canonicalPath.replace(/\/?$/, '/');
+const canonicalUrl = new URL(normalizedPath, Astro.site).href;
 
 const organizationSchema = {
 	'@context': 'https://schema.org',

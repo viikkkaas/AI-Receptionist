@@ -1,5 +1,15 @@
 {
   "buildCommand": "astro build",
   "outputDirectory": "dist",
-  "framework": "astro"
+  "framework": "astro",
+  "redirects": [
+    { "source": "/how-it-works", "destination": "/how-it-works/", "permanent": true },
+    { "source": "/blog", "destination": "/blog/", "permanent": true },
+    { "source": "/case-studies", "destination": "/case-studies/", "permanent": true },
+    { "source": "/contact", "destination": "/contact/", "permanent": true },
+    { "source": "/privacy", "destination": "/privacy/", "permanent": true },
+    { "source": "/blog/ai-receptionist-dental-clinics-guide", "destination": "/blog/ai-receptionist-dental-clinics-guide/", "permanent": true },
+    { "source": "/blog/dentrix-eaglesoft-ai-integration", "destination": "/blog/dentrix-eaglesoft-ai-integration/", "permanent": true },
+    { "source": "/blog/revenue-lost-missed-calls", "destination": "/blog/revenue-lost-missed-calls/", "permanent": true }
+  ]
 }

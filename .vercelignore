@@ -1,0 +1,13 @@
+# Dev tooling & local audit artifacts — never upload to Vercel builds
+.claude/
+.claude-seo/
+.opencode/
+opencode.json
+AGENTS.md
+claude-seo.cmd
+claude-seo.ps1
+SEO/
+screenshots/
+lighthouse-*.html
+lighthouse-scores.json
+lighthouse-report.report.json

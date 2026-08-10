@@ -134,7 +134,7 @@ export const Testimonials: React.FC = () => {
 
                   <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
                     <a
-                      href={`/case-studies#${study.slug}`}
+                      href={`/case-studies/#${study.slug}`}
                       className="inline-flex items-center justify-center gap-2 rounded-full bg-primary text-white px-7 py-3 text-sm font-bold hover:bg-primary/90 active:scale-[0.98] transition-all duration-200 shadow-sm w-full sm:w-auto min-h-11"
                     >
                       Full Case Study
@@ -196,7 +196,7 @@ export const Testimonials: React.FC = () => {
 
                   <div className="mt-5">
                     <a
-                      href={`/case-studies#${study.slug}`}
+                      href={`/case-studies/#${study.slug}`}
                       className="inline-flex items-center justify-center gap-2 rounded-full bg-primary text-white px-7 py-3 text-sm font-bold hover:bg-primary/90 active:scale-[0.98] transition-all duration-200 shadow-sm w-full min-h-11"
                     >
                       Full Case Study
