@@ -141,3 +141,20 @@
 | 2026-08-11 | IndexNow: key `aa98164b99c7437a92d828a2450a4316` in `public/` + `scripts/indexnow.mjs` postbuild (15s fetch timeout; non-fatal on failure; 9 URLs from `sitemap-0.xml`; host `www.carereceptionistai.com`) (commit `0affa75`) | ✅ DONE — key live 200, ping 202 (9 URLs) |
 | 2026-08-11 | Health score 63 → **65/100** (Technical 87→93: headers + IndexNow + sitemap noindex) | ✅ DONE |
 | 2026-08-11 | Health score 65 → **68/100** (GEO 40→70: GPTBot/ClaudeBot block real, root-caused + resolved via CF robots overlay disable; residual GEO gap: no citable passages, H6) | ✅ DONE |
+| 2026-08-11 | H6 partial: consolidated citable passage (148 words, self-contained, all stats linked to sources) on S3 revenue post | ✅ DONE — build verified, pending push |
+
+---
+
+## PENDING — Author bio / E-E-A-T (H3), requires owner facts — NO placeholder fabrication
+
+**Do not write the bio from imagination. Blocking on 3–5 real credentials from owner. Draft targets (all to be verified against owner input):**
+
+1. **Name/role + real credential #1** — degree + institution (e.g., B.S./B.E. field, college name, year) or equivalent professional cert.
+2. **Why dental/healthcare** — real origin story fact: first practice context, or reason for vertical focus (1-2 true sentences).
+3. **Build credibility** — what was actually built: the CareReceptionist AI system (voice AI, Dentrix/Eaglesoft integration, appointment booking, SMS), timeline, and any real usage/metrics (e.g., calls handled, practices served — only real numbers).
+4. **Anything else real**: prior startup/tech roles, relevant projects, awards, or employment history a dental buyer would respect.
+5. **Photo?** Real headshot yes/no — if yes, source it (site currently has none; fine without).
+
+**Ship plan once received:** bio block on all 3 posts (replacing bare "By Vikas"), author `Person` schema enriched (jobTitle/affiliation), trust block on home + contact, HIPAA/BAA statement only if documented. Until facts arrive, site stays as-is — no placeholder copy.
+
+**Low-priority queue (deferred post-first-client):** content depth expansion (1,500-word floors), new posts, citable passages on remaining pages, Gmail → `hello@` swap (owner decision, flagged 08-10).
