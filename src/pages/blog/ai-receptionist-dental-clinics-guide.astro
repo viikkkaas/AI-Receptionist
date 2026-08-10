@@ -37,10 +37,27 @@ const faqSchema = {
   ],
 };
 
-const jsonLd = JSON.stringify([faqSchema]);
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: 'AI Receptionist for Dental Clinics: The Complete Guide',
+  description: pageDescription,
+  image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=1200',
+  datePublished: '2026-07-01',
+  dateModified: '2026-07-01',
+  author: { '@type': 'Person', name: 'Vikas' },
+  publisher: {
+    '@type': 'Organization',
+    name: 'CareReceptionist AI',
+    url: 'https://www.carereceptionistai.com',
+  },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': pageCanonical },
+};
+
+const jsonLd = JSON.stringify([articleSchema, faqSchema]);
 ---
 
-<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} jsonLd={jsonLd}>
+<Layout title={pageTitle} description={pageDescription} canonical={pageCanonical} ogType="article" jsonLd={jsonLd}>
   <div class="min-h-screen bg-background text-foreground selection:bg-secondary/20 overflow-x-hidden">
     <header class="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur-lg border-b border-border/80 shadow-sm">
       <nav class="container-custom h-16 flex items-center justify-between">
@@ -113,7 +130,7 @@ const jsonLd = JSON.stringify([faqSchema]);
 
           <h3 class="text-lg font-bold text-primary mt-6">Revenue Recovery</h3>
           <p>
-            Every call answered is a potential booking. Practices using AI receptionists report recovering $5,000 to $15,000 per month in previously missed revenue. The system pays for itself within weeks.
+            Every call answered is a potential booking. Practices using AI receptionists report recovering $5,000 to $15,000 per month in previously missed revenue (<a href="/case-studies/" class="text-secondary font-semibold hover:underline">see real practice results</a>). The system pays for itself within weeks. Curious how the numbers add up? See <a href="/blog/revenue-lost-missed-calls/" class="text-secondary font-semibold hover:underline">how much revenue dental practices lose to missed calls</a>.
           </p>
 
           <h3 class="text-lg font-bold text-primary mt-6">Operational Efficiency</h3>
@@ -176,6 +193,20 @@ const jsonLd = JSON.stringify([faqSchema]);
           </p>
         </div>
       </article>
+
+      <div class="container-custom max-w-3xl mt-12">
+        <h2 class="text-xl font-bold text-primary mb-4">Related Articles</h2>
+        <div class="space-y-3">
+          <a href="/blog/revenue-lost-missed-calls/" class="block card-premium p-4 sm:p-5 hover:-translate-y-0.5 transition-all duration-300">
+            <span class="block text-sm font-bold text-primary">How Much Revenue Dental Practices Lose to Missed Calls</span>
+            <span class="block text-xs text-muted-foreground mt-1">Dental practices lose $50K+ per year to missed calls — see the real math.</span>
+          </a>
+          <a href="/blog/dentrix-eaglesoft-ai-integration/" class="block card-premium p-4 sm:p-5 hover:-translate-y-0.5 transition-all duration-300">
+            <span class="block text-sm font-bold text-primary">Dentrix and Eaglesoft AI Integration Explained</span>
+            <span class="block text-xs text-muted-foreground mt-1">Technical deep dive on how AI receptionists connect to your practice management system.</span>
+          </a>
+        </div>
+      </div>
     </main>
 
     <footer class="bg-primary text-white py-12">
