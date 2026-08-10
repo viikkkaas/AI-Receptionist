@@ -1,19 +1,19 @@
 # FULL SEO AUDIT REPORT — carereceptionistai.com
 
-**Date:** 2026-08-10 (initial) · **Updated:** 2026-08-10 (post-P0 deploy + C2 correction; score re-computed to 60/100, see Status Log at bottom)
+**Date:** 2026-08-10 (initial) · **Updated:** 2026-08-11 (post-P0 deploy + C2 correction + high-priority bundle live; score re-computed to 63/100, see Status Log at bottom)
 
 ---
 
 ## Executive Summary
 
-**SEO Health Score: 58/100**
+**SEO Health Score: 63/100**
 
 | Category | Weight | Score | Notes |
 |---|---|---|---|
-| Technical SEO | 22% | 78 | Duplicate-URL crisis dominates; otherwise clean |
-| Content Quality / E-E-A-T | 23% | 34 | No credentials, zero citations, trust infra gaps |
-| On-Page / SXO | 20% | 60 | 5/6 pages type-aligned; depth gaps; 1 mismatch |
-| Schema / Structured Data | 10% | 60 | Clean JSON-LD; missing Article/Breadcrumb |
+| Technical SEO | 22% | 87 | Duplicate-URL crisis fixed + deployed (9/9 slash, 8/8 308s) |
+| Content Quality / E-E-A-T | 23% | 40 | Citations added to S3 (6 sources), numbers verified vs sources; still no author credentials |
+| On-Page / SXO | 20% | 62 | 5/6 pages type-aligned; depth gaps; 1 mismatch |
+| Schema / Structured Data | 10% | 80 | BlogPosting + og:article on all 3 posts live; Breadcrumb still missing |
 | Performance (CWV) | 10% | 70 | Strong LCP/CLS proxies; INP risk from framer-motion |
 | AI Search Readiness (GEO) | 10% | 40 | No citable passages; GPTBot/ClaudeBot blocked |
 | Images | 5% | 75 | Alt text + lazy + reserved boxes; no dimensions attrs |
@@ -133,4 +133,5 @@
 | 2026-08-10 | High-queue: privacy date bumped May 2025 → August 2026 | ✅ DONE (uncommitted) |
 | 2026-08-10 | Personal Gmail as business contact (H3) | ⏳ FLAGGED only — swap requires owner decision |
 | 2026-08-10 | Source-verification pass on S3 numbers (user challenge): $850 confirmed on Slexium (dropped unsupported $1,300 top-end); $3,200–8,000 confirmed (Resonate/Slexium); miss-rate range corrected to 20–50% (Resonate's own stat is 20–38%, not 20–35%); turnover claim re-cited to Enrich (states SHRM 50–60% verbatim) + transparent math ($20–24K @ $40K salary) — SHRM "Real Costs of Recruitment" page itself only supports $4,700 cost-per-hire | ✅ DONE — build verified |
-| 2026-08-10 | Push high-queue bundle: BlogPosting schema, link graph, citations, corrected numbers, privacy date (commit after `10db358`) | ⏳ READY — staging + push |
+| 2026-08-10 | Push high-queue bundle: BlogPosting schema, link graph, citations, corrected numbers, privacy date (commit after `10db358`) | ✅ DONE — commit `2b63e4e` pushed, Vercel auto-deployed; live-verified 2026-08-11 (3/3 BlogPosting + og:article, S3 no `$1,300`, 20–50%/20–38% live, enrich citation live, privacy "August 2026") |
+| 2026-08-11 | Health score recompute 60 → **63/100** (Schema 60→80, Content 34→40; ~66 projected post-CF-toggle via GEO 40→70) | ✅ DONE |
