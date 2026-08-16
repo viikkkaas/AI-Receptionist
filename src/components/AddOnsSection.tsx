@@ -101,7 +101,7 @@ const enterpriseAddOns: AddOnCard[] = [
   {
     icon: 'plug',
     title: 'PM Software Integration',
-    description: 'Direct integration with Dentrix, Eaglesoft, or Open Dental for seamless two-way data sync.',
+    description: 'We connect to your booking calendar — live sync for supported systems (Open Dental, Curve Dental, Denticon), and one-click confirm for Dentrix, Eaglesoft, and other legacy systems.',
   },
   {
     icon: 'building-2',

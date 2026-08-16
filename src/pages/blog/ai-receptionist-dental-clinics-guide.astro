@@ -15,7 +15,7 @@ const faqSchema = {
       name: 'What is an AI receptionist for dental clinics?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'An AI receptionist is a voice AI system that answers patient calls, handles appointment scheduling, sends SMS confirmations, and manages review requests automatically. It integrates with your existing practice management system and phone number.',
+        text: 'An AI receptionist is a voice AI system that answers patient calls, handles appointment scheduling, sends SMS confirmations, and manages review requests automatically. It connects to your booking calendar and works with your existing practice management system and phone number.',
       },
     },
     {
@@ -165,7 +165,7 @@ const jsonLd = JSON.stringify([articleSchema, faqSchema, breadcrumbSchema]);
           <h2 class="text-2xl font-extrabold text-primary tracking-tight mt-10">Integration with Practice Management Systems</h2>
 
           <p>
-            A critical requirement for any dental AI receptionist is deep integration with your existing practice management software. Leading systems like Dentrix and Eaglesoft are the backbone of dental practice operations. An AI receptionist must be able to read and write appointment data directly to these systems.
+            A critical requirement for any dental AI receptionist is a solid connection to your existing practice management software. Leading systems like Dentrix and Eaglesoft are the backbone of dental practice operations — but not every system exposes a modern API for direct booking writes. Strong vendors work on two tiers: live sync for systems with modern APIs (Open Dental, Curve Dental, Denticon), where the AI books, reschedules, and cancels appointments directly in the PMS in real time; and one-click confirm for Dentrix, Eaglesoft, and other legacy systems, where the AI captures the complete appointment details during the call and your staff confirms the booking with a single click — no manual re-typing.
           </p>
 
           <p>
@@ -180,7 +180,7 @@ const jsonLd = JSON.stringify([articleSchema, faqSchema, breadcrumbSchema]);
 
           <ul class="space-y-3">
             <li><strong>Dental-specific training:</strong> The AI must understand dental terminology and clinical workflows. Generic AI systems cannot distinguish between a routine cleaning and an SRP quad.</li>
-            <li><strong>PMS integration:</strong> Direct integration with Dentrix, Eaglesoft, or your existing practice management system is non-negotiable.</li>
+            <li><strong>PMS integration:</strong> Live sync for Open Dental, Curve Dental, and Denticon — or one-click confirm for Dentrix, Eaglesoft, and other legacy systems. Never manual re-typing of captured details.</li>
             <li><strong>HIPAA compliance:</strong> The vendor must sign a BAA and use enterprise-grade encryption for all patient data.</li>
             <li><strong>Live in days, not months:</strong> Setup should take under two weeks, not a lengthy IT project.</li>
             <li><strong>Transparent pricing:</strong> No long-term contracts, no hidden fees, and clear pricing based on your call volume.</li>
@@ -199,7 +199,7 @@ const jsonLd = JSON.stringify([articleSchema, faqSchema, breadcrumbSchema]);
           <h2 class="text-2xl font-extrabold text-primary tracking-tight mt-10">Getting Started</h2>
 
           <p>
-            Implementation is typically a five to seven day process. The vendor conducts a discovery call to understand your workflows, trains the AI on your specific protocols, integrates with your practice management system, tests thoroughly, and goes live. Your patients continue calling the same number — nothing changes from their perspective except that every call is now answered.
+            Implementation is typically a five to seven day process. The vendor conducts a discovery call to understand your workflows, trains the AI on your specific protocols, sets up the integration with your practice management system, tests thoroughly, and goes live. Your patients continue calling the same number — nothing changes from their perspective except that every call is now answered.
           </p>
 
           <p>

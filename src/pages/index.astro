@@ -36,6 +36,14 @@ const faqSchema = {
 		},
 		{
 			'@type': 'Question',
+			name: 'How does integration work with my practice management software?',
+			acceptedAnswer: {
+				'@type': 'Answer',
+				text: 'Two ways. Open Dental, Curve Dental, and Denticon connect via live sync — the AI books, reschedules, and cancels appointments directly in your PMS in real time through the API. Dentrix, Eaglesoft, and other legacy systems use one-click confirm: the AI captures the full appointment details during the call, and your staff approves the booking in your PMS with a single click — no re-typing, no back-and-forth. Either way, your front desk saves hours every week compared to manual phone intake.',
+			},
+		},
+		{
+			'@type': 'Question',
 			name: 'What if I want to cancel?',
 			acceptedAnswer: {
 				'@type': 'Answer',
@@ -478,6 +486,7 @@ const jsonLd = JSON.stringify([faqSchema, softwareSchema]);
 					<div class="space-y-3">
 						<FAQItem question="Will this replace my front desk staff?" answer="No. It works alongside your team — handling overflow and after-hours so they can focus on in-clinic patients." />
 						<FAQItem question="How long does setup take?" answer="Most clinics are live within 5–7 business days. We sign a BAA and integrate with your PM software first." delay="100ms" />
+						<FAQItem question="How does integration work with my practice management software?" answer="Two ways. Open Dental, Curve Dental, and Denticon connect via live sync — the AI books, reschedules, and cancels appointments directly in your PMS in real time through the API. Dentrix, Eaglesoft, and other legacy systems use one-click confirm: the AI captures the full appointment details during the call, and your staff approves the booking in your PMS with a single click — no re-typing, no back-and-forth. Either way, your front desk saves hours every week compared to manual phone intake." delay="200ms" />
 						<FAQItem question="What if I want to cancel?" answer="No long-term contracts. Cancel anytime with 30 days notice." delay="200ms" />
 						<FAQItem question="Does it work with our existing phone number?" answer="Yes. We route calls through your existing number — no changes needed on your end." delay="300ms" />
 						<FAQItem question="Is this HIPAA compliant?" answer="Absolutely. We use enterprise-grade encryption and provide a signed BAA for every practice." delay="400ms" />
