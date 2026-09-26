@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Button from '../../components/Button.astro';
+import FAQItem from '../../components/FAQItem.astro';
 
 const pageTitle = 'Dentrix & Eaglesoft AI Integration | CareReceptionist AI';
 const pageDescription = 'How AI receptionists integrate with Dentrix and Eaglesoft practice management systems. Technical deep dive on PMS integration for dental clinics.';
@@ -228,6 +229,27 @@ const jsonLd = JSON.stringify([articleSchema, faqSchema, breadcrumbSchema]);
           </p>
         </div>
       </article>
+
+      <!-- FAQ Section (matches FAQPage schema) -->
+      <section id="faq" class="container-custom max-w-3xl mt-16" aria-labelledby="faq-heading">
+        <h2 id="faq-heading" class="text-2xl font-bold text-primary mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-3">
+          <FAQItem
+            question="Can AI receptionists integrate with Dentrix?"
+            answer="Yes. Dentrix does not expose a public API for third-party appointment writes, but AI receptionists work with Dentrix through a one-click confirm model: the AI captures the full booking details during the call, and your front desk confirms the appointment in Dentrix with a single click — no manual re-typing."
+          />
+          <FAQItem
+            question="Can AI receptionists integrate with Eaglesoft?"
+            answer="Yes. Eaglesoft also works through a one-click confirm flow. The AI captures appointment details during the call — provider, date, time, procedure, and notes — and your staff confirms the booking in Eaglesoft with one click, instead of re-typing details from a phone call."
+            delay="100ms"
+          />
+          <FAQItem
+            question="Do I need to change my practice management system to use an AI receptionist?"
+            answer="No. AI receptionists are designed to work with your existing Dentrix or Eaglesoft setup. You keep your current PMS — the AI layer connects on top of it with live sync or one-click confirm."
+            delay="200ms"
+          />
+        </div>
+      </section>
 
       <div class="container-custom max-w-3xl mt-12">
         <h2 class="text-xl font-bold text-primary mb-4">Related Articles</h2>

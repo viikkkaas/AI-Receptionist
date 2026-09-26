@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Button from '../../components/Button.astro';
+import FAQItem from '../../components/FAQItem.astro';
 
 const pageTitle = 'Dental AI Receptionist Complete Guide | CareReceptionist AI';
 const pageDescription = 'Everything dental practice owners need to know about AI receptionists: how they work, what they cost, and how they recover missed revenue.';
@@ -207,6 +208,27 @@ const jsonLd = JSON.stringify([articleSchema, faqSchema, breadcrumbSchema]);
           </p>
         </div>
       </article>
+
+      <!-- FAQ Section (matches FAQPage schema) -->
+      <section id="faq" class="container-custom max-w-3xl mt-16" aria-labelledby="faq-heading">
+        <h2 id="faq-heading" class="text-2xl font-bold text-primary mb-6">Frequently Asked Questions</h2>
+        <div class="space-y-3">
+          <FAQItem
+            question="What is an AI receptionist for dental clinics?"
+            answer="An AI receptionist is a voice AI system that answers patient calls, handles appointment scheduling, sends SMS confirmations, and manages review requests automatically. It connects to your booking calendar and works with your existing practice management system and phone number."
+          />
+          <FAQItem
+            question="Will an AI receptionist replace my front desk staff?"
+            answer="No. AI receptionists work alongside your team by handling overflow calls and after-hours bookings. Your front desk staff continues focusing on patients in the clinic while the AI manages phone traffic."
+            delay="100ms"
+          />
+          <FAQItem
+            question="How much does an AI receptionist for dental clinics cost?"
+            answer="AI receptionist services for dental clinics typically start around $1,000 to $2,000 per month depending on call volume and features. Most practices recover the cost within the first month from recovered missed revenue."
+            delay="200ms"
+          />
+        </div>
+      </section>
 
       <div class="container-custom max-w-3xl mt-12">
         <h2 class="text-xl font-bold text-primary mb-4">Related Articles</h2>
