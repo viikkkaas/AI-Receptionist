@@ -1,0 +1,50 @@
+---
+---
+<!-- Scroll to Top Button -->
+<button
+  id="scroll-to-top"
+  class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full gradient-accent text-primary-foreground shadow-lg opacity-0 invisible translate-y-4 transition-all duration-300 hover:scale-105 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+  aria-label="Scroll to top"
+  type="button"
+>
+  <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+  </svg>
+</button>
+
+<script is:inline>
+  const btn = document.getElementById('scroll-to-top');
+  if (!btn) return;
+
+  let isVisible = false;
+
+  function toggleVisibility() {
+    const scrollY = window.scrollY || document.documentElement.scrollTop;
+    const shouldShow = scrollY > 300;
+
+    if (shouldShow && !isVisible) {
+      btn.classList.remove('opacity-0', 'invisible', 'translate-y-4');
+      btn.classList.add('opacity-100', 'visible', 'translate-y-0');
+      isVisible = true;
+    } else if (!shouldShow && isVisible) {
+      btn.classList.add('opacity-0', 'invisible', 'translate-y-4');
+      btn.classList.remove('opacity-100', 'visible', 'translate-y-0');
+      isVisible = false;
+    }
+  }
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  window.addEventListener('scroll', toggleVisibility, { passive: true });
+</script>
+
+<style>
+  /* Ensure button stays above mobile sticky CTA on mobile */
+  @media (max-width: 767px) {
+    #scroll-to-top {
+      bottom: 90px; /* Above mobile sticky CTA which is at bottom-[72px] */
+    }
+  }
+</style>

@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import UTMTracking from '../components/UTMTracking.astro';
+import ScrollToTop from '../components/ScrollToTop.astro';
 
 export interface Props {
 	title?: string;
@@ -85,6 +86,7 @@ const organizationSchema = {
 	</head>
 	<body>
 		<slot />
+		<ScrollToTop />
 	</body>
 </html>
 
