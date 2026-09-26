@@ -1,0 +1,106 @@
+---
+---
+<!-- UMT Tracking: capture from URL, persist to sessionStorage, append to outbound links -->
+<script type="module">
+  const UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'] as const;
+  const STORAGE_KEY = 'cr_utm_params';
+
+  function captureUTMParams(): Record<string, string> {
+    const params = new URLSearchParams(window.location.search);
+    const utm: Record<string, string> = {};
+    UTM_KEYS.forEach(key => {
+      const value = params.get(key);
+      if (value) utm[key] = value;
+    });
+    return utm;
+  }
+
+  function getStoredUTMParams(): Record<string, string> {
+    try {
+      const stored = sessionStorage.getItem(STORAGE_KEY);
+      return stored ? JSON.parse(stored) : {};
+    } catch {
+      return {};
+    }
+  }
+
+  function saveUTMParams(utm: Record<string, string>): void {
+    try {
+      const existing = getStoredUTMParams();
+      const merged = { ...existing, ...utm };
+      if (Object.keys(merged).length > 0) {
+        sessionStorage.setItem(STORAGE_KEY, JSON.stringify(merged));
+      }
+    } catch {
+      // Ignore storage errors
+    }
+  }
+
+  function appendUTMParams(url: string, utm?: Record<string, string>): string {
+    const params = utm || getStoredUTMParams();
+    if (Object.keys(params).length === 0) return url;
+    try {
+      const urlObj = new URL(url);
+      Object.entries(params).forEach(([key, value]) => {
+        if (value && !urlObj.searchParams.has(key)) {
+          urlObj.searchParams.set(key, value);
+        }
+      });
+      return urlObj.toString();
+    } catch {
+      return url;
+    }
+  }
+
+  function enhanceOutboundLinks(): void {
+    const utm = getStoredUTMParams();
+    if (Object.keys(utm).length === 0) return;
+    const links = document.querySelectorAll<HTMLAnchorElement>(
+      'a[href*="calendly.com"], a[href^="mailto:"]'
+    );
+    links.forEach(link => {
+      const originalHref = link.getAttribute('href');
+      if (!originalHref) return;
+      try {
+        const url = new URL(originalHref);
+        if (UTM_KEYS.some(key => url.searchParams.has(key))) return;
+      } catch {
+        if (originalHref.startsWith('mailto:')) {
+          const [email, existingParams] = originalHref.split('?');
+          const utmParams = new URLSearchParams(utm).toString();
+          const newParams = existingParams ? `${existingParams}&${utmParams}` : utmParams;
+          link.setAttribute('href', `${email}?${newParams}`);
+        }
+        return;
+      }
+      const enhanced = appendUTMParams(originalHref, utm);
+      if (enhanced !== originalHref) {
+        link.setAttribute('href', enhanced);
+      }
+    });
+  }
+
+  function initUTMTracking(): void {
+    const fromUrl = captureUTMParams();
+    if (Object.keys(fromUrl).length > 0) saveUTMParams(fromUrl);
+    try {
+      const referrer = document.referrer;
+      if (referrer) {
+        const referrerUrl = new URL(referrer);
+        const fromReferrer: Record<string, string> = {};
+        UTM_KEYS.forEach(key => {
+          const value = referrerUrl.searchParams.get(key);
+          if (value) fromReferrer[key] = value;
+        });
+        if (Object.keys(fromReferrer).length > 0) saveUTMParams(fromReferrer);
+      }
+    } catch {}
+    enhanceOutboundLinks();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initUTMTracking);
+  } else {
+    initUTMTracking();
+  }
+</script>
