@@ -85,6 +85,10 @@ const organizationSchema = {
 		<UTMTracking />
 	</head>
 	<body>
+		<!-- Skip to main content link (accessibility) -->
+		<a href="#main" class="sr-only focus-visible:not-sr-only focus-visible:absolute focus-visible:top-4 focus-visible:left-4 focus-visible:z-50 focus-visible:px-4 focus-visible:py-2 focus-visible:bg-primary focus-visible:text-primary-foreground focus-visible:rounded-lg focus-visible:font-medium focus-visible:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2" id="skip-link">
+			Skip to main content
+		</a>
 		<slot />
 		<ScrollToTop />
 	</body>
