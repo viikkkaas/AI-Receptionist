@@ -26,6 +26,10 @@
   --radius-3xl: 2rem;
 
   --container-max-w: 80rem;
+
+  /* Brand Fonts (from BRAND_FONTS.md) */
+  --font-base: 'Poppins', sans-serif;
+  --font-accent: 'Playfair Display', serif;
 }
 
 @layer base {
@@ -81,6 +85,17 @@
 
   .gradient-section {
     @apply bg-gradient-to-b from-background via-background to-muted/50;
+  }
+
+  /* Brand font utilities (from BRAND_FONTS.md) */
+  .font-base {
+    font-family: var(--font-base);
+    font-weight: 500;
+  }
+  .font-accent {
+    font-family: var(--font-accent);
+    font-style: italic;
+    font-weight: 400;
   }
 }
 

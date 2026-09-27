@@ -14,8 +14,8 @@ export const heroData = {
     text: 'Built for Growing Dental Practices',
   },
   headline: {
-    light: 'The Front Office Operating System for',
-    bold: 'Growing Dental Practices.',
+    light: 'Focus on your patients.',
+    bold: 'We run your entire front desk.',
   },
   subheadline:
     'Answer every call, book appointments automatically, and recover missed revenue — without adding headcount. Live in 7 days.',
