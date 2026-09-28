@@ -274,10 +274,9 @@ export const HeroFloatingCards: React.FC<HeroFloatingCardsProps> = ({ ctaText, c
           </a>
 
           {/* Glass Box */}
-          <div className="mt-32 w-full">
+          <div className="mt-8 md:mt-32 w-full">
             <div
-              className="relative bg-white/65 backdrop-blur-xl border border-white/80 rounded-3xl shadow-xl"
-              style={{ height: '220px' }}
+              className="relative bg-white/65 backdrop-blur-xl border border-white/80 rounded-3xl shadow-xl min-h-[300px] md:min-h-0 md:h-[220px]"
             >
               <AnimatePresence mode="wait" initial={false}>
                 <motion.div
@@ -344,7 +343,7 @@ export const HeroFloatingCards: React.FC<HeroFloatingCardsProps> = ({ ctaText, c
         </div>
       </div>
       {/* HIPAA line - outside grid so it doesn't affect card alignment */}
-      <p className="mt-4 text-xs text-gray-500 flex items-center justify-center gap-1.5">
+      <p className="mt-4 relative z-0 text-xs text-gray-500 flex items-center justify-center gap-1.5">
         <ShieldIcon />
         HIPAA-ready | BAA provided to every clinic
       </p>
