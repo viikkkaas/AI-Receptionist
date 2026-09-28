@@ -28,16 +28,19 @@ const cardConfigs: CardConfig[] = [
     ),
     iconColor: 'text-blue-500',
     title: 'AI Receptionist',
-    sublabel: 'Inbound + outbound calls',
+    sublabel: 'Answers every call',
     centerContent: (
       <div className="text-left space-y-3">
         <div className="space-y-2 text-sm text-gray-700 font-medium leading-relaxed">
           <p><span className="text-secondary font-semibold">Ava:</span> Hi, thank you for calling CareReceptionist. How can I help?</p>
           <p><span className="text-gray-500 font-semibold">Patient:</span> I'd like to book a cleaning for next week.</p>
         </div>
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 border border-blue-100 px-3 py-1 text-xs font-medium text-blue-700">
-          Also handles outbound calls
-        </span>
+        <div className="space-y-2 text-sm text-gray-700 font-medium leading-relaxed">
+          <p><span className="text-secondary font-semibold">Ava:</span> Tuesday 10:00 AM works. You're booked.</p>
+        </div>
+        <p className="inline-flex items-center gap-1.5 rounded-full bg-blue-50 border border-blue-100 px-3 py-1 text-xs font-medium text-blue-700">
+          Books straight to your schedule
+        </p>
       </div>
     ),
   },
@@ -50,7 +53,7 @@ const cardConfigs: CardConfig[] = [
     ),
     iconColor: 'text-emerald-500',
     title: 'Growth & Retention',
-    sublabel: 'Review requests',
+    sublabel: 'Reviews + reactivation',
     centerContent: (
       <div className="text-left space-y-3">
         <p className="text-sm text-gray-700 leading-relaxed">
@@ -63,7 +66,9 @@ const cardConfigs: CardConfig[] = [
             </svg>
           ))}
         </div>
-        <p className="text-xs text-emerald-600 font-medium">Review link sent</p>
+        <p className="text-sm text-gray-700 leading-relaxed">
+          It's been a while. Want to book a cleaning?
+        </p>
       </div>
     ),
   },
@@ -76,13 +81,19 @@ const cardConfigs: CardConfig[] = [
     ),
     iconColor: 'text-amber-500',
     title: 'Revenue Recovery',
-    sublabel: 'Reminders + confirmations',
+    sublabel: 'Auto reminders',
     centerContent: (
       <div className="text-left space-y-3">
         <div className="bg-amber-50 border border-amber-100 rounded-lg p-3">
           <p className="text-sm text-gray-800">
             Reminder: your appointment is tomorrow at 2:00 PM. Reply C to confirm or R to reschedule.
           </p>
+        </div>
+        <div className="flex items-center justify-between w-full">
+          <p className="text-sm text-gray-800">C</p>
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-50 border border-amber-100 px-3 py-1 text-xs font-medium text-amber-700">
+            Confirmed
+          </span>
         </div>
         <p className="text-xs text-amber-600 font-medium">Auto reminders: 48h and 24h before</p>
       </div>
@@ -100,17 +111,26 @@ const cardConfigs: CardConfig[] = [
     sublabel: 'Online scheduling',
     centerContent: (
       <div className="text-left space-y-3">
-        <div className="flex items-center gap-2 text-sm text-gray-500">
-          <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-          <span>Select date</span>
-          <span className="px-2 py-1 bg-gray-100 rounded text-gray-700 text-xs">Tue, Jan 21</span>
-          <span className="px-2 py-1 bg-gray-100 rounded text-gray-700 text-xs">Wed, Jan 22</span>
+        <div className="flex flex-wrap gap-2">
+          <span className="px-2 py-1 bg-gray-100 rounded text-gray-700 text-xs">Mon</span>
+          <span className="px-2 py-1 bg-primary text-white rounded text-xs font-medium">Tue</span>
+          <span className="px-2 py-1 bg-gray-100 rounded text-gray-700 text-xs">Wed</span>
+          <span className="px-2 py-1 bg-gray-100 rounded text-gray-700 text-xs">Thu</span>
+          <span className="px-2 py-1 bg-gray-100 rounded text-gray-700 text-xs">Fri</span>
         </div>
-        <div className="bg-gray-50 border border-gray-100 rounded-lg p-3">
-          <p className="text-sm font-medium text-gray-800">New patient: Alex Morgan</p>
-          <p className="text-xs text-gray-500 mt-0.5">Tue, 10:00 AM</p>
+        <div className="space-y-2">
+          <p className="flex items-center justify-between w-full text-sm text-gray-500">
+            <span>9:00 AM</span>
+            <span className="text-xs font-medium">Open</span>
+          </p>
+          <p className="flex items-center justify-between w-full text-sm text-gray-500">
+            <span>10:00 AM</span>
+            <span className="text-xs font-medium bg-primary/20 rounded px-2 py-0.5">New patient: Alex Morgan</span>
+          </p>
+          <p className="flex items-center justify-between w-full text-sm text-gray-500">
+            <span>11:30 AM</span>
+            <span className="text-xs font-medium">Open</span>
+          </p>
         </div>
       </div>
     ),
@@ -324,7 +344,7 @@ export const HeroFloatingCards: React.FC<HeroFloatingCardsProps> = ({ ctaText, c
       {/* HIPAA line - outside grid so it doesn't affect card alignment */}
       <p className="mt-4 text-xs text-gray-500 flex items-center justify-center gap-1.5">
         <ShieldIcon />
-        HIPAA Compliant | BAA Signed
+        HIPAA-ready | BAA provided to every clinic
       </p>
     </div>
   );
