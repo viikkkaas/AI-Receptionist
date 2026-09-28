@@ -195,14 +195,14 @@ export const HeroFloatingCards: React.FC<HeroFloatingCardsProps> = ({ ctaText, c
   const showCardContent = activeIndex ?? 0;
 
   return (
-    <div className="max-w-[1120px] mx-auto w-full" style={{ '--cycle-ms': `${CYCLE_MS}ms` }}>
-      <div className="grid grid-cols-[240px_minmax(0,560px)_240px] gap-6 items-start">
+    <div className="max-w-[1200px] mx-auto w-full" style={{ '--cycle-ms': `${CYCLE_MS}ms` }}>
+      <div className="grid md:grid-cols-[240px_560px_240px] md:gap-x-14 md:items-stretch gap-6 items-start">
         {/* LEFT COLUMN */}
-        <div className="hidden md:flex flex-col gap-6">
+        <div className="hidden md:flex flex-col justify-between">
           {cardConfigs.filter((_, i) => i === 0 || i === 2).map((card) => (
             <div
               key={card.id}
-              className={`relative group ${card.id === 2 ? 'mt-24' : ''}`}
+              className="relative group"
               onMouseEnter={() => handleMouseEnter(card.id)}
               onMouseLeave={() => handleMouseLeave(card.id)}
             >
@@ -252,7 +252,7 @@ export const HeroFloatingCards: React.FC<HeroFloatingCardsProps> = ({ ctaText, c
           </a>
 
           {/* Glass Box */}
-          <div className="mt-8 w-full">
+          <div className="mt-32 w-full">
             <div
               className="relative bg-white/65 backdrop-blur-xl border border-white/80 rounded-3xl shadow-xl"
               style={{ height: '220px' }}
@@ -280,20 +280,15 @@ export const HeroFloatingCards: React.FC<HeroFloatingCardsProps> = ({ ctaText, c
                 </motion.div>
               </AnimatePresence>
             </div>
-            {/* HIPAA line */}
-            <p className="mt-4 text-xs text-gray-500 flex items-center justify-center gap-1.5">
-              <ShieldIcon />
-              HIPAA Compliant | BAA Signed
-            </p>
           </div>
         </div>
 
         {/* RIGHT COLUMN */}
-        <div className="hidden md:flex flex-col gap-6">
+        <div className="hidden md:flex flex-col justify-between">
           {cardConfigs.filter((_, i) => i === 1 || i === 3).map((card) => (
             <div
               key={card.id}
-              className={`relative group ${card.id === 3 ? 'mt-24' : ''}`}
+              className="relative group"
               onMouseEnter={() => handleMouseEnter(card.id)}
               onMouseLeave={() => handleMouseLeave(card.id)}
             >
@@ -326,6 +321,11 @@ export const HeroFloatingCards: React.FC<HeroFloatingCardsProps> = ({ ctaText, c
           ))}
         </div>
       </div>
+      {/* HIPAA line - outside grid so it doesn't affect card alignment */}
+      <p className="mt-4 text-xs text-gray-500 flex items-center justify-center gap-1.5">
+        <ShieldIcon />
+        HIPAA Compliant | BAA Signed
+      </p>
     </div>
   );
 };
