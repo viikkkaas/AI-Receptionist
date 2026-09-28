@@ -29,16 +29,4 @@ export const heroData = {
       href: 'https://calendly.com/vikas-p-2706/30min',
     },
   },
-  stats: {
-    label: 'Trusted by dental practices across the US',
-    items: [
-      { value: '$10K+', label: 'recovered / mo' },
-      { value: '24/7', label: 'patient coverage' },
-      { value: '7-day', label: 'setup' },
-    ] as HeroStat[],
-  },
-  compliance: [
-    { icon: 'shield' as const, text: 'HIPAA Compliant | BAA Signed' },
-    { icon: 'clock' as const, text: 'Live in 7 Days' },
-  ] as HeroCompliance[],
 }
