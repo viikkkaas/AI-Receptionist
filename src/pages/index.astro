@@ -9,6 +9,7 @@ import Testimonials from '../components/Testimonials.tsx';
 import { PricingSection } from '../components/PricingSection.tsx';
 import { AddOnsSection } from '../components/AddOnsSection.tsx';
 import { FinalCTA } from '../components/FinalCTA.tsx';
+import { HeroFloatingCards } from '../components/HeroFloatingCards.tsx';
 import { heroData } from '../data/hero';
 
 const pageTitle = 'CareReceptionist AI — AI Front Office for Dental Practices';
@@ -113,7 +114,7 @@ const jsonLd = JSON.stringify([faqSchema, softwareSchema]);
 
 			<div class="hidden md:flex items-center gap-4">
 				<Button variant="ghost" href="https://app.carereceptionistai.com/login" title="Login" target="_self" />
-				<Button variant="pill" title="Start Revenue Recovery" icon="arrow" />
+				<Button variant="pill" title="Book a Demo" icon="arrow" />
 			</div>
 
 				<button class="md:hidden p-3 -mr-3 flex items-center justify-center text-primary z-[60] relative" aria-label="Toggle menu" id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu">
@@ -134,7 +135,7 @@ const jsonLd = JSON.stringify([faqSchema, softwareSchema]);
 				<a href="#pricing" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Pricing</a>
 					<a href="https://app.carereceptionistai.com/login" class="text-3xl font-bold text-primary hover:text-secondary transition-colors mobile-link">Login</a>
 				<div class="mt-4 scale-125">
-					<Button variant="pill" title="Start Revenue Recovery" icon="arrow" />
+					<Button variant="pill" title="Book a Demo" icon="arrow" />
 				</div>
 				</div>
 			</div>
@@ -144,7 +145,7 @@ const jsonLd = JSON.stringify([faqSchema, softwareSchema]);
 		<nav class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur-xl border-t border-border/80 safe-bottom will-change-transform" id="mobile-bottom-nav">
 			<div class="flex items-center justify-around h-[72px] px-2 max-w-xl mx-auto">
 				<a href="#top" class="flex flex-col items-center justify-center gap-1 min-w-[56px] py-2 bottom-nav-link text-secondary">
-					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-home"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-home"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2 2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
 					<span class="text-[10px] font-semibold">Home</span>
 				</a>
 				<a href="/how-it-works/" class="flex flex-col items-center justify-center gap-1 min-w-[56px] py-2 bottom-nav-link text-muted-foreground hover:text-secondary transition-colors">
@@ -168,61 +169,25 @@ const jsonLd = JSON.stringify([faqSchema, softwareSchema]);
 
 		<main id="main">
 			<!-- ==================== HERO SECTION ==================== -->
-			<section class="relative pt-28 pb-16 sm:pt-[120px] sm:pb-24 overflow-hidden bg-white">
-				<div class="absolute inset-0 pointer-events-none overflow-hidden">
-					<div class="absolute top-1/2 -translate-y-1/2 -left-[15%] w-[30%] h-[150%] bg-gradient-to-b from-transparent via-secondary/10 to-transparent blur-[100px] rotate-12"></div>
-					<div class="absolute top-1/2 -translate-y-1/2 -right-[15%] w-[30%] h-[150%] bg-gradient-to-b from-transparent via-secondary/8 to-transparent blur-[100px] -rotate-12"></div>
-					<div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[70%] h-[50%] bg-gradient-to-b from-transparent via-secondary/5 to-transparent blur-[120px]"></div>
-				</div>
+			<section class="relative pt-28 pb-16 sm:pt-[120px] sm:pb-24 overflow-hidden">
+				<img src="/hero-bg.webp" alt="" class="absolute inset-0 w-full h-full object-cover object-bottom z-0">
 
-				<div class="relative container-custom flex flex-col items-center text-center max-w-5xl mx-auto">
-					<div class="inline-flex items-center gap-2 rounded-full bg-secondary/10 border border-secondary/20 px-4 py-1.5 text-xs font-semibold text-secondary mb-6 sm:mb-8">
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building w-3.5 h-3.5"><rect width="16" height="16" x="4" y="2" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg>
-						{heroData.badge.text}
-					</div>
-
-					<h1 class="text-[2.25rem] sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] text-primary max-w-4xl">
-						<span class="font-medium text-gray-600 tracking-[-0.03em]">{heroData.headline.light}</span>
-						<br class="hidden sm:block" />
-						<span class="text-gradient">{heroData.headline.bold}</span>
-					</h1>
-
-					<p class="mt-5 sm:mt-6 text-[15px] sm:text-lg text-gray-500 max-w-[540px] leading-relaxed">
-						{heroData.subheadline}
-					</p>
-
-					<div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto px-5 sm:px-0">
-						<Button variant="pill" title={heroData.cta.primary.text} href={heroData.cta.primary.href} icon="arrow" class="w-full sm:w-auto min-h-12" />
-						<Button variant="pill-ghost" title={heroData.cta.secondary.text} href={heroData.cta.secondary.href} icon="play" class="w-full sm:w-auto min-h-12" />
-					</div>
-
-					<div class="mt-14 sm:mt-16 w-full max-w-2xl">
-						<p class="text-sm text-gray-400 font-medium mb-5">{heroData.stats.label}</p>
-						<div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-x-8">
-							{heroData.stats.items.map((stat) => (
-								<div class="flex items-baseline gap-1.5">
-									<span class="text-2xl sm:text-3xl font-black text-primary tracking-tight">{stat.value}</span>
-									<span class="text-sm text-gray-500">{stat.label}</span>
-								</div>
-							))}
+				<div class="relative z-10">
+					<div class="relative container-custom flex flex-col items-center text-center max-w-5xl mx-auto">
+						<div class="inline-flex items-center gap-2 rounded-full bg-secondary/10 border border-secondary/20 px-4 py-1.5 text-xs font-semibold text-secondary mb-6 sm:mb-8">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-building w-3.5 h-3.5"><rect width="16" height="16" x="4" y="2" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg>
+							{heroData.badge.text}
 						</div>
-					</div>
 
-					<div class="mt-8 pt-6 border-t border-gray-100 w-full max-w-2xl flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-xs text-gray-400 font-medium">
-						{heroData.compliance.map((item) => (
-							<span class="inline-flex items-center gap-1.5">
-								{item.icon === 'shield' && (
-									<svg class="w-3.5 h-3.5 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
-								)}
-								{item.icon === 'clock' && (
-									<svg class="w-3.5 h-3.5 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
-								)}
-								{item.icon === 'file-text' && (
-									<svg class="w-3.5 h-3.5 text-secondary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /></svg>
-								)}
-								{item.text}
-							</span>
-						))}
+						<h1 class="text-[2.25rem] sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.11] text-primary max-w-4xl">
+							<span class="font-base font-normal">{heroData.headline.light}</span>
+							<span class="font-accent font-bold">{heroData.headline.bold}</span>
+						</h1>
+
+
+						<div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 w-full sm:w-auto px-5 sm:px-0">
+							<HeroFloatingCards client:load ctaText={heroData.cta.primary.text} ctaHref={heroData.cta.primary.href} />
+						</div>
 					</div>
 				</div>
 			</section>
@@ -342,14 +307,6 @@ const jsonLd = JSON.stringify([faqSchema, softwareSchema]);
 						</div>
 
 						<div class="bg-white rounded-2xl border border-border/80 p-5">
-							<div class="w-9 h-9 rounded-lg bg-primary/5 border border-primary/10 flex items-center justify-center text-primary mb-3">
-								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-							</div>
-							<h3 class="font-bold text-[15px] text-foreground">More New Patients</h3>
-							<p class="mt-1 text-[13px] text-muted-foreground leading-relaxed">Every call is answered. Every caller is converted. The leakage stops.</p>
-						</div>
-
-						<div class="bg-white rounded-2xl border border-border/80 p-5">
 							<div class="w-9 h-9 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center text-accent mb-3">
 								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
 							</div>
@@ -359,7 +316,7 @@ const jsonLd = JSON.stringify([faqSchema, softwareSchema]);
 
 						<div class="bg-white rounded-2xl border border-border/80 p-5">
 							<div class="w-9 h-9 rounded-lg bg-primary/5 border border-primary/10 flex items-center justify-center text-primary mb-3">
-								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+								<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4-4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
 							</div>
 							<h3 class="font-bold text-[15px] text-foreground">Happier Front Desk Staff</h3>
 							<p class="mt-1 text-[13px] text-muted-foreground leading-relaxed">Interruptions drop by 60%. Stress drops. Retention improves.</p>
@@ -425,7 +382,7 @@ const jsonLd = JSON.stringify([faqSchema, softwareSchema]);
 						>
 							<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-accent shrink-0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
 							<span class="font-bold text-2xl sm:text-3xl tracking-tight text-white group-hover:text-accent transition-colors">+1 (510) 344-5892</span>
-							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white/40 group-hover:text-accent transition-colors shrink-0"><path d="M18 8v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9l4 4z"/><polyline points="15 3 15 8 20 8"/></svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white/40 group-hover:text-accent transition-colors shrink-0"><path d="M18 8v11a2 2 0 0 1-2 2H8a2 2 0 0 1-2 2V5a2 2 0 0 1 2-2h9l4 4z"/><polyline points="15 3 15 8 20 8"/></svg>
 						</a>
 					</div>
 
@@ -514,7 +471,7 @@ const jsonLd = JSON.stringify([faqSchema, softwareSchema]);
 				</div>
 
 				<div class="flex flex-wrap gap-x-12 sm:gap-x-16 gap-y-6 sm:gap-y-8 text-sm font-semibold">
-					<div class="flex flex-col gap-3">
+					<div class="flex flo col gap-3">
 						<span class="text-accent uppercase tracking-wider text-xs font-bold">Product</span>
 						<a href="/how-it-works/" class="text-white/50 hover:text-white transition-colors">How It Works</a>
 						<a href="/#pricing" class="text-white/50 hover:text-white transition-colors">Pricing</a>
@@ -522,12 +479,12 @@ const jsonLd = JSON.stringify([faqSchema, softwareSchema]);
 						<a href="/#features" class="text-white/50 hover:text-white transition-colors">Features</a>
 						<a href="/#demo" class="text-white/50 hover:text-white transition-colors">Demo</a>
 					</div>
-					<div class="flex flex-col gap-3">
+					<div class="flex flo col gap-3">
 						<span class="text-accent uppercase tracking-wider text-xs font-bold">Learn more</span>
 						<a href="https://app.carereceptionistai.com/login" class="text-white/50 hover:text-white transition-colors">Login</a>
 						<a href="/blog/" class="text-white/50 hover:text-white transition-colors">Blog</a>
 					</div>
-					<div class="flex flex-col gap-3">
+					<div class="flex flo col gap-3">
 						<span class="text-accent uppercase tracking-wider text-xs font-bold">Company</span>
 						<a href="/privacy/" class="text-white/50 hover:text-white transition-colors">Privacy Policy</a>
 						<a href="/contact/" class="text-white/50 hover:text-white transition-colors">Contact</a>
@@ -553,18 +510,18 @@ const jsonLd = JSON.stringify([faqSchema, softwareSchema]);
 				</div>
 
 				<div class="flex justify-center gap-8 mt-6 text-[13px] font-semibold">
-					<div class="flex flex-col gap-2.5 items-center">
+					<div class="flex flo col gap-2.5 items-center">
 						<span class="text-accent uppercase tracking-wider text-[10px] font-bold">Product</span>
 						<a href="/how-it-works/" class="text-white/50 hover:text-white transition-colors">How It Works</a>
 						<a href="/#pricing" class="text-white/50 hover:text-white transition-colors">Pricing</a>
 						<a href="/case-studies/" class="text-white/50 hover:text-white transition-colors">Case Studies</a>
 					</div>
-					<div class="flex flex-col gap-2.5 items-center">
+					<div class="flex flo col gap-2.5 items-center">
 						<span class="text-accent uppercase tracking-wider text-[10px] font-bold">Learn more</span>
 						<a href="https://app.carereceptionistai.com/login" class="text-white/50 hover:text-white transition-colors">Login</a>
 						<a href="/blog/" class="text-white/50 hover:text-white transition-colors">Blog</a>
 					</div>
-					<div class="flex flex-col gap-2.5 items-center">
+					<div class="flex flo col gap-2.5 items-center">
 						<span class="text-accent uppercase tracking-wider text-[10px] font-bold">Company</span>
 						<a href="/privacy/" class="text-white/50 hover:text-white transition-colors">Privacy</a>
 						<a href="/contact/" class="text-white/50 hover:text-white transition-colors">Contact</a>
@@ -597,7 +554,7 @@ const jsonLd = JSON.stringify([faqSchema, softwareSchema]);
 	// ==================== NEW MOBILE BOTTOM NAV ACTIVE LINK ====================
 	(function() {
 		const navLinks = document.querySelectorAll('#mobile-bottom-nav .bottom-nav-link');
-		const sections = ['#top', '/how-it-works/', '#pricing'];
+		const sections = ['#top', '/how-it-works/', '/pricing'];
 		const currentPath = window.location.pathname;
 
 		navLinks.forEach((link, i) => {

@@ -18,10 +18,10 @@ export const heroData = {
     bold: 'We run your entire front desk.',
   },
   subheadline:
-    'Answer every call, book appointments automatically, and recover missed revenue — without adding headcount. Live in 7 days.',
+    'From first call to final follow-up, booking, reminders, reactivation, reporting handled automatically.',
   cta: {
     primary: {
-      text: 'Start Revenue Recovery',
+      text: 'Book a Demo',
       href: 'https://calendly.com/vikas-p-2706/30min',
     },
     secondary: {
