@@ -89,10 +89,12 @@ const cardConfigs: CardConfig[] = [
             Reminder: your appointment is tomorrow at 2:00 PM. Reply C to confirm or R to reschedule.
           </p>
         </div>
-        <div className="flex items-center justify-between w-full">
-          <p className="text-sm text-gray-800">C</p>
+        <div className="flex items-center justify-end gap-2">
           <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-50 border border-amber-100 px-3 py-1 text-xs font-medium text-amber-700">
             Confirmed
+          </span>
+          <span className="bg-blue-500 text-white rounded-2xl px-3 py-1 text-sm">
+            C
           </span>
         </div>
         <p className="text-xs text-amber-600 font-medium">Auto reminders: 48h and 24h before</p>
