@@ -92,7 +92,7 @@ const cardConfigs: CardConfig[] = [
     id: 3,
     icon: (
       <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 002 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
       </svg>
     ),
     iconColor: 'text-violet-500',
@@ -122,6 +122,14 @@ const ShieldIcon = () => (
     <path strokeLinecap="round" strokeLinejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
   </svg>
 );
+
+// Map iconColor strings to their hex values for use in inline styles
+const iconColorMap: Record<string, string> = {
+  'text-blue-500': '#3B82F6',
+  'text-emerald-500': '#10B981',
+  'text-amber-500': '#F59E0B',
+  'text-violet-500': '#8B5CF6',
+};
 
 export const HeroFloatingCards: React.FC<HeroFloatingCardsProps> = ({ ctaText, ctaHref }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -187,8 +195,8 @@ export const HeroFloatingCards: React.FC<HeroFloatingCardsProps> = ({ ctaText, c
   const showCardContent = activeIndex ?? 0;
 
   return (
-    <div className="max-w-5xl mx-auto w-full" style={{ '--cycle-ms': `${CYCLE_MS}ms` }}>
-      <div className="grid grid-cols-[220px_minmax(0,560px)_220px] gap-6 items-start">
+    <div className="max-w-[1120px] mx-auto w-full" style={{ '--cycle-ms': `${CYCLE_MS}ms` }}>
+      <div className="grid grid-cols-[240px_minmax(0,560px)_240px] gap-6 items-start">
         {/* LEFT COLUMN */}
         <div className="hidden md:flex flex-col gap-6">
           {cardConfigs.filter((_, i) => i === 0 || i === 2).map((card) => (
@@ -199,33 +207,27 @@ export const HeroFloatingCards: React.FC<HeroFloatingCardsProps> = ({ ctaText, c
               onMouseLeave={() => handleMouseLeave(card.id)}
             >
               <div
-                className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 w-full min-h-[96px]"
+                className="relative overflow-hidden rounded-2xl shadow-sm border border-gray-100 bg-white min-h-[96px] flex items-center"
                 style={{
-                  filter: activeIndex === card.id ? 'none' : 'blur(3px)',
-                  opacity: activeIndex === card.id ? 1 : 0.55,
+                  filter: activeIndex === card.id ? 'none' : 'blur(2px)',
+                  opacity: activeIndex === card.id ? 1 : 0.75,
                   transition: 'filter 400ms ease, opacity 400ms ease',
                   boxShadow: activeIndex === card.id ? '0 0 0 2px rgba(59, 130, 246, 0.2), 0 4px 12px rgba(15, 23, 42, 0.08)' : '0 1px 3px rgba(15, 23, 42, 0.04)',
                 }}
               >
-                <div className="flex items-start gap-3">
-                  <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center bg-[color-mix(in_srgb,${card.iconColor.replace('text-','')}_12%,transparent)] ${card.iconColor}`}>
+                <div className="flex items-center gap-3">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center bg-[color-mix(in_srgb,${card.iconColor.replace('text-', '')}_12%,transparent)]" style={{ color: iconColorMap[card.iconColor] }}>
                     {card.icon}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="font-semibold text-sm text-gray-800 truncate">{card.title}</p>
-                    <p className="text-xs text-gray-500 truncate mt-0.5">{card.sublabel}</p>
+                    <p className="font-semibold text-sm text-gray-800 whitespace-nowrap">{card.title}</p>
+                    <p className="text-xs text-gray-500 whitespace-nowrap mt-0.5">{card.sublabel}</p>
                   </div>
                 </div>
                 {/* Progress bar */}
-                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gray-100 rounded-b-2xl overflow-hidden">
+                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gray-100 rounded-b-2xl overflow-hidden">
                   {activeIndex === card.id && (
-                    <div
-                      className="h-full bg-secondary"
-                      style={{
-                        width: '100%',
-                        animation: `progress-fill var(--cycle-ms) linear forwards`,
-                      }}
-                    />
+                    <div className="h-full bg-secondary" style={{ width: '100%', animation: `progress-fill var(--cycle-ms) linear forwards` }} />
                   )}
                 </div>
               </div>
@@ -252,8 +254,8 @@ export const HeroFloatingCards: React.FC<HeroFloatingCardsProps> = ({ ctaText, c
           {/* Glass Box */}
           <div className="mt-8 w-full">
             <div
-              className="relative bg-white/50 backdrop-blur-xl border border-white/60 rounded-3xl shadow-lg"
-              style={{ minHeight: '250px' }}
+              className="relative bg-white/65 backdrop-blur-xl border border-white/80 rounded-3xl shadow-xl"
+              style={{ height: '220px' }}
             >
               <AnimatePresence mode="wait" initial={false}>
                 <motion.div
@@ -262,10 +264,19 @@ export const HeroFloatingCards: React.FC<HeroFloatingCardsProps> = ({ ctaText, c
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-                  className="p-6 h-[250px] flex flex-col justify-center"
+                  className="p-6 flex flex-col justify-start"
                   style={{ '--cycle-ms': `${CYCLE_MS}ms` }}
                 >
-                  {cardConfigs[showCardContent].centerContent}
+                  <div className="flex items-center gap-2 mb-3">
+                    <div className="h-2 w-2 rounded-full" style={{ backgroundColor: iconColorMap[cardConfigs[showCardContent].iconColor] }}>
+                    </div>
+                    <p className="text-xs font-medium uppercase tracking-wide text-gray-500">
+                      {cardConfigs[showCardContent].title}
+                    </p>
+                  </div>
+                  <div className="text-[15px] space-y-3">
+                    {cardConfigs[showCardContent].centerContent}
+                  </div>
                 </motion.div>
               </AnimatePresence>
             </div>
@@ -287,33 +298,27 @@ export const HeroFloatingCards: React.FC<HeroFloatingCardsProps> = ({ ctaText, c
               onMouseLeave={() => handleMouseLeave(card.id)}
             >
               <div
-                className="bg-white rounded-2xl shadow-sm border border-gray-100 p-4 w-full min-h-[96px]"
+                className="relative overflow-hidden rounded-2xl shadow-sm border border-gray-100 bg-white min-h-[96px] flex items-center"
                 style={{
-                  filter: activeIndex === card.id ? 'none' : 'blur(3px)',
-                  opacity: activeIndex === card.id ? 1 : 0.55,
+                  filter: activeIndex === card.id ? 'none' : 'blur(2px)',
+                  opacity: activeIndex === card.id ? 1 : 0.75,
                   transition: 'filter 400ms ease, opacity 400ms ease',
                   boxShadow: activeIndex === card.id ? '0 0 0 2px rgba(59, 130, 246, 0.2), 0 4px 12px rgba(15, 23, 42, 0.08)' : '0 1px 3px rgba(15, 23, 42, 0.04)',
                 }}
               >
-                <div className="flex items-start gap-3">
-                  <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center bg-[color-mix(in_srgb,${card.iconColor.replace('text-','')}_12%,transparent)] ${card.iconColor}`}>
+                <div className="flex items-center gap-3">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center bg-[color-mix(in_srgb,${card.iconColor.replace('text-', '')}_12%,transparent)]" style={{ color: iconColorMap[card.iconColor] }}>
                     {card.icon}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <p className="font-semibold text-sm text-gray-800 truncate">{card.title}</p>
-                    <p className="text-xs text-gray-500 truncate mt-0.5">{card.sublabel}</p>
+                    <p className="font-semibold text-sm text-gray-800 whitespace-nowrap">{card.title}</p>
+                    <p className="text-xs text-gray-500 whitespace-nowrap mt-0.5">{card.sublabel}</p>
                   </div>
                 </div>
                 {/* Progress bar */}
-                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gray-100 rounded-b-2xl overflow-hidden">
+                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gray-100 rounded-b-2xl overflow-hidden">
                   {activeIndex === card.id && (
-                    <div
-                      className="h-full bg-secondary"
-                      style={{
-                        width: '100%',
-                        animation: `progress-fill var(--cycle-ms) linear forwards`,
-                      }}
-                    />
+                    <div className="h-full bg-secondary" style={{ width: '100%', animation: `progress-fill var(--cycle-ms) linear forwards` }} />
                   )}
                 </div>
               </div>
